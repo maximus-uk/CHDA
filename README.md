@@ -1,7 +1,7 @@
 # CHDA
 code files and pages for the SPO CHDA Intranet
 
-#SPGo JSON
+# SPGo JSON
 
 {
     "sourceDirectory": "src",
