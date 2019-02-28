@@ -3,6 +3,7 @@
     "sharePointSiteUrl": "https://maxukdevjc.sharepoint.com/sites/chda",
     "publishingScope": "Major",
     "authenticationType": "Digest",
+    "storeCredentials" : true,
     "remoteFolders": [
         "/Style Library/CSS",
         "/Style Library/JS",
