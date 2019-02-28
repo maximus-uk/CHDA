@@ -232,7 +232,7 @@
                             </a>
 
                             <!-- ***** Site Help Link ***** -->                       
-                            <a title="Intranet Help" href="/sitepages/help.aspx" class="siteHelp"><i class='fa fa-question'></i></a>
+                            <a title="Intranet Help" id="O365_MainLink_Help" class="siteHelp o365cs-nav-item o365cs-nav-button ms-bgc-tdr-h o365button o365cs-topnavText"><i class='fa fa-question'></i></a>
 
                             <a title="Test page responsiveness" id="btnResponsive" href="#" onclick="testResponsive();return false;" class="siteTest"><i class="fas fa-expand-arrows-alt"></i></a>
 
