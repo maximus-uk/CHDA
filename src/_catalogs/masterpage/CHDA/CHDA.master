@@ -373,7 +373,7 @@
                                                         <strong id="groupTitle1"></strong>
                                                     </div>
                                                 </a>
-                                                <div id="group1" class="collapse show" data-parent="#accordion">
+                                                <div id="group1" class="collapse" data-parent="#accordion">
                                                     <div class='list-group' id="links1"></div>
                                                 </div>
                                             </div>
@@ -385,7 +385,7 @@
                                                         <strong id="groupTitle2"></strong>
                                                     </div>
                                                 </a>
-                                                <div id="group2" class="collapse show" data-parent="#accordion">
+                                                <div id="group2" class="collapse" data-parent="#accordion">
                                                     <div class='list-group' id="links2"></div>
                                                 </div>
                                             </div>
@@ -397,7 +397,7 @@
                                                         <strong id="groupTitle3"></strong>
                                                     </div>
                                                 </a>
-                                                <div id="group3" class="collapse show" data-parent="#accordion">
+                                                <div id="group3" class="collapse" data-parent="#accordion">
                                                     <div class='list-group' id="links3"></div>
                                                 </div>
                                             </div>
@@ -409,7 +409,7 @@
                                                         <strong>Site Contacts</strong>
                                                     </div>
                                                 </a>
-							                    <div id="siteContacts" class="collapse show" data-parent="#accordion">
+							                    <div id="siteContacts" class="collapse" data-parent="#accordion">
 								                    <div class='list-group'>
                                                         <strong>
                                                             <h5 style="margin:-2px 0 0 15px;padding-top:5px;">Owners<hr style="margin-top:2px;color:#545487;"/></h5>
