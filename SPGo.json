@@ -12,7 +12,8 @@
         "_catalogs/masterpage/CHDA/CSS",
         "_catalogs/masterpage/CHDA/JS",
         "/SitePages/",
-        "/PublishingImages/"
+        "PublishingImages/",
+        "/PublishingImages/*/**"
     ],
     "checkInMessage": "Published by Jason Clark"
 }
