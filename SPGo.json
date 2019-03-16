@@ -1,11 +1,12 @@
 {
     "sourceDirectory": "src",
-    "sharePointSiteUrl": "https://maxukdevjc.sharepoint.com/sites/chda",
+    "sharePointSiteUrl": "https://maximusukdev.sharepoint.com/sites/chda",
     "publishingScope": "Major",
     "authenticationType": "Digest",
     "remoteFolders": [
         "/Style Library/CSS",
         "/Style Library/JS",
+        "_catalogs/lt/*/**",
         "_catalogs/masterpage/CHDA/",
         "_catalogs/masterpage/CHDA/CSS",
         "_catalogs/masterpage/CHDA/JS",
