@@ -56,18 +56,16 @@
     <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/vendor/fontawesome-free/css/fa-solid.css" />
     <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/vendor/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/vendor/jquery/jquery-ui.min.css" />
-
-    <!-- Add-In Apps -->
-	<link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/vendor/nivo/nivo-slider.css"/>
-    <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/vendor/nivo/themes/default/default.css"/>
-    <link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/rotating-card.css" />
-	<link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/EventCalendar.css" />
-	<link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/EventListing.css" />
     
     <!-- ***** MAX UK Core ***** -->
 	<link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk_sites/css/maxuk_corev15.css" />
     <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk_sites/css/maxuksites.css" /> 
-    <link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/custom.css" />		
+    <link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/custom.css" />
+    
+    <!-- Add-In Apps -->
+    <link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/metrotiles.css" />
+    <link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/EventCalendar.css" />
+    <link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/EventListing.css" />
 
 	<%-- ***** Chrome Resolution CSS files ***** --%>
 	<link rel="stylesheet" media="screen and (-webkit-min-device-pixel-ratio:0), screen and (-webkit-min-device-pixel-ratio:1), screen and (-webkit-min-device-pixel-ratio:2)" href="/Style%20Library/maxuk/css/custom_Chrome.css" />	
@@ -96,7 +94,8 @@
 	
     <style type="text/css">
         .ms-cui-tt {visibility: hidden;}
-
+        .carousel-indicators li {background-color:#545487;}
+        .carousel-caption {background-color:#7676b8; opacity: .6;}
         /* Safari */
         @-webkit-keyframes spin {
           0% { -webkit-transform: rotate(0deg); }
@@ -232,9 +231,9 @@
                             </a>
 
                             <!-- ***** Site Help Link ***** -->                       
-                            <a title="Intranet Help" href="/sitepages/help.aspx" class="siteHelp"><span class="glyphicon glyphicon-question-sign"></span></a>
+                            <a title="Intranet Help" id="O365_MainLink_Help" class="siteHelp o365cs-nav-item o365cs-nav-button ms-bgc-tdr-h o365button o365cs-topnavText"><i class='fa fa-question'></i></a>
 
-                            <a title="Test page responsiveness" id="btnResponsive" href="#" onclick="testResponsive();return false;" class="siteTest"><span class="glyphicon glyphicon-resize-full"></span></a>
+                            <a title="Test page responsiveness" id="btnResponsive" href="#" onclick="testResponsive();return false;" class="siteTest"><i class="fas fa-expand-arrows-alt"></i></a>
 
                             <!-- ***** Suite Bar - Site Acions ***** -->
                             <SharePoint:AjaxDelta runat="server" 
@@ -262,12 +261,13 @@
                                 <div id="suiteBarButtons">
 
                                     <!-- Site Actions Cog Options /PublishingImages/cog_32x32.png-->
+                                    
                                     <span class="siteActions" id="siteactiontd">
                                         
                                         <SharePoint:SiteActions runat="server" accesskey="<%$Resources:wss,tb_SiteActions_AK%>" id="SiteActionsMenuMain"
                                                                 PrefixHtml=""
                                                                 SuffixHtml=""
-                                                                ImageUrl="/PublishingImages/cog_32x32.png"
+                                                                ImageUrl=""
                                                                 ThemeKey="spcommon"
                                                                 MenuAlignment="Right"
                                                                 MenuNotVisibleHtml="&amp;nbsp;"
@@ -354,70 +354,84 @@
                             <div class="loader"> </div>
                         </div>
 
-                        <div class="hidden msgBannerAdjust" id="pageContent" >  <!-- main row -->                                                                                                                                       
-                            <asp:ContentPlaceHolder id="PlaceHolderMain" runat="server"></asp:ContentPlaceHolder>
+                        <!-- main row --> 
+                        <div class="hidden msgBannerAdjust row" id="pageContent" >  
+
+                            <!--<asp:ContentPlaceHolder id="PlaceHolderMain" runat="server"></asp:ContentPlaceHolder>-->
+
+                            <!-- *********************** -->
+                            <!-- **** Left Section ***** -->
+                            <!-- *********************** -->	    
+                            <div class="col-9 pageLeftContainer"> 
+
+                                <!-- ***** Slideshow ***** -->
+                                <div id="slideshow"></div>
+                                
+                            </div>  <!-- End Left Section -->
+
+                            <!-- ************************* -->
+                            <!-- **** Middle Section ***** -->
+                            <!-- ************************* -->
+                            <div class="col-2 pageMiddleContainer" id="metrotilesApp">
+                                <div class="metrotiles">	        							
+                                    <div class="hidden restricted" id="restrictApp">&nbsp;</div>
+                                    <div id="metrotiles"></div>							  
+                                </div>
+                            </div>
 
                             <!-- ************************* -->
                             <!-- ***** Right Section ***** -->
                             <!-- ************************* -->
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-justify usefulLinksSection" id="pageRightContainer">
-                                <div class="pageRightContainer">
+                            <div class="col-1 text-justify pageRightContainer" id="pageRightContainer">
+                                <div class="usefulLinksSection">
                                     <div class="row linkContainer" id="usefulLinks">
-                                        <div class="panel-group" id="accordion">                        
+                                        <div id="accordion">                        
 
                                             <!-- ***** Group 1 is the Team links ***** -->
-						                    <div class="panel panel-default" id="usefulLinksGroup1">                        
-                                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#group1" style="text-decoration:none">
-                                                    <div class="panel-heading">
-                                                        <div class="panel-title">
-                                                            <strong id="groupTitle1"></strong>
-                                                        </div>
+                                            <div class="card" id="usefulLinksGroup1">                        
+                                                <a class="accordion-toggle card-link" data-toggle="collapse" href="#group1" style="text-decoration:none">
+                                                    <div class="card-header">
+                                                        <strong id="groupTitle1"></strong>
                                                     </div>
                                                 </a>
-                                                <div id="group1" class="panel-collapse collapse">
+                                                <div id="group1" class="collapse" data-parent="#accordion">
                                                     <div class='list-group' id="links1"></div>
                                                 </div>
                                             </div>
 
                                             <!-- ***** Group 2 is the CHDA links ***** -->
-	                                        <div class="panel panel-default" id="usefulLinksGroup2">
-                                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#group2" style="text-decoration:none">
-                                                    <div class="panel-heading">
-                                                        <div class="panel-title">
-                                                            <strong id="groupTitle2"></strong>
-                                                        </div>
+                                            <div class="card" id="usefulLinksGroup2">
+                                                <a class="accordion-toggle" data-toggle="collapse" href="#group2" style="text-decoration:none">
+                                                    <div class="card-header">
+                                                        <strong id="groupTitle2"></strong>
                                                     </div>
                                                 </a>
-                                                <div id="group2" class="panel-collapse collapse">
+                                                <div id="group2" class="collapse" data-parent="#accordion">
                                                     <div class='list-group' id="links2"></div>
                                                 </div>
                                             </div>
 
                                             <!-- ***** Group 3 is the MAXIMUS UK links ***** -->
-	                                        <div class="panel panel-default" id="usefulLinksGroup3">
-                                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#group3" style="text-decoration:none">
-                                                    <div class="panel-heading">
-                                                        <div class="panel-title">
-                                                            <strong id="groupTitle3"></strong>
-                                                        </div>
+                                            <div class="card" id="usefulLinksGroup3">
+                                                <a class="accordion-toggle" data-toggle="collapse" href="#group3" style="text-decoration:none">
+                                                    <div class="card-header">
+                                                        <strong id="groupTitle3"></strong>
                                                     </div>
                                                 </a>
-                                                <div id="group3" class="panel-collapse collapse">
+                                                <div id="group3" class="collapse" data-parent="#accordion">
                                                     <div class='list-group' id="links3"></div>
                                                 </div>
                                             </div>
 
                                             <!-- ***** This is for the Site Contacts ***** -->
-						                    <div class="panel panel-default" id="usefulLinksSiteContacts">
-                                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#siteContacts" style="text-decoration:none">
-                                                    <div class="panel-heading">
-                                                        <div class="panel-title">
-                                                            <strong>Site Contacts</strong>
-                                                        </div>
+                                            <div class="card" id="usefulLinksSiteContacts">
+                                                <a class="accordion-toggle" data-toggle="collapse" href="#siteContacts" style="text-decoration:none">
+                                                    <div class="card-header">
+                                                        <strong>Site Contacts</strong>
                                                     </div>
                                                 </a>
-							                    <div id="siteContacts" class="panel-collapse collapse">
-								                    <div class='list-group'>
+                                                <div id="siteContacts" class="collapse" data-parent="#accordion">
+                                                    <div class='list-group'>
                                                         <strong>
                                                             <h5 style="margin:-2px 0 0 15px;padding-top:5px;">Owners<hr style="margin-top:2px;color:#545487;"/></h5>
                                                         </strong>
@@ -430,13 +444,13 @@
                                                             <h5 style="margin:-2px 0 0 15px;padding-top:5px;">Moderators<hr style="margin-top:2px;color:#545487;"/></h5>
                                                         </strong>
                                                         <div id="moderatorUser" style="margin-top:-20px!important"></div>
-								                    </div>
-							                    </div>
+                                                    </div>
+                                                </div>
                                             </div> <!-- end contacts panel-->
                                         </div> <!-- end panel group -->
-				                    </div> <!-- end link container -->
-			                    </div> <!-- end Right Container -->			                                                                                    
-                            </div> <!-- end Column --> 
+                                    </div> <!-- end link container -->
+                                </div> <!-- end Right Container -->			                                                                                    
+                            </div> <!-- end Column - useful links section -->    
                         </div> <!-- end main row -->
                     </div> <!-- end Main Container -->
                 </div> <!-- end Body Container -->
@@ -474,6 +488,7 @@
     <script type="text/javascript" src="/Style%20Library/maxuk/js/siteContacts.js"></script>
     <script type="text/javascript" src="/Style%20Library/maxuk/js/siteMessages.js"></script>  
     <script type="text/javascript" src="/Style%20Library/maxuk/js/importantMessage.js"></script>
+    <script type="text/javascript" src="/Style%20Library/maxuk/js/siteMetroTiles.js"></script>
 
     <script type="text/javascript">
         
@@ -502,6 +517,8 @@
 
             $('#pageLoader').addClass('hidden');
             $('#pageContent').removeClass('hidden');
+            
+            getTiles(siteURL);
 
             /***** Check for temp user *****/
             $().SPServices({

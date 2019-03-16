@@ -3,6 +3,7 @@
     "sharePointSiteUrl": "https://maximusukdev.sharepoint.com/sites/chda",
     "publishingScope": "Major",
     "authenticationType": "Digest",
+    "storeCredentials" : true,
     "remoteFolders": [
         "/Style Library/CSS",
         "/Style Library/JS",
@@ -13,5 +14,5 @@
         "/SitePages/",
         "/PublishingImages/"
     ],
-    "checkInMessage": "Published by %username%"
+    "checkInMessage": "Published by Jason Clark"
 }
