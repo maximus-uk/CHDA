@@ -12,8 +12,11 @@
         "_catalogs/masterpage/CHDA/CSS",
         "_catalogs/masterpage/CHDA/JS",
         "/SitePages/",
-        "PublishingImages/",
-        "/PublishingImages/*/**"
+        "/PublishingImages/",
+        "/PublishingImages/*/**",
+        "/PublishingImages/temp_slides/*",
+        "/PublishingImages/metrotiles/*",
+        "/PublishingImages/news/*"         
     ],
     "checkInMessage": "Published by Jason Clark"
 }
