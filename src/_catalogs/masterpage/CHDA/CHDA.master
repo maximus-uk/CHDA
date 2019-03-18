@@ -43,19 +43,18 @@
 	<SharePoint:ScriptLink language="javascript" name="sp.js" OnDemand="false" runat="server" LoadAfterUI="true" Localizable="false" />   
     <SharePoint:ScriptLink language="javascript" name="sp.taxonomy.js" OnDemand="false" runat="server" LoadAfterUI="true" Localizable="false" />
 
-    <script type="text/javascript" src="/_catalogs/masterpage/vendor/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="/_catalogs/masterpage/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/_catalogs/masterpage/vendor/jquery/jquery-ui.min.js"></script>	
-    <script type="text/javascript" src="/_catalogs/masterpage/vendor/jquery/jquery.SPServices.min.js"></script>		   
-    <script type="text/javascript" src="/_catalogs/masterpage/vendor/jquery/jquery.tickerNews.min.js"></script>
-    <script type="text/javascript" src="/_catalogs/masterpage/vendor/nivo/jquery.nivo.slider.js"></script> 
+    <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery-ui.min.js"></script>	
+    <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery.SPServices.min.js"></script>		   
+    <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery.tickerNews.min.js"></script>
 
     <%-- ***** STYLES ***** --%>
     <!-- ***** VENDOR ***** -->  
-    <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/vendor/fontawesome-free/css/fa-all.css" />
-    <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/vendor/fontawesome-free/css/fa-solid.css" />
-    <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/vendor/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/vendor/jquery/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk/vendor/fontawesome-free/css/fa-all.css" />
+    <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk/vendor/fontawesome-free/css/fa-solid.css" />
+    <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk/vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk/vendor/jquery/jquery-ui.min.css" />
     
     <!-- ***** MAX UK Core ***** -->
 	<link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk_sites/css/maxuk_corev15.css" />
