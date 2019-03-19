@@ -5,13 +5,14 @@ code files and pages for the SPO CHDA Intranet
 
 {
     "sourceDirectory": "src",
-    "sharePointSiteUrl": "https://maxukdevjc.sharepoint.com/sites/chda/",
-    "publishingScope": "SaveOnly",
+    "sharePointSiteUrl": "https://maximusukdev.sharepoint.com/sites/chda/",
+    "publishingScope": "Major",
     "authenticationType": "Digest",
+    "storeCredentials" : true,
     "remoteFolders": [
         "/Style Library/CSS",
         "/Style Library/JS",
-        "_catalogs/masterpage/CHDA/*",
+        "_catalogs/masterpage/CHDA/",
         "_catalogs/masterpage/CHDA/CSS",
         "_catalogs/masterpage/CHDA/JS",
         "/SitePages/",
