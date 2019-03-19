@@ -49,11 +49,7 @@
     <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery.SPServices.min.js"></script>		   
     <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery.tickerNews.min.js"></script>
 
-    <%-- ***** STYLES ***** --%>
-
-
-
-    
+    <%-- ***** STYLES ***** --%>   
     <!-- ***** VENDOR ***** -->  
     <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk/vendor/fontawesome-free/css/fa-all.css" />
     <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk/vendor/fontawesome-free/css/fa-solid.css" />
