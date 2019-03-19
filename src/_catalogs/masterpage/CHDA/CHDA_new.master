@@ -2,7 +2,7 @@
 
 This HTML file has been associated with a SharePoint Master Page (.master file) carrying the same name.  While the files remain associated, you will not be allowed to edit the .master file, and any rename, move, or deletion operations will be reciprocated.
 
-To build the master page directly from this HTML file, simply edit the page as you normally would.  Use the Snippet Generator at https://maxukdevjc.sharepoint.com/sites/CHDA/_layouts/15/ComponentHome.aspx?Url=https%3A%2F%2Fmaxukdevjc%2Esharepoint%2Ecom%2Fsites%2FCHDA%2F%5Fcatalogs%2Fmasterpage%2FCHDA%2FCHDA%5Fnew%2Emaster to create and customize useful SharePoint entities, then copy and paste them as HTML snippets into your HTML code.   All updates to this file will automatically sync to the associated Master Page.
+To build the master page directly from this HTML file, simply edit the page as you normally would.  Use the Snippet Generator at https://maximusukdev.sharepoint.com/sites/CHDA/_layouts/15/ComponentHome.aspx?Url=https%3A%2F%2Fmaximusukdev%2Esharepoint%2Ecom%2Fsites%2FCHDA%2F%5Fcatalogs%2Fmasterpage%2FCHDA%2FCHDA%5Fnew%2Emaster to create and customize useful SharePoint entities, then copy and paste them as HTML snippets into your HTML code.   All updates to this file will automatically sync to the associated Master Page.
 
  --%>
 <%@Master language="C#"%>
