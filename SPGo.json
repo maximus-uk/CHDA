@@ -1,7 +1,7 @@
 {
     "sourceDirectory": "src",
     "sharePointSiteUrl": "https://maximusukdev.sharepoint.com/sites/chda",
-    "publishingScope": "SaveOnly",
+    "publishingScope": "Major",
     "authenticationType": "Digest",
     "storeCredentials" : true,
     "remoteFolders": [

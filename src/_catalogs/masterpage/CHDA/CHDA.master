@@ -51,7 +51,7 @@
 
     <%-- ***** STYLES ***** --%>   
     <!-- ***** VENDOR ***** -->  
-    <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk/vendor/fontawesome-free/css/fa-all.css" />
+    <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk/vendor/fontawesome-free/css/all.min.css" />
     <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk/vendor/fontawesome-free/css/fa-solid.css" />
     <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk/vendor/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk/vendor/jquery/jquery-ui.min.css" />
