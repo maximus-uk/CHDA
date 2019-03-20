@@ -1,18 +1,23 @@
 {
     "sourceDirectory": "src",
     "sharePointSiteUrl": "https://maximusukdev.sharepoint.com/sites/chda",
-    "publishingScope": "Major",
+    "publishingScope": "SaveOnly",
     "authenticationType": "Digest",
     "storeCredentials" : true,
     "remoteFolders": [
         "/Style Library/CSS",
         "/Style Library/JS",
+        "_catalogs/lt/",
         "_catalogs/masterpage/CHDA/",
         "_catalogs/masterpage/CHDA/CSS",
         "_catalogs/masterpage/CHDA/JS",
         "_catalogs/masterpage/lt/",
         "/SitePages/",
-        "/PublishingImages/"
+        "/PublishingImages/",
+        "/PublishingImages/*/**",
+        "/PublishingImages/temp_slides/*",
+        "/PublishingImages/metrotiles/*",
+        "/PublishingImages/news/*"
     ],
     "checkInMessage": "Published by Jason Clark"
 }
