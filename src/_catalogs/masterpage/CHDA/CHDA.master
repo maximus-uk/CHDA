@@ -45,6 +45,7 @@
 
     <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/fontawesome-free/js/all.js"></script>	
     <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery-ui.min.js"></script>	
     <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery.SPServices.min.js"></script>		   
     <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery.tickerNews.min.js"></script>
@@ -52,7 +53,7 @@
     <%-- ***** STYLES ***** --%>   
     <!-- ***** VENDOR ***** -->  
     <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk/vendor/fontawesome-free/css/all.min.css" />
-    <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk/vendor/fontawesome-free/css/fa-solid.css" />
+    <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk/vendor/fontawesome-free/css/solid.min.css" />
     <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk/vendor/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk/vendor/jquery/jquery-ui.min.css" />
     
@@ -244,11 +245,12 @@
                                 &lt;div id=&quot;suiteBarButtons&quot;&gt;
 
                                     &lt;!-- Site Actions Cog Options --&gt;
+                                    
                                     &lt;span class=&quot;siteActions&quot; id=&quot;siteactiontd&quot;&gt;
                                         
                                         
 												    
-									    &lt;span style=&quot;display:none&quot;&gt;&lt;menu type=&#39;ServerMenu&#39; id=&quot;zz1_SiteActionsMenuMain&quot; hideicons=&quot;true&quot;&gt;&lt;ie:menuitem id=&quot;zz2_MenuItem_ShareThisSite&quot; type=&quot;option&quot; onMenuClick=&quot;EnsureScriptFunc(&amp;#39;sharing.js&amp;#39;, &amp;#39;DisplaySharedWithDialog&amp;#39;, function () { DisplaySharedWithDialog(&amp;#39;\u002f&amp;#39;); })&quot; menuGroupId=&quot;100&quot;&gt;&lt;/ie:menuitem&gt;
+									    &lt;span style=&quot;display:inherit&quot;&gt;&lt;menu type=&#39;ServerMenu&#39; id=&quot;zz1_SiteActionsMenuMain&quot; hideicons=&quot;true&quot;&gt;&lt;ie:menuitem id=&quot;zz2_MenuItem_ShareThisSite&quot; type=&quot;option&quot; onMenuClick=&quot;EnsureScriptFunc(&amp;#39;sharing.js&amp;#39;, &amp;#39;DisplaySharedWithDialog&amp;#39;, function () { DisplaySharedWithDialog(&amp;#39;\u002f&amp;#39;); })&quot; menuGroupId=&quot;100&quot;&gt;&lt;/ie:menuitem&gt;
 	&lt;ie:menuitem id=&quot;zz3_MenuItem_ViewAllSiteContents&quot; type=&quot;option&quot; iconSrc=&quot;/_layouts/15/images/allcontent32.png?rev=23&quot; onMenuClick=&quot;STSNavigate2(event,&amp;#39;/_layouts/15/viewlsts.aspx&amp;#39;);&quot; menuGroupId=&quot;200&quot;&gt;&lt;/ie:menuitem&gt;
 	&lt;ie:menuitem id=&quot;zz4_MenuItem_Settings&quot; type=&quot;option&quot; iconSrc=&quot;/_layouts/15/images/settingsIcon.png?rev=23&quot; onMenuClick=&quot;GoToPage(&amp;#39;\u002f_layouts\u002f15\u002fsettings.aspx&amp;#39;)&quot; menuGroupId=&quot;300&quot;&gt;&lt;/ie:menuitem&gt;
 	&lt;/menu&gt;&lt;/span&gt;&lt;span id=&quot;zz5_SiteActionsMenu_t&quot; class=&quot;ms-siteactions-normal&quot; title=&quot;Settings&quot; onmouseover=&quot;MMU_PopMenuIfShowing(this);MMU_EcbTableMouseOverOut(this, true)&quot; hoveractive=&quot;ms-siteactions-normal ms-siteactions-hover&quot; hoverinactive=&quot;ms-siteactions-normal&quot; onclick=&quot; CoreInvoke(&#39;MMU_Open&#39;,byid(&#39;&#39;), MMU_GetMenuFromClientId(&#39;zz5_SiteActionsMenu&#39;),event,true, null, 0); return false;&quot; foa=&quot;MMU_GetMenuFromClientId(&#39;zz5_SiteActionsMenu&#39;)&quot; oncontextmenu=&quot;ClkElmt(this); return false;&quot;&gt;&lt;a class=&quot;ms-core-menu-root&quot; id=&quot;zz5_SiteActionsMenu&quot; href=&quot;javascript:;&quot; title=&quot;Settings&quot; onkeydown=&quot;MMU_EcbLinkOnKeyDown(byid(&#39;&#39;), MMU_GetMenuFromClientId(&#39;zz5_SiteActionsMenu&#39;));&quot; menutokenvalues=&quot;MENUCLIENTID=zz5_SiteActionsMenu,TEMPLATECLIENTID=zz1_SiteActionsMenuMain&quot; serverclientid=&quot;zz5_SiteActionsMenu&quot;&gt;&lt;span class=&quot;ms-siteactions-imgspan&quot;&gt;&lt;img class=&quot;ms-core-menu-buttonIcon&quot; src=&quot;/PublishingImages/cog_32x32.png?rev=23&quot; alt=&quot;Settings&quot; title=&quot;Settings&quot; /&gt;&lt;/span&gt;&lt;span class=&#39;ms-accessible&#39;&gt;Use SHIFT+ENTER to open the menu (new window).&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;                                        
@@ -266,7 +268,7 @@
                                         <SharePoint:SiteActions runat="server" accesskey="<%$Resources:wss,tb_SiteActions_AK%>" id="SiteActionsMenuMain"
                                                                 PrefixHtml=""
                                                                 SuffixHtml=""
-                                                                ImageUrl=""
+                                                                ImageUrl="/PublishingImages/cog_32x32.png"
                                                                 ThemeKey="spcommon"
                                                                 MenuAlignment="Right"
                                                                 MenuNotVisibleHtml="&amp;nbsp;"
@@ -402,7 +404,7 @@
                                             <div class="card" id="usefulLinksGroup2">
                                                 <a class="accordion-toggle" data-toggle="collapse" href="#group2" style="text-decoration:none">
                                                     <div class="card-header">
-                                                        <strong id="groupTitle2"></strong>
+                                                        <strong id="groupTitle2"></strong>                                                        
                                                     </div>
                                                 </a>
                                                 <div id="group2" class="collapse" data-parent="#accordion">
