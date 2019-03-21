@@ -261,19 +261,21 @@
 
                                 <div id="suiteBarButtons">
 
-                                    <!-- Site Actions Cog Options /PublishingImages/cog_32x32.png-->
-                                    
-                                    <span class="siteActions" id="siteactiontd">
-                                        
+                                    <!-- Site Actions Cog Options /PublishingImages/cog_32x32.png
+                                    <div class="customCog"><i class="fa fa-cog"></i></div>-->
+                                    <div class="siteActions" id="siteactiontd">
+                                         
                                         <SharePoint:SiteActions runat="server" accesskey="<%$Resources:wss,tb_SiteActions_AK%>" id="SiteActionsMenuMain"
                                                                 PrefixHtml=""
                                                                 SuffixHtml=""
                                                                 ImageUrl="/PublishingImages/cog_32x32.png"
                                                                 ThemeKey="spcommon"
                                                                 MenuAlignment="Right"
-                                                                MenuNotVisibleHtml="&amp;nbsp;"
-                                                                LargeIconMode="false"><CustomTemplate>
-												    <SharePoint:FeatureMenuTemplate runat="server"
+                                                                MenuNotVisibleHtml=""
+                                                                LargeIconMode="false">
+                                            
+                                            <CustomTemplate>
+                                                <SharePoint:FeatureMenuTemplate runat="server"
                                                                                 FeatureScope="Site"
                                                                                 Location="Microsoft.SharePoint.StandardMenu"
                                                                                 GroupId="SiteActions"
@@ -324,9 +326,11 @@
                                                                                     UseShortId="true"
                                                                                     ClientOnClickScript="var mswlh = window.location.href; if (mswlh.indexOf('?')==-1) { window.location = mswlh + '?mobile=1'; } else { window.location = mswlh + '&mobile=1'; }" />
                                                 </SharePoint:FeatureMenuTemplate>
-									    </CustomTemplate>
-                                        </SharePoint:SiteActions>                                        
-                                    </span>
+									        </CustomTemplate>
+                                        </SharePoint:SiteActions>
+                                                                               
+                                    </div>
+                                    
                                 </div>
                             </SharePoint:AjaxDelta>
 
