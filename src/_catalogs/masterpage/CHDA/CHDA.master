@@ -49,6 +49,7 @@
     <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery-ui.min.js"></script>	
     <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery.SPServices.min.js"></script>		   
     <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery.tickerNews.min.js"></script>
+    <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/AngularJS/angularjs.min.js"></script>
 
     <%-- ***** STYLES ***** --%>   
     <!-- ***** VENDOR ***** -->  
@@ -110,7 +111,7 @@
     </style>
 </head>
 
-<body>
+<body ng-app="chdaApp">
 
     <SharePoint:SPClientIDGenerator runat="server" ServerControlID="DeltaPlaceHolderMain;DeltaPlaceHolderPageTitleInTitleArea;DeltaPlaceHolderUtilityContent" />
     <SharePoint:ImageLink runat="server" />
@@ -368,7 +369,7 @@
                             <!-- *********************** -->
                             <!-- **** Left Section ***** -->
                             <!-- *********************** -->	    
-                            <div class="col-9 pageLeftContainer"> 
+                            <div class="col-9 pageLeftContainer" ng-controller="leftContainer"> 
 
                                 <!-- ***** Slideshow ***** -->
                                 <div id="slideshow"></div>
