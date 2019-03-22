@@ -565,7 +565,7 @@
                 headers: { "Accept": "application/json; odata=verbose" },
                 success: function (data) {
                     siteTitle = data.d.Title;
-                   
+
                     if (siteTitle == "CHDA Intranet") {
                         getLinkData(siteURL,'Home');
                     } else {
