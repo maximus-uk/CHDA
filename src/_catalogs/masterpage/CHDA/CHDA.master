@@ -58,8 +58,9 @@
     <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk/vendor/jquery/jquery-ui.min.css" />
     
     <!-- ***** MAX UK Core ***** -->
-	<link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk_sites/css/maxuk_corev15.css" />
+    <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk_sites/css/maxuk_corev15.css" />
     <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk_sites/css/maxuksites.css" /> 
+    <link rel="stylesheet" type="text/css" href="/sites/chda/_catalogs/masterpage/chda/css/chda.css" /> 
     <link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/custom.css" />
     
     <!-- Add-In Apps -->
@@ -371,7 +372,10 @@
 
                                 <!-- ***** Slideshow ***** -->
                                 <div id="slideshow"></div>
-                                
+
+                                <!-- ***** Site welcome text for team front door pages ***** -->
+                                <div id="siteWelcomeText"></div>
+
                             </div>  <!-- End Left Section -->
 
                             <!-- ************************* -->
@@ -488,7 +492,7 @@
         </SharePoint:SharePointForm>
 <asp:ContentPlaceHolder id="PlaceHolderUtilityContent" runat="server" />    
 
-    <!-- **** The scripts below can be anywhere on the site collection, but please use the Style Library as the default **** -->
+    <!-- **** Custom App Scripts **** -->
     <script type="text/javascript" src="/Style%20Library/maxuk/js/siteLinks.js"></script> 
     <script type="text/javascript" src="/Style%20Library/maxuk/js/siteContacts.js"></script>
     <script type="text/javascript" src="/Style%20Library/maxuk/js/siteMessages.js"></script>  
