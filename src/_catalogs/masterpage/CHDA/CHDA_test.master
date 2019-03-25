@@ -2,7 +2,7 @@
 
 This HTML file has been associated with a SharePoint Master Page (.master file) carrying the same name.  While the files remain associated, you will not be allowed to edit the .master file, and any rename, move, or deletion operations will be reciprocated.
 
-To build the master page directly from this HTML file, simply edit the page as you normally would.  Use the Snippet Generator at https://maximusukdev.sharepoint.com/sites/CHDA/_layouts/15/ComponentHome.aspx?Url=https%3A%2F%2Fmaximusukdev%2Esharepoint%2Ecom%2Fsites%2FCHDA%2F%5Fcatalogs%2Fmasterpage%2FCHDA%2FCHDA%2Emaster to create and customize useful SharePoint entities, then copy and paste them as HTML snippets into your HTML code.   All updates to this file will automatically sync to the associated Master Page.
+To build the master page directly from this HTML file, simply edit the page as you normally would.  Use the Snippet Generator at https://maximusukdev.sharepoint.com/sites/CHDA/_layouts/15/ComponentHome.aspx?Url=https%3A%2F%2Fmaximusukdev%2Esharepoint%2Ecom%2Fsites%2FCHDA%2F%5Fcatalogs%2Fmasterpage%2FCHDA%2FCHDA%5Ftest%2Emaster to create and customize useful SharePoint entities, then copy and paste them as HTML snippets into your HTML code.   All updates to this file will automatically sync to the associated Master Page.
 
  --%>
 <%@Master language="C#"%>
@@ -103,20 +103,20 @@ To build the master page directly from this HTML file, simply edit the page as y
         <link rel="stylesheet" media="screen and (min-width: 2601px) and (max-width:3000px)" href="/Style%20Library/maxuk/css/custom_(2601-3000).css" />
         <link rel="stylesheet" media="screen and (min-width: 3001px)" href="/Style%20Library/maxuk/css/custom_3001.css" />
         <style type="text/css">//<![CDATA[
-        .ms-cui-tt {visibility: hidden;}
-        .carousel-indicators li {background-color:#545487;}
-        .carousel-caption {background-color:#7676b8; opacity: .6;}
-        /* Safari */
-        @-webkit-keyframes spin {
-          0% { -webkit-transform: rotate(0deg); }
-          100% { -webkit-transform: rotate(360deg); }
-        }
+            .ms-cui-tt {visibility: hidden;}
+            .carousel-indicators li {background-color:#545487;}
+            .carousel-caption {background-color:#7676b8; opacity: .6;}
 
-        @keyframes spin {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
-        }
-    
+            /* Safari */
+            @-webkit-keyframes spin {
+                0% { -webkit-transform: rotate(0deg); }
+                100% { -webkit-transform: rotate(360deg); }
+            }
+
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
         
         //]]></style>
         </head>
@@ -126,6 +126,22 @@ To build the master page directly from this HTML file, simply edit the page as y
                 <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 headerLeftContainer">
                     <!-- ***** CHDA Logo ***** -->
                     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 pageLogo">
+                        <div data-name="SiteLogo">
+                            
+                            
+                            <SharePoint:AjaxDelta BlockElement="true" runat="server">
+                                
+                                <SharePoint:SPSimpleSiteLink CssClass="ms-siteicon-a" runat="server" ID="xaed88f3a5f2d4bbcaaa62dc48ca9ba7d">
+                                    
+                                    <SharePoint:SiteLogoImage CssClass="ms-siteicon-img" name="onetidHeadbnnr0" ID="x6d23369ff50d43dfa56f336d32224626" LogoImageUrl="/_layouts/15/images/siteIcon.png" runat="server">
+                                        
+                                    </SharePoint:SiteLogoImage>
+                                    
+                                </SharePoint:SPSimpleSiteLink>
+                                
+                            </SharePoint:AjaxDelta>
+                            
+                        </div>
                     </div>
                     <!-- ***** Top Navigation ***** -->
                     <div class="col-sm-10 col-md-10 col-lg-10 col-xs-10 nav-section">
@@ -135,30 +151,9 @@ To build the master page directly from this HTML file, simply edit the page as y
                                 <span class="navbar-toggler-icon">
                                 </span>
                             </button>
-                            <div class="collapse navbar-collapse" id="chdaNavbarCollapse">
-                                <!-- Metadata navbar code goes here -->
-                                <div class="nav navbar-nav" data-name="TopNavigationNoFlyoutWithStartNode">
-                                    
-                                    
-                                    <SharePoint:AjaxDelta runat="server" CssClass="ms-displayInline ms-core-navigation ms-dialogHidden" BackColor="#7676B8" BorderColor="" BorderStyle="None" BlockElement="True" ID="DeltaTopNavigation">
-                                        
-                                        <SharePoint:DelegateControl runat="server" Id="topNavigationDelegate" ControlId="TopNavigationDataSource">
-                                            
-                                            <Template_Controls>
-                                                <asp:SiteMapDataSource ShowStartingNode="True" SiteMapProvider="SPNavigationProvider" ID="topSiteMap" runat="server" StartingNodeUrl="sid:1002">
-                                                </asp:SiteMapDataSource>
-                                            </Template_Controls>
-                                        </SharePoint:DelegateControl>
-                                        <a name="startNavigation">
-                                        </a>
-                                        <asp:ContentPlaceHolder ID="PlaceHolderTopNavBar" runat="server">
-                                            <SharePoint:AspMenu runat="server" UseSeparateCss="false" AdjustForShowStartingNode="True" StaticDisplayLevels="3" AccessKey="1" SkipLinkText="" ForeColor="#545487" IncludeStyleBlock="False" ItemWrap="True" EnableViewState="False" MaximumDynamicDisplayLevels="0" UseSimpleRendering="True" DataSourceID="topSiteMap" Orientation="Horizontal" ID="TopNavigationMenu">
-                                                
-                                            </SharePoint:AspMenu>
-                                        </asp:ContentPlaceHolder>
-                                        
-                                    </SharePoint:AjaxDelta>
-                                    
+                            <div class="collapsed navbar-collapse" id="chdaNavbarCollapse">
+                                <div class="nav navbar-nav">
+                                    <!-- Metadata navbar code goes here -->
                                 </div>
                             </div>
                         </nav>
@@ -170,6 +165,7 @@ To build the master page directly from this HTML file, simply edit the page as y
                     </div>
                 </div>
                 <!-- ***** End Header Left Container ***** -->
+                
                 <!-- ***** Header Right Container ***** -->
                 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 headerRightContainer">
                     <!-- ***** Search Box ***** -->
@@ -241,8 +237,6 @@ To build the master page directly from this HTML file, simply edit the page as y
                             
                             <SharePoint:AjaxDelta ID="DeltaPlaceHolderMain" IsMainContent="true" runat="server">
                                 <asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server">
-                                    <div class="DefaultContentBlock" style="border:medium black solid; background:yellow; color:black; margin:20px; padding:10px;">
-                                    </div>
                                 </asp:ContentPlaceHolder>
                             </SharePoint:AjaxDelta>
                             
@@ -252,7 +246,9 @@ To build the master page directly from this HTML file, simply edit the page as y
                 </div>
                 <!-- end Main Container -->
             </div>
+            <!-- end Body Container -->
         </div>
+        <!-- end Workspace -->
         <!-- ***** SCRIPTS ***** -->
         <!-- ***** Core Vendor Scripts ***** -->
         <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery.min.js">//<![CDATA[
@@ -294,8 +290,166 @@ To build the master page directly from this HTML file, simply edit the page as y
         //]]></script>
         <script type="text/javascript">//<![CDATA[
 
+            var context;
+            var web;
+            var submitHook = function () { return false; };				
+            var siteURL = _spPageContextInfo.webAbsoluteUrl;
+            var domainURL = siteURL.split("/")[2];	     
+            var isAdmin = false;	  
+            var userName = "";
 
+            theForm._spOldSubmit = theForm.submit; theForm.submit = function () {
+                if (!submitHook()) { this._spOldSubmit(); }
+            };
+
+            $(function () {
+
+                SP.SOD.executeFunc('sp.js', 'SP.ClientContext', sharePointReady);
+
+                var sWidth = screen.width;
+                var sHeight = screen.height;
+                var dHeight = $(document).height();
+                var dWidth = $(document).width();
+                console.log('Screen Height :' + sHeight + ' Screen Width :'+ sWidth);
+                console.log('Document Height :' + dHeight + ' Document Width :' + dWidth);
+
+                $('#pageLoader').addClass('hidden');
+                $('#pageContent').removeClass('hidden');
+
+                getTiles(siteURL);
+
+                /***** Check for temp user *****/
+                $().SPServices({
+                    operation: "GetGroupCollectionFromUser",
+                    userLoginName: $().SPServices.SPGetCurrentUser(),
+                    async: false,
+                    completefunc: function (xData, Status) {
+
+                        /*If the current User does belong to a specific group*/
+                        if ($(xData.responseXML).find("Group[Name='CHDA Intranet Visitors']").length === 1) {
+                            var agreement = getCookie();
+
+                            /***** remove search function *****/
+                            /*$('#search').addClass('hidden');*/
+                            var disclaimURL = 'https://'+ domainURL + '/SitePages/disclaimer.html';
+                            /*alert(disclaimURL);*/
+
+                            /*checks for cookie and displays disclaimer alert if new user*/
+                            if (agreement === "") {
+                                window.open(disclaimURL, '_self', 'toolbar=no,status=no,titlebar=no,scrollbars=no');
+                            }
+
+                            $('#custom-bootstrap-menu ul li:nth-child(4) ul li:nth-child(3)').addClass('hidden');
+                            /*$('#mainWindow').removeClass('hidden');*/                                                      
+                            $('#restrictApp').removeClass('hidden');	
+                                
+                            console.log('Danger Will Robinson! temp user logged in');
+                        }
+                    }
+                }); 
+
+                $.ajax({
+                    url: siteURL + "/_api/web/title",
+                    method: "GET",
+                    headers: { "Accept": "application/json; odata=verbose" },
+                    success: function (data) {
+                        siteTitle = data.d.Title;
+
+                        if (siteTitle == "CHDA Intranet") {
+                            getLinkData(siteURL,'Home');
+                        } else {
+                            getLinkData(siteURL, siteTitle);
+                            getContacts(siteURL, 'Contacts');
+                        }
+                    },
+                    error: function (data) {
+                        console.log("Error: " + data);
+                    }
+                });
+
+                console.log('DOM ready from Master page');
+
+            });
+
+            /***** Load SharePoint ClientContext */
+            function sharePointReady() {
+                try {
+
+                    getMessages();
+                    console.log("getting important messages");
+
+                    var timer = !1;
+                    _Ticker = $("#messages").newsTicker();
+                    _Ticker.on("mouseenter", function () {
+                        var __self = this;
+                        timer = setTimeout(function () {
+                            __self.pauseTicker();
+                        }, 200);
+                    });
+                    _Ticker.on("mouseleave", function () {
+                        clearTimeout(timer);
+                        if (!timer) return !1;
+                        this.startTicker();
+                    });
+
+                    context = new SP.ClientContext.get_current();
+                    web = context.get_web();  
+
+                    /***** Get name of user from SharePoint user profile service and display on screen*/
+                    getCurrentUser();                                             
+                    console.log('SharePoint ready from Master page');
+                }
+                catch (err) { console.log(err); }
+            }
+
+            /*gets the Cookie if it exists*/
+            function getCookie() {
+                if (document.cookie.length > 0) {
+                    c_name = "PartnerAgreement";
+                    c_start = document.cookie.indexOf(c_name + "=")
+
+                    if (c_start !== -1) {
+                        c_start = c_start + c_name.length + 1
+                        c_end = document.cookie.indexOf(";", c_start)
+                        if (c_end === -1) { c_end = document.cookie.length }
+                        return agreement = unescape(document.cookie.substring(c_start, c_end))
+                    }
+                }           
+                return "";
+            }
+
+            function testResponsive() {
+
+                var resolutions = [1200, 1250, 1300, 1350, 1400, 1450, 1500, 1550, 1600, 1650, 1700, 1750, 1800, 1850, 1900, 1920, 1950, 2000, 2050, 2100, 2150, 2200, 2300, 2400, 2500, 2600, 2700, 2800];
+
+                var dHeight = screen.height;
+                for (var i = 0; i < resolutions.length; i++) {
+                    var dWidth = resolutions[i];
+                    
+                    window.setTimeout(resizeWindow(dWidth,dHeight), 3000);
+                }
+            }
+
+            function resizeWindow(dWidth,dHeight) {
+                window.resizeTo(dWidth, dHeight);
+                alert('Testing Screen Resolution - Height :' + dHeight + ' x Width :' + dWidth);
+            }
+
+            function getCurrentUser() {
+
+                /***** Get first name of user from SharePoint user profile service and display on screen*/
+                var userName = $().SPServices.SPGetCurrentUser({
+                    fieldName: 'FirstName',
+                    debug: false
+                });
+
+                var userID = _spPageContextInfo.userId;
+                $("#welcomeMsg").append("Welcome " + "<a href='" + siteURL + "/my/'>" + userName + "</a>"); 
+            }
+
+            
+        
         
         //]]></script>
-    <SharePoint:AjaxDelta id="DeltaFormDigest" BlockElement="true" runat="server"><asp:ContentPlaceHolder id="PlaceHolderFormDigest" runat="server"><SharePoint:formdigest runat="server" /></asp:ContentPlaceHolder></SharePoint:AjaxDelta></SharePoint:SharePointForm><SharePoint:AjaxDelta id="DeltaPlaceHolderUtilityContent" runat="server"><asp:ContentPlaceHolder id="PlaceHolderUtilityContent" runat="server" /></SharePoint:AjaxDelta><asp:ContentPlaceHolder id="PlaceHolderTitleAreaClass" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleBreadcrumb" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderGlobalNavigationSiteMap" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderGlobalNavigation" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderSearchArea" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftNavBar" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderHorizontalNav" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftNavBarDataSource" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderCalendarNavigator" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftActions" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftNavBarTop" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderSiteName" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderPageDescription" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderPageImage" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleLeftBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderMiniConsole" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleRightMargin" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleAreaSeparator" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderNavSpacer" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftNavBarBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderBodyLeftBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderBodyRightMargin" Visible="False" runat="server" /><asp:ContentPlaceHolder id="WSSDesignConsole" Visible="False" runat="server" /><asp:ContentPlaceHolder id="SPNavigation" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderQuickLaunchTop" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderQuickLaunchBottom" Visible="False" runat="server" /></body>
+    <SharePoint:AjaxDelta id="DeltaFormDigest" BlockElement="true" runat="server"><asp:ContentPlaceHolder id="PlaceHolderFormDigest" runat="server"><SharePoint:formdigest runat="server" /></asp:ContentPlaceHolder></SharePoint:AjaxDelta></SharePoint:SharePointForm><SharePoint:AjaxDelta id="DeltaPlaceHolderUtilityContent" runat="server"><asp:ContentPlaceHolder id="PlaceHolderUtilityContent" runat="server" /></SharePoint:AjaxDelta><asp:ContentPlaceHolder id="PlaceHolderTitleAreaClass" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleBreadcrumb" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderGlobalNavigationSiteMap" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderGlobalNavigation" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderSearchArea" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftNavBar" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderHorizontalNav" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTopNavBar" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftNavBarDataSource" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderCalendarNavigator" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftActions" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftNavBarTop" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderSiteName" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderPageDescription" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderPageImage" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleLeftBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderMiniConsole" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleRightMargin" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleAreaSeparator" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderNavSpacer" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftNavBarBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderBodyLeftBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderBodyRightMargin" Visible="False" runat="server" /><asp:ContentPlaceHolder id="WSSDesignConsole" Visible="False" runat="server" /><asp:ContentPlaceHolder id="SPNavigation" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderQuickLaunchTop" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderQuickLaunchBottom" Visible="False" runat="server" /></body>
 </SharePoint:SPHtmlTag>

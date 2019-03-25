@@ -345,7 +345,8 @@
                 <div id="s4-bodyContainer">
 
                     <!-- ***** Main Content Container ***** -->
-                    <div class="container-fluid mainContainer">						
+                    <div class="container-fluid mainContainer">	
+                        					
                         <div class="row notifications hidden" id="notifications">                                              		                    	
                             <div class="TickerNews" id="messages">
                                 <div class="ti_wrapper">
@@ -369,13 +370,17 @@
                             <!-- *********************** -->
                             <!-- **** Left Section ***** -->
                             <!-- *********************** -->	    
-                            <div class="col-9 pageLeftContainer" ng-controller="leftContainer"> 
+                            <div class="col-9 pageLeftContainer" id="#pageLeftContainer"> 
 
                                 <!-- ***** Slideshow ***** -->
                                 <div id="slideshow"></div>
 
                                 <!-- ***** Site welcome text for team front door pages ***** -->
                                 <div id="siteWelcomeText"></div>
+
+                                <!-- ***** Page Content ***** -->
+                                <div id="newContent"></div>
+                                <asp:ContentPlaceHolder id="PlaceHolderPageContent" runat="server"></asp:ContentPlaceHolder>
 
                             </div>  <!-- End Left Section -->
 
@@ -509,7 +514,8 @@
         var domainURL = siteURL.split("/")[2];	     
         var isAdmin = false;	  
         var userName = "";
-        
+        var contentCode;
+
         theForm._spOldSubmit = theForm.submit; theForm.submit = function () {
             if (!submitHook()) { this._spOldSubmit(); }
         };
@@ -518,6 +524,8 @@
 
             SP.SOD.executeFunc('sp.js', 'SP.ClientContext', sharePointReady);
 
+            $('#newContent').append(contentCode);
+            
             var sWidth = screen.width;
             var sHeight = screen.height;
             var dHeight = $(document).height();

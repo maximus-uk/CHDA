@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" masterpagefile="../_catalogs/masterpage/chda/chda.master" inherits="Microsoft.SharePoint.WebPartPages.WebPartPage, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" meta:progid="SharePoint.WebPartPage.Document" %>
+﻿<%@ Page Language="C#" masterpagefile="../_catalogs/masterpage/CHDA/CHDA.master" inherits="Microsoft.SharePoint.WebPartPages.WebPartPage, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" meta:progid="SharePoint.WebPartPage.Document" %>
 <%@ Register tagprefix="SharePoint" namespace="Microsoft.SharePoint.WebControls" assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
 
 <%-- **************************************************
@@ -39,14 +39,16 @@
 
 </asp:Content>
 
+<%-- ***** For code to be added within the page body but not content for the left container ***** --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderMain" runat="server">  
-    
+
     <!-- SCRIPTS -->
     <script type="text/javascript" src="/Style%20Library/maxuk/js/siteSlider.js"></script>
     <script type="text/javascript"> 	            
 
-        $(function () {
+        $(function(){
             //getLinkData('Home'); 
+                
             $('#slideshow').append('<div class="carousel slide" id="slideshowApp" data-ride="carousel">' +                                    
                                 '<div class="carousel-inner">' +
                                     '<div id="slideItems"></div>'+
@@ -63,7 +65,10 @@
                                 '</div>'+	
                             '</div>');            
 
-            getSlideData();        
+            getSlideData();
+            
+            //contentCode=$("#thisContent").html();
+
         });
         
         $(window).on('load',function () {           					 	                 	
@@ -71,3 +76,9 @@
 
     </script>
 </asp:Content>                      
+
+<%-- ***** For content to be added to the left container ***** --%>
+<asp:Content ContentPlaceHolderID="PlaceHolderPageContent" runat="server"> 
+    <div id="thisContent">
+    </div>
+</asp:Content>

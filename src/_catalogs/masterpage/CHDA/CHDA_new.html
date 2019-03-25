@@ -2,20 +2,20 @@
 
 This HTML file has been associated with a SharePoint Master Page (.master file) carrying the same name.  While the files remain associated, you will not be allowed to edit the .master file, and any rename, move, or deletion operations will be reciprocated.
 
-To build the master page directly from this HTML file, simply edit the page as you normally would.  Use the Snippet Generator at https://maximusukdev.sharepoint.com/sites/CHDA/_layouts/15/ComponentHome.aspx?Url=https%3A%2F%2Fmaximusukdev%2Esharepoint%2Ecom%2Fsites%2FCHDA%2F%5Fcatalogs%2Fmasterpage%2FCHDA%2FCHDA%5Fnew%2Emaster to create and customize useful SharePoint entities, then copy and paste them as HTML snippets into your HTML code.   All updates to this file will automatically sync to the associated Master Page.
+To build the master page directly from this HTML file, simply edit the page as you normally would.  Use the Snippet Generator at https://maximusukdev.sharepoint.com/sites/CHDA/_layouts/15/ComponentHome.aspx?Url=https%3A%2F%2Fmaximusukdev%2Esharepoint%2Ecom%2Fsites%2FCHDA%2F%5Fcatalogs%2Fmasterpage%2FCHDA%2FCHDA%2Emaster to create and customize useful SharePoint entities, then copy and paste them as HTML snippets into your HTML code.   All updates to this file will automatically sync to the associated Master Page.
 
 -->
-<!DOCTYPE html[]>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"[]>
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
     <head>
-        <meta http-equiv="X-UA-Compatible" content="IE=10" xmlns="" />
+        <meta http-equiv="X-UA-Compatible" content="IE=10" />
         <!--CS: Start Page Head Contents Snippet-->
         <!--SPM:<%@Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
         <!--SPM:<%@Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
         <!--SID:00 -->
-        <meta name="GENERATOR" content="Microsoft SharePoint" xmlns="" />
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8" xmlns="" />
-        <meta http-equiv="Expires" content="0" xmlns="" />
+        <meta name="GENERATOR" content="Microsoft SharePoint" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Expires" content="0" />
         <!--MS:<SharePoint:RobotsMetaTag runat="server">-->
         <!--ME:</SharePoint:RobotsMetaTag>-->
         <!--MS:<SharePoint:PageTitle runat="server">-->
@@ -61,102 +61,296 @@ To build the master page directly from this HTML file, simply edit the page as y
             <!--ME:</WebPartPages:SPWebPartManager>-->
         <!--ME:</SharePoint:AjaxDelta>-->
         <!--CE: End Page Head Contents Snippet-->
-        <meta charset="utf-8" />
-        <!--DC:CHDA Intranet-->
-        <!-- STYLES -->
+        <!-- ***** STYLES ***** -->
+        <!-- ***** MAX UK Core ***** -->
+        <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk_sites/css/maxuk_corev15.css" />
+        <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk_sites/css/maxuksites.css" />
+        <link rel="stylesheet" type="text/css" href="/sites/chda/_catalogs/masterpage/chda/css/chda.css" />
+        <link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/custom.css" />
+        <!-- ***** VENDOR ***** -->
+        <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk/vendor/fontawesome-free/css/all.min.css" />
+        <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk/vendor/fontawesome-free/css/solid.min.css" />
+        <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk/vendor/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk/vendor/jquery/jquery-ui.min.css" />
+        <!-- Add-In Apps -->
+        <link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/metrotiles.css" />
+        <link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/EventCalendar.css" />
+        <link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/EventListing.css" />
+        <!-- ***** Chrome Resolution CSS files ***** -->
+        <link rel="stylesheet" media="screen and (-webkit-min-device-pixel-ratio:0), screen and (-webkit-min-device-pixel-ratio:1), screen and (-webkit-min-device-pixel-ratio:2)" href="/Style%20Library/maxuk/css/custom_Chrome.css" />
+        <!-- ***** Small Resolution CSS files ***** -->
+        <link rel="stylesheet" media="screen and (max-width:1200px)" href="/Style%20Library/maxuk/css/custom_smlScreen.css" />
+        <!-- ***** Medium Resolution CSS files ***** -->
+        <link rel="stylesheet" media="screen and (min-width: 1201px) and (max-width:1280px)" href="/Style%20Library/maxuk/css/custom_(1201-1280).css" />
+        <link rel="stylesheet" media="screen and (min-width: 1281px) and (max-width:1399px)" href="/Style%20Library/maxuk/css/custom_(1281-1399).css" />
+        <link rel="stylesheet" media="screen and (min-width: 1400px) and (max-width:1600px)" href="/Style%20Library/maxuk/css/custom_(1400-1600).css" />
+        <!-- ***** Large Resolution CSS files ***** -->
+        <link rel="stylesheet" media="screen and (min-width: 1601px) and (max-width:1749px)" href="/Style%20Library/maxuk/css/custom_(1601-1749).css" />
+        <link rel="stylesheet" media="screen and (min-width: 1750px) and (max-width:1918px)" href="/Style%20Library/maxuk/css/custom_(1750-1918).css" />
+        <link rel="stylesheet" media="screen and (min-width: 1919px) and (max-width:1921px)" href="/Style%20Library/maxuk/css/custom_1920.css" />
+        <link rel="stylesheet" media="screen and (min-width: 1922px) and (max-width:1999px)" href="/Style%20Library/maxuk/css/custom_(1922-1999).css" />
+        <link rel="stylesheet" media="screen and (min-width: 2000px) and (max-width:2199px)" href="/Style%20Library/maxuk/css/custom_(2000-2199).css" />
+        <link rel="stylesheet" media="screen and (min-width: 2200px) and (max-width:2399px)" href="/Style%20Library/maxuk/css/custom_(2200-2399).css" />
+        <link rel="stylesheet" media="screen and (min-width: 2400px) and (max-width:2499px)" href="/Style%20Library/maxuk/css/custom_(2400-2499).css" />
+        <link rel="stylesheet" media="screen and (min-width: 2500px) and (max-width:2600px)" href="/Style%20Library/maxuk/css/custom_(2500-2600).css" />
+        <!-- ***** Very Big Resolution CSS files ***** -->
+        <link rel="stylesheet" media="screen and (min-width: 2601px) and (max-width:3000px)" href="/Style%20Library/maxuk/css/custom_(2601-3000).css" />
+        <link rel="stylesheet" media="screen and (min-width: 3001px)" href="/Style%20Library/maxuk/css/custom_3001.css" />
+        <style type="text/css">//<![CDATA[
+        .ms-cui-tt {visibility: hidden;}
+        .carousel-indicators li {background-color:#545487;}
+        .carousel-caption {background-color:#7676b8; opacity: .6;}
+        /* Safari */
+        @-webkit-keyframes spin {
+          0% { -webkit-transform: rotate(0deg); }
+          100% { -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+    
+        
+        //]]>
+        </style>
         <!--[if gte mso 9]><xml>
 <mso:CustomDocumentProperties>
-<mso:_dlc_DocId msdt:dt="string">R63XEAHEVNT7-260023175-2224</mso:_dlc_DocId>
-<mso:_dlc_DocIdItemGuid msdt:dt="string">b76c92d7-c9e3-42de-91cc-b9d7804fa69e</mso:_dlc_DocIdItemGuid>
-<mso:_dlc_DocIdUrl msdt:dt="string">https://maximusukdev.sharepoint.com/sites/CHDA/_layouts/15/DocIdRedir.aspx?ID=R63XEAHEVNT7-260023175-2224, R63XEAHEVNT7-260023175-2224</mso:_dlc_DocIdUrl>
-<mso:ContentTypeId msdt:dt="string">0x0101000F1C8B9E0EB4BE489F09807B2C53288F0054AD6EF48B9F7B45A142F8173F171BD10003D357F861E29844953D5CAA1D4D8A3A</mso:ContentTypeId>
-<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
-<mso:HtmlDesignFromMaster msdt:dt="string">https://maximusukdev.sharepoint.com/sites/CHDA/_catalogs/masterpage/CHDA/CHDA_new.html, https://maximusukdev.sharepoint.com/sites/CHDA/_catalogs/masterpage/CHDA/CHDA_new.html</mso:HtmlDesignFromMaster>
-<mso:HtmlDesignConversionSucceeded msdt:dt="string">True</mso:HtmlDesignConversionSucceeded>
+<mso:HtmlDesignFromMaster msdt:dt="string"></mso:HtmlDesignFromMaster>
 <mso:HtmlDesignStatusAndPreview msdt:dt="string">https://maximusukdev.sharepoint.com/sites/CHDA/_catalogs/masterpage/CHDA/CHDA_new.html, Conversion successful.</mso:HtmlDesignStatusAndPreview>
+<mso:ContentTypeId msdt:dt="string">0x0101000F1C8B9E0EB4BE489F09807B2C53288F0054AD6EF48B9F7B45A142F8173F171BD10003D357F861E29844953D5CAA1D4D8A3A0086C23DC0E691A34089258C361B88AC8F</mso:ContentTypeId>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:_dlc_DocId msdt:dt="string">R63XEAHEVNT7-260023175-2245</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">2323a038-033f-4b08-90f3-9b05a195cba8</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">https://maximusukdev.sharepoint.com/sites/CHDA/_layouts/15/DocIdRedir.aspx?ID=R63XEAHEVNT7-260023175-2245, R63XEAHEVNT7-260023175-2245</mso:_dlc_DocIdUrl>
+
+<mso:HtmlDesignConversionSucceeded msdt:dt="string">True</mso:HtmlDesignConversionSucceeded>
+<mso:DefaultCssFile msdt:dt="string"></mso:DefaultCssFile>
+<mso:PublishingPreviewImage msdt:dt="string"></mso:PublishingPreviewImage>
+<mso:HtmlDesignPreviewUrl msdt:dt="string"></mso:HtmlDesignPreviewUrl>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:UIVersion msdt:dt="string">;#15;#16;#</mso:UIVersion>
+<mso:PublishingHidden msdt:dt="string">0</mso:PublishingHidden>
 </mso:CustomDocumentProperties>
 </xml><![endif]-->
+        <!--DC:-->
     </head>
-    <body>
-        <style>//<![CDATA[
-                     
-            //]]>
-        </style>
+    <body ng-app="chdaApp">
+        <header>
+            <div class="row">
+                <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 headerLeftContainer">
+                    <!-- ***** CHDA Logo ***** -->
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 pageLogo">
+                    </div>
+                    <!-- ***** Top Navigation ***** -->
+                    <div class="col-sm-10 col-md-10 col-lg-10 col-xs-10 nav-section">
+                        <nav class="navbar" id="custom-bootstrap-menu">
+                            <!-- Toggler/collapsibe Button -->
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#chdaNavbarCollapse">
+                                <span class="navbar-toggler-icon">
+                                </span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="chdaNavbarCollapse">
+                                <!-- Metadata navbar code goes here -->
+                                <div class="nav navbar-nav" data-name="TopNavigationNoFlyoutWithStartNode">
+                                    <!--CS: Start Top Navigation Snippet-->
+                                    <!--SPM:<%@Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+                                    <!--MS:<SharePoint:AjaxDelta runat="server" CssClass="ms-displayInline ms-core-navigation ms-dialogHidden" BackColor="#7676B8" BorderColor="" BorderStyle="None" BlockElement="True" ID="DeltaTopNavigation">-->
+                                        <!--PS: Start of READ-ONLY PREVIEW (do not modify)--><!--PE: End of READ-ONLY PREVIEW-->
+                                        <!--MS:<SharePoint:DelegateControl runat="server" Id="topNavigationDelegate" ControlId="TopNavigationDataSource">-->
+                                            <!--PS: Start of READ-ONLY PREVIEW (do not modify)--><!--PE: End of READ-ONLY PREVIEW-->
+                                            <!--MS:<Template_Controls>-->
+                                                <!--MS:<asp:SiteMapDataSource ShowStartingNode="True" SiteMapProvider="SPNavigationProvider" ID="topSiteMap" runat="server" StartingNodeUrl="sid:1002">-->
+                                                <!--ME:</asp:SiteMapDataSource>-->
+                                            <!--ME:</Template_Controls>-->
+                                        <!--ME:</SharePoint:DelegateControl>-->
+                                        <a name="startNavigation">
+                                        </a>
+                                        <!--MS:<asp:ContentPlaceHolder ID="PlaceHolderTopNavBar" runat="server">-->
+                                            <!--MS:<SharePoint:AspMenu runat="server" UseSeparateCss="false" AdjustForShowStartingNode="True" StaticDisplayLevels="3" AccessKey="1" SkipLinkText="" ForeColor="#545487" IncludeStyleBlock="False" ItemWrap="True" EnableViewState="False" MaximumDynamicDisplayLevels="0" UseSimpleRendering="True" DataSourceID="topSiteMap" Orientation="Horizontal" ID="TopNavigationMenu">-->
+                                                <!--PS: Start of READ-ONLY PREVIEW (do not modify)--><link id="CssLink-8375199840a14a7f8596d5b68fafd524" rel="stylesheet" type="text/css" href="https://maximusukdev.sharepoint.com/_layouts/15/1033/styles/menu-21.css" /><div id="zz7_TopNavigationMenu" class=" noindex ms-core-listMenu-horizontalBox"><ul id="zz9_RootAspMenu" class="root ms-core-listMenu-root static"><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/sitepages/home.aspx" accesskey="1"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Home</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/about/SitePages/Home.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">About Us</span></span></a><ul class="static"><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/chda/about/sitepages/culture.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Culture</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/chda/about/sitepages/ERG.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">ERG</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/chda/about/sitepages/news.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">News</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/chda/about/sitepages/SMT.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">SMT</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/chda/about/sitepages/suggestions.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Suggestion
+                                                                    Box</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/chda/about/sitepages/unions.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Unions</span></span></a></li></ul></li><li class="static"><span class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Teams</span></span></span><ul class="static"><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/business-services"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Business
+                                                                    Services</span></span></a><ul class="static"><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/business-services/business-intelligence"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Business
+                                                                            Intelligence</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/business-services/business-services"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Business
+                                                                            Services</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/business-services/customer-experience"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Customer
+                                                                            Experience</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/business-services/customer-relations"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Customer
+                                                                            Relations</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/business-services/estates"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Estates</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/business-services/learning-and-development"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Learning and
+                                                                            Development</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/business-services/process-design"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Process
+                                                                            Design</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/business-services/project-management"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Project
+                                                                            Management</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/business-services/vcc"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">VCC</span></span></a></li></ul></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/clinical"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Clinical</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/commercial"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Commercial</span></span></a><ul class="static"><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/commercial/change"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Change</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/commercial/commercial"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Commercial</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/commercial/pmo"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">PMO</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/commercial/supply-chain"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Supply
+                                                                            Chain</span></span></a></li></ul></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/communications"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Communications</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/finance"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Finance</span></span></a><ul class="static"><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/finance/finance"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Finance</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/finance/payroll"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Payroll</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/finance/travel-and-expenses"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Travel and
+                                                                            Expenses</span></span></a></li></ul></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/health-and-safety"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Health and
+                                                                    Safety</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/hr"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">HR</span></span></a><ul class="static"><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/hr/compensation-and-benefits"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Compensation and
+                                                                            Benefits</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/hr/hr"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">HR</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/hr/hr-solutions-centre"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">HR Solutions
+                                                                            Centre</span></span></a></li></ul></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/it"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">IT</span></span></a><ul class="static"><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/chda/it/sitepages/home.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">IT</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/it/privacy-and-security"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Privacy and
+                                                                            Security</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/it/sharepoint-developers"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">SharePoint
+                                                                            Developers</span></span></a></li></ul></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/legal"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Legal</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/operations"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Operations</span></span></a><ul class="static"><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/operations/central-operations-support"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Central
+                                                                            Operations Support</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/operations/london-and-south-east"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">London and South
+                                                                            East</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/operations/national-performance"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">National
+                                                                            Performance</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/operations/northern-england"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Northern
+                                                                            England</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/operations/operations"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Operations</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/operations/scotland-and-newcastle"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Scotland and
+                                                                            Newcastle</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/operations/west-and-wales"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">West and
+                                                                            Wales</span></span></a></li></ul></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/recruitment"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Recruitment</span></span></a><ul class="static"><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/teams/recruitment/new-starters"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">New
+                                                                            Starters</span></span></a></li></ul></li></ul></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/knowledge/sitepages/home.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Knowledge</span></span></a><ul class="static"><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/knowledge/branding"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Branding</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/knowledge/tempates"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Tempates</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/knowledge/teams"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Teams</span></span></a><ul class="static"><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/knowledge/teams/business-services"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Business
+                                                                            Services</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/knowledge/teams/clinical"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Clinical</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/knowledge/teams/commercial"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Commercial</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/knowledge/teams/communications"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Communications</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/knowledge/teams/finance"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Finance</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/knowledge/teams/health-and-safety"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Health and
+                                                                            Safety</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/knowledge/teams/hr"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">HR</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/knowledge/teams/it"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">IT</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/knowledge/teams/legal"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Legal</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/knowledge/teams/operations"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Operations</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/knowledge/teams/recruitment"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Recruitment</span></span></a></li></ul></li></ul></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/about/sitepages/contacts.aspx"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Key Contacts</span></span></a></li><li class="static"><span class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Admin</span></span></span><ul class="static"><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/admin/about-us"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">About
+                                                                    Us</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/admin/home"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Home</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/admin/knowledge"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Knowledge</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/admin/teams"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Teams</span></span></a><ul class="static"><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/admin/teams/business-services"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Business
+                                                                            Services</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/admin/teams/clinical"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Clinical</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/admin/teams/commercial"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Commercial</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/admin/teams/communications"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Communications</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/admin/teams/finance"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Finance</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/admin/teams/health-and-safety"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Health and
+                                                                            Safety</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/admin/teams/hr"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">HR</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/admin/teams/it"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">IT</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/admin/teams/legal"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Legal</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/admin/teams/operations"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Operations</span></span></a></li><li class="static"><a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="https://maximusukdev.sharepoint.com/sites/CHDA/admin/teams/recruitment"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Recruitment</span></span></a></li></ul></li></ul></li><li class="static ms-verticalAlignTop ms-listMenu-editLink ms-navedit-editArea"><span class="ms-navedit-editSpan" id="zz7_TopNavigationMenu_NavMenu_Edit"><a id="zz7_TopNavigationMenu_NavMenu_EditLinks" class="ms-navedit-editLinksText" href="#" onclick="g_QuickLaunchMenu = null; EnsureScriptParams('quicklaunch.js', 'QuickLaunchInitEditMode', 'zz7_TopNavigationMenu', 3, 0, 0, ''); cancelDefault(event); return false;" title="Edit Links"><span class="ms-displayInlineBlock"><span class="ms-navedit-editLinksIconWrapper ms-verticalAlignMiddle"><img class="ms-navedit-editLinksIcon" src="https://maximusukdev.sharepoint.com/_layouts/15/images/spcommon.png?rev=45#ThemeKey=spcommon" alt="Edit Links" role="presentation" /></span><span class="ms-metadata ms-verticalAlignMiddle">Edit
+                                                                Links</span></span></a><span id="zz7_TopNavigationMenu_NavMenu_Loading" class="ms-navedit-menuLoading ms-hide"><a id="zz7_TopNavigationMenu_NavMenu_GearsLink" href="#" onclick="HideGears(); return false;" title="This animation indicates the operation is in progress. Click to remove this animated image."><img id="zz7_TopNavigationMenu_NavMenu_GearsImage" src="https://maximusukdev.sharepoint.com/_layouts/15/images/loadingcirclests16.gif?rev=45" alt="This animation indicates the operation is in progress. Click to remove this animated image." /></a></span><div id="zz7_TopNavigationMenu_NavMenu_ErrorMsg" class="ms-navedit-errorMsg"></div></span></li></ul></div><!--PE: End of READ-ONLY PREVIEW-->
+                                            <!--ME:</SharePoint:AspMenu>-->
+                                        <!--ME:</asp:ContentPlaceHolder>-->
+                                        <!--PS: Start of READ-ONLY PREVIEW (do not modify)--><!--PE: End of READ-ONLY PREVIEW-->
+                                    <!--ME:</SharePoint:AjaxDelta>-->
+                                    <!--CE: End Top Navigation Snippet-->
+                                </div>
+                            </div>
+                        </nav>
+                        <!-- ***** Site Page Title &#38; Breadcrumbs ***** -->
+                        <div class="pageTitle">
+                            <h1 style="color:#545487!important" id="pageTitle">
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <!-- ***** End Header Left Container ***** -->
+                <!-- ***** Header Right Container ***** -->
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 headerRightContainer">
+                    <!-- ***** Search Box ***** -->
+                    <div class="navbar-search" id="search">
+                    </div>
+                    <!-- ***** Site Welcome Message and Link to User Profile Page ***** -->
+                    <div class="welcomeText" id="welcomeMsg">
+                    </div>
+                    <div class="adminTools">
+                        <!-- ***** Site Email Link ***** -->
+                        <a title="Contact us about the Intranet" href="mailto:CIntranet@maximusuk.co.uk?subject=New%20Enquiry%20from%20CHDA%20Intranet" class="siteEmail">
+                            <i class="fa fa-envelope">
+                            </i>
+                        </a>
+                        <!-- ***** Site Help Link ***** -->
+                        <a title="Intranet Help" id="O365_MainLink_Help" class="siteHelp o365cs-nav-item o365cs-nav-button ms-bgc-tdr-h o365button o365cs-topnavText">
+                            <i class="fa fa-question">
+                            </i>
+                        </a>
+                        <a title="Test page responsiveness" id="btnResponsive" href="#" onclick="testResponsive();return false;" class="siteTest">
+                            <i class="fas fa-expand-arrows-alt">
+                            </i>
+                        </a>
+                        <!-- ***** Suite Bar - Site Acions ***** -->
+                        <div id="suiteBarButtons">
+                            <!-- Site Actions Cog Options /PublishingImages/cog_32x32.png
+                            <div class="customCog"><i class="fa fa-cog"></i></div>-->
+                            <div class="siteActions" id="siteactiontd">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
         <!--CS: Start Ribbon Snippet-->
         <!--SPM:<%@Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
         <!--SPM:<%@Register Tagprefix="wssucw" TagName="Welcome" Src="~/_controltemplates/15/Welcome.ascx"%>-->
         <!--MS:<SharePoint:SPSecurityTrimmedControl runat="server" HideFromSearchCrawler="true" EmitDiv="true">-->
-            <div id="TurnOnAccessibility" style="display:none" class="s4-notdlg noindex" xmlns="">
+            <div id="TurnOnAccessibility" style="display:none" class="s4-notdlg noindex">
                 <a id="linkTurnOnAcc" href="#" class="ms-accessible ms-acc-button" onclick="SetIsAccessibilityFeatureEnabled(true);UpdateAccessibilityUI();document.getElementById('linkTurnOffAcc').focus();return false;">
                     <!--MS:<SharePoint:EncodedLiteral runat="server" text="&#60;%$Resources:wss,master_turnonaccessibility%&#62;" EncodeMethod="HtmlEncode">-->
                     <!--ME:</SharePoint:EncodedLiteral>-->
                 </a>
             </div>
-            <div id="TurnOffAccessibility" style="display:none" class="s4-notdlg noindex" xmlns="">
+            <div id="TurnOffAccessibility" style="display:none" class="s4-notdlg noindex">
                 <a id="linkTurnOffAcc" href="#" class="ms-accessible ms-acc-button" onclick="SetIsAccessibilityFeatureEnabled(false);UpdateAccessibilityUI();document.getElementById('linkTurnOnAcc').focus();return false;">
                     <!--MS:<SharePoint:EncodedLiteral runat="server" text="&#60;%$Resources:wss,master_turnoffaccessibility%&#62;" EncodeMethod="HtmlEncode">-->
                     <!--ME:</SharePoint:EncodedLiteral>-->
                 </a>
             </div>
         <!--ME:</SharePoint:SPSecurityTrimmedControl>-->
-        <div id="ms-designer-ribbon" xmlns="">
+        <div id="ms-designer-ribbon">
             <!--SID:02 {Ribbon}-->
             <!--PS: Start of READ-ONLY PREVIEW (do not modify) --><div class="DefaultContentBlock" style="background:rgb(0, 114, 198); color:white; width:100%; padding:8px; height:64px; overflow:hidden;">The SharePoint ribbon will be here when your file is either previewed on or applied to your site.</div><!--PE: End of READ-ONLY PREVIEW -->
         </div>
-        <!-- 
-         ********************************************************
-         ******************** Security Options ******************
-         ******************************************************** -->
         <!--MS:<SharePoint:SPSecurityTrimmedControl runat="server" AuthenticationRestrictions="AnonymousUsersOnly">-->
             <!--MS:<wssucw:Welcome runat="server" EnableViewState="false">-->
             <!--ME:</wssucw:Welcome>-->
         <!--ME:</SharePoint:SPSecurityTrimmedControl>-->
         <!--CE: End Ribbon Snippet-->
-        <header xmlns="http://www.w3.org/1999/xhtml">
-        </header>
-        <div id="s4-workspace" xmlns="">
+        <div id="s4-workspace">
             <div id="s4-bodyContainer">
                 <!-- ***** Main Content Container ***** -->
-                <div class="container-fluid" xmlns="http://www.w3.org/1999/xhtml">
-                    <div data-name="ContentPlaceHolderMain">
-                        <!--CS: Start PlaceHolderMain Snippet-->
-                        <!--SPM:<%@Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
-                        <!--MS:<SharePoint:AjaxDelta ID="DeltaPlaceHolderMain" IsMainContent="true" runat="server">-->
-                            <!--MS:<asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server">-->
-                                <div class="hidden msgBannerAdjust" id="pageContent">
-                                    <!-- *********************** -->
-                                    <!-- **** Left Section ***** -->
-                                    <!-- *********************** -->
-                                    <!-- ***** NOTE : change the class below to be                         
-                                        2-column with Useful Links  : col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xl-10
-                                        Full Width Page             : col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12
-                                    -->
-                                    <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 col-xl-7 clearfix text-justify pageLeftContainer">
-                                        Page Left Container                                       
-                                    
+                <div class="container-fluid mainContainer">
+                    <!-- main row -->
+                    <div class="hidden msgBannerAdjust row" id="pageContent">
+                        <div data-name="ContentPlaceHolderMain">
+                            <!--CS: Start PlaceHolderMain Snippet-->
+                            <!--SPM:<%@Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+                            <!--MS:<SharePoint:AjaxDelta ID="DeltaPlaceHolderMain" IsMainContent="true" runat="server">-->
+                                <!--MS:<asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server">-->
+                                    <div class="DefaultContentBlock" style="border:medium black solid; background:yellow; color:black; margin:20px; padding:10px;">
                                     </div>
-                                    <!-- ************************* -->
-                                    <!-- **** Middle Section ***** -->
-                                    <!-- ************************* -->
-                                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                                        <div class="pageMiddleContainer">
-                                            <div class="hidden restricted" id="restrictApp">
-                                            </div>
-                                            <div class="metroTiles">Metrotiles
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            <!--ME:</asp:ContentPlaceHolder>-->
-                        <!--ME:</SharePoint:AjaxDelta>-->
-                        <!--CE: End PlaceHolderMain Snippet-->
+                                <!--ME:</asp:ContentPlaceHolder>-->
+                            <!--ME:</SharePoint:AjaxDelta>-->
+                            <!--CE: End PlaceHolderMain Snippet-->
+                        </div>
                     </div>
+                    <!-- end main row -->
                 </div>
                 <!-- end Main Container -->
             </div>
         </div>
-        <!-- SCRIPTS -->
+        <!-- ***** SCRIPTS ***** -->
+        <!-- ***** Core Vendor Scripts ***** -->
+        <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery.min.js">//<![CDATA[
+        
+        //]]>
+        </script>
+        <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/bootstrap/js/bootstrap.min.js">//<![CDATA[
+        
+        //]]>
+        </script>
+        <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/fontawesome-free/js/all.js">//<![CDATA[
+        
+        //]]>
+        </script>
+        <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery-ui.min.js">//<![CDATA[
+        
+        //]]>
+        </script>
+        <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery.SPServices.min.js">//<![CDATA[
+        
+        //]]>
+        </script>
+        <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery.tickerNews.min.js">//<![CDATA[
+        
+        //]]>
+        </script>
+        <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/AngularJS/angularjs.min.js">//<![CDATA[
+        
+        //]]>
+        </script>
+        <!-- **** Custom App Scripts **** -->
+        <script type="text/javascript" src="/Style%20Library/maxuk/js/siteLinks.js">//<![CDATA[
+        
+        //]]>
+        </script>
+        <script type="text/javascript" src="/Style%20Library/maxuk/js/siteContacts.js">//<![CDATA[
+        
+        //]]>
+        </script>
+        <script type="text/javascript" src="/Style%20Library/maxuk/js/siteMessages.js">//<![CDATA[
+        
+        //]]>
+        </script>
+        <script type="text/javascript" src="/Style%20Library/maxuk/js/importantMessage.js">//<![CDATA[
+        
+        //]]>
+        </script>
+        <script type="text/javascript" src="/Style%20Library/maxuk/js/siteMetroTiles.js">//<![CDATA[
+        
+        //]]>
+        </script>
         <script type="text/javascript">//<![CDATA[
+
+
         
         //]]>
         </script>

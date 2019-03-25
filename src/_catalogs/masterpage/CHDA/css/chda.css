@@ -319,8 +319,12 @@
         background-color: var(--PrimaryMid);
     }
     
-    .carousel {border:1px solid var(--PrimaryLight)}
-        
+    .carousel {border:1px solid var(--PrimaryLight); border-radius:20px;}
+    .carousel-inner{border-radius:20px}
+    .carousel-control-prev, .carousel-control-next{background-color:var(--PrimaryLight);width:5%;opacity: 0.7;}
+    .carousel-control-prev:hover, .carousel-control-next:hover{background-color:var(--PrimaryMid)}
+    .carousel-control-prev-icon, .carousel-control-next-icon{width:60%;height:60%}
+
     /**************************/
     /****** Useful Links ******/
     /**************************/

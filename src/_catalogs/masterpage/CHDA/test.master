@@ -2,16 +2,16 @@
 
 This HTML file has been associated with a SharePoint Master Page (.master file) carrying the same name.  While the files remain associated, you will not be allowed to edit the .master file, and any rename, move, or deletion operations will be reciprocated.
 
-To build the master page directly from this HTML file, simply edit the page as you normally would.  Use the Snippet Generator at https://maxukdevjc.sharepoint.com/sites/CHDA/_layouts/15/ComponentHome.aspx?Url=https%3A%2F%2Fmaxukdevjc%2Esharepoint%2Ecom%2Fsites%2FCHDA%2F%5Fcatalogs%2Fmasterpage%2FCHDA%2FCHDA%2Emaster to create and customize useful SharePoint entities, then copy and paste them as HTML snippets into your HTML code.   All updates to this file will automatically sync to the associated Master Page.
+To build the master page directly from this HTML file, simply edit the page as you normally would.  Use the Snippet Generator at https://maximusukdev.sharepoint.com/sites/CHDA/_layouts/15/ComponentHome.aspx?Url=https%3A%2F%2Fmaximusukdev%2Esharepoint%2Ecom%2Fsites%2FCHDA%2F%5Fcatalogs%2Fmasterpage%2FCHDA%2Ftest%2Emaster to create and customize useful SharePoint entities, then copy and paste them as HTML snippets into your HTML code.   All updates to this file will automatically sync to the associated Master Page.
 
  --%>
 <%@Master language="C#"%>
 <%@Register TagPrefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
-<%@Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
-<%@Register TagPrefix="wssucmui" TagName="MUISelector" Src="~/_controltemplates/15/MUISelector.ascx"%>
+<%@Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
 <%@Register TagPrefix="wssucw" TagName="Welcome" Src="~/_controltemplates/15/Welcome.ascx"%>
+<%@Register TagPrefix="wssucmui" TagName="MUISelector" Src="~/_controltemplates/15/MUISelector.ascx"%>
 <%@Register TagPrefix="PublishingRibbon" TagName="PublishingRibbon" Src="~/_controltemplates/15/Ribbon.ascx"%>
-<!DOCTYPE html >
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <SharePoint:SPHtmlTag runat="server" id="SPHtmlTag" dir="&lt;%$Resources:wss,multipages_direction_dir_value%&gt;">
     <head runat="server">
         <meta http-equiv="X-UA-Compatible" content="IE=10" />
@@ -20,28 +20,37 @@ To build the master page directly from this HTML file, simply edit the page as y
         
         
         <meta name="GENERATOR" content="Microsoft SharePoint" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
         <meta http-equiv="Expires" content="0" />
-        <SharePoint:RobotsMetaTag runat="server" />
+        <SharePoint:RobotsMetaTag runat="server">
+        </SharePoint:RobotsMetaTag>
         <SharePoint:PageTitle runat="server">
             <asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server">
-            <SharePoint:ProjectProperty Property="Title" runat="server" />
+                <SharePoint:ProjectProperty Property="Title" runat="server">
+                </SharePoint:ProjectProperty>
             </asp:ContentPlaceHolder>
         </SharePoint:PageTitle>
-        <SharePoint:StartScript runat="server" />
+        <SharePoint:StartScript runat="server">
+        </SharePoint:StartScript>
         <SharePoint:CssLink runat="server" Version="15">
-            
         </SharePoint:CssLink>
-        <SharePoint:CacheManifestLink runat="server" />
-        <SharePoint:PageRenderMode runat="server" RenderModeType="Standard" />
-        <SharePoint:ScriptLink language="javascript" name="core.js" OnDemand="true" runat="server" Localizable="false" />
-        <SharePoint:ScriptLink language="javascript" name="menu.js" OnDemand="true" runat="server" Localizable="false" />
-        <SharePoint:ScriptLink language="javascript" name="callout.js" OnDemand="true" runat="server" Localizable="false" />
-        <SharePoint:ScriptLink language="javascript" name="sharing.js" OnDemand="true" runat="server" Localizable="false" />
-        <SharePoint:ScriptLink language="javascript" name="suitelinks.js" OnDemand="true" runat="server" Localizable="false" />
-        <SharePoint:CustomJSUrl runat="server" />
+        <SharePoint:CacheManifestLink runat="server">
+        </SharePoint:CacheManifestLink>
+        <SharePoint:PageRenderMode runat="server" RenderModeType="Standard">
+        </SharePoint:PageRenderMode>
+        <SharePoint:ScriptLink language="javascript" name="core.js" OnDemand="true" runat="server" Localizable="false">
+        </SharePoint:ScriptLink>
+        <SharePoint:ScriptLink language="javascript" name="menu.js" OnDemand="true" runat="server" Localizable="false">
+        </SharePoint:ScriptLink>
+        <SharePoint:ScriptLink language="javascript" name="callout.js" OnDemand="true" runat="server" Localizable="false">
+        </SharePoint:ScriptLink>
+        <SharePoint:ScriptLink language="javascript" name="sharing.js" OnDemand="true" runat="server" Localizable="false">
+        </SharePoint:ScriptLink>
+        <SharePoint:ScriptLink language="javascript" name="suitelinks.js" OnDemand="true" runat="server" Localizable="false">
+        </SharePoint:ScriptLink>
+        <SharePoint:CustomJSUrl runat="server">
+        </SharePoint:CustomJSUrl>
         <SharePoint:SoapDiscoveryLink runat="server">
-            
         </SharePoint:SoapDiscoveryLink>
         <SharePoint:AjaxDelta id="DeltaPlaceHolderAdditionalPageHead" Container="false" runat="server">
             <asp:ContentPlaceHolder id="PlaceHolderAdditionalPageHead" runat="server">
@@ -51,15 +60,80 @@ To build the master page directly from this HTML file, simply edit the page as y
             <asp:ContentPlaceHolder id="PlaceHolderBodyAreaClass" runat="server">
             </asp:ContentPlaceHolder>
         </SharePoint:AjaxDelta>
-        <SharePoint:CssRegistration Name="Themable/corev15.css" runat="server" />
+        <SharePoint:CssRegistration Name="Themable/corev15.css" runat="server">
+        </SharePoint:CssRegistration>
         <SharePoint:AjaxDelta id="DeltaSPWebPartManager" runat="server">
-        <WebPartPages:SPWebPartManager runat="server" />
+            <WebPartPages:SPWebPartManager runat="server">
+            </WebPartPages:SPWebPartManager>
         </SharePoint:AjaxDelta>
         
+
+        <!-- ***** STYLES ***** -->
+        <!-- ***** MAX UK Core ***** -->
+        <SharePoint:CssRegistration name="/_catalogs/masterpage/maxuk_sites/css/maxuk_corev15.css" runat="server" after="SharepointCssFile" />
+        <SharePoint:CssRegistration name="/_catalogs/masterpage/maxuk_sites/css/maxuksites.css" runat="server" after="SharepointCssFile" />
+        <SharePoint:CssRegistration name="/sites/chda/_catalogs/masterpage/chda/css/chda.css" runat="server" after="SharepointCssFile" />
+        <SharePoint:CssRegistration name="/Style Library/maxuk/css/custom.css" runat="server" after="SharepointCssFile" />
+
+        <!-- ***** VENDOR ***** -->
+        <SharePoint:CssRegistration name="/_catalogs/masterpage/maxuk/vendor/fontawesome-free/css/all.min.css" runat="server" after="SharepointCssFile" />
+        <SharePoint:CssRegistration name="/_catalogs/masterpage/maxuk/vendor/fontawesome-free/css/solid.min.css" runat="server" after="SharepointCssFile" />
+        <SharePoint:CssRegistration name="/_catalogs/masterpage/maxuk/vendor/bootstrap/css/bootstrap.min.css" runat="server" after="SharepointCssFile" />
+        <SharePoint:CssRegistration name="/_catalogs/masterpage/maxuk/vendor/jquery/jquery-ui.min.css" runat="server" after="SharepointCssFile" />
+        <!-- Add-In Apps -->
+        <SharePoint:CssRegistration name="/Style Library/maxuk/css/metrotiles.css" runat="server" after="SharepointCssFile" />
+
+        <!-- ***** Chrome Resolution CSS files ***** -->
+        <link rel="stylesheet" media="screen and (-webkit-min-device-pixel-ratio:0), screen and (-webkit-min-device-pixel-ratio:1), screen and (-webkit-min-device-pixel-ratio:2)" href="/Style%20Library/maxuk/css/custom_Chrome.css" />
+
+        <!-- ***** Small Resolution CSS files ***** -->
+        <link rel="stylesheet" media="screen and (max-width:1200px)" href="/Style%20Library/maxuk/css/custom_smlScreen.css" />
+
+        <!-- ***** Medium Resolution CSS files ***** -->
+        <link rel="stylesheet" media="screen and (min-width: 1201px) and (max-width:1280px)" href="/Style%20Library/maxuk/css/custom_(1201-1280).css" />
+        <link rel="stylesheet" media="screen and (min-width: 1281px) and (max-width:1399px)" href="/Style%20Library/maxuk/css/custom_(1281-1399).css" />
+        <link rel="stylesheet" media="screen and (min-width: 1400px) and (max-width:1600px)" href="/Style%20Library/maxuk/css/custom_(1400-1600).css" />
+
+        <!-- ***** Large Resolution CSS files ***** -->
+        <link rel="stylesheet" media="screen and (min-width: 1601px) and (max-width:1749px)" href="/Style%20Library/maxuk/css/custom_(1601-1749).css" />
+        <link rel="stylesheet" media="screen and (min-width: 1750px) and (max-width:1918px)" href="/Style%20Library/maxuk/css/custom_(1750-1918).css" />
+        <link rel="stylesheet" media="screen and (min-width: 1919px) and (max-width:1921px)" href="/Style%20Library/maxuk/css/custom_1920.css" />
+        <link rel="stylesheet" media="screen and (min-width: 1922px) and (max-width:1999px)" href="/Style%20Library/maxuk/css/custom_(1922-1999).css" />
+        <link rel="stylesheet" media="screen and (min-width: 2000px) and (max-width:2199px)" href="/Style%20Library/maxuk/css/custom_(2000-2199).css" />
+        <link rel="stylesheet" media="screen and (min-width: 2200px) and (max-width:2399px)" href="/Style%20Library/maxuk/css/custom_(2200-2399).css" />
+        <link rel="stylesheet" media="screen and (min-width: 2400px) and (max-width:2499px)" href="/Style%20Library/maxuk/css/custom_(2400-2499).css" />
+        <link rel="stylesheet" media="screen and (min-width: 2500px) and (max-width:2600px)" href="/Style%20Library/maxuk/css/custom_(2500-2600).css" />
+
+        <!-- ***** Very Big Resolution CSS files ***** -->
+        <link rel="stylesheet" media="screen and (min-width: 2601px) and (max-width:3000px)" href="/Style%20Library/maxuk/css/custom_(2601-3000).css" />
+        <link rel="stylesheet" media="screen and (min-width: 3001px)" href="/Style%20Library/maxuk/css/custom_3001.css" />
+
+        <style type="text/css">//<![CDATA[
+            .ms-cui-tt {visibility: hidden;}
+            .carousel-indicators li {background-color:#545487;}
+            .carousel-caption {background-color:#7676b8; opacity: .6;}
+
+            /* Safari */
+            @-webkit-keyframes spin {
+                0% { -webkit-transform: rotate(0deg); }
+                100% { -webkit-transform: rotate(360deg); }
+            }
+
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+        
+        //]]></style>
         </head>
-    <body onhashchange="if (typeof(_spBodyOnHashChange) != 'undefined') _spBodyOnHashChange();"><SharePoint:SPClientIDGenerator runat="server" ServerControlID="DeltaPlaceHolderMain;DeltaPlaceHolderPageTitleInTitleArea;DeltaPlaceHolderUtilityContent" /><SharePoint:ImageLink runat="server" /><SharePoint:SharePointForm onsubmit="if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;}" runat="server"><asp:ScriptManager id="ScriptManager" runat="server" EnablePageMethods="false" EnablePartialRendering="true" EnableScriptGlobalization="false" EnableScriptLocalization="true" />
-        <div id="ms-designer-ribbon">
-            
+    
+    <body ng-app="chdaApp" onhashchange="if (typeof(_spBodyOnHashChange) != 'undefined') _spBodyOnHashChange();"><SharePoint:SPClientIDGenerator runat="server" ServerControlID="DeltaPlaceHolderMain;DeltaPlaceHolderPageTitleInTitleArea;DeltaPlaceHolderUtilityContent" /><SharePoint:ImageLink runat="server" /><SharePoint:SharePointForm onsubmit="if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;}" runat="server"><asp:ScriptManager id="ScriptManager" runat="server" EnablePageMethods="false" EnablePartialRendering="true" EnableScriptGlobalization="false" EnableScriptLocalization="true" />
+
+        
+        
+        
+        
+        <SharePoint:SPSecurityTrimmedControl runat="server" HideFromSearchCrawler="true" EmitDiv="true">
             <div id="TurnOnAccessibility" style="display:none" class="s4-notdlg noindex">
                 <a id="linkTurnOnAcc" href="#" class="ms-accessible ms-acc-button" onclick="SetIsAccessibilityFeatureEnabled(true);UpdateAccessibilityUI();document.getElementById('linkTurnOffAcc').focus();return false;">
                     <SharePoint:EncodedLiteral runat="server" text="&lt;%$Resources:wss,master_turnonaccessibility%&gt;" EncodeMethod="HtmlEncode">
@@ -72,37 +146,430 @@ To build the master page directly from this HTML file, simply edit the page as y
                     </SharePoint:EncodedLiteral>
                 </a>
             </div>
+        </SharePoint:SPSecurityTrimmedControl>
+
+        <div class="hidden" id="ms-designer-ribbon">
             <PublishingRibbon:PublishingRibbon runat="server" />
             
         </div>
         <SharePoint:SPSecurityTrimmedControl runat="server" AuthenticationRestrictions="AnonymousUsersOnly">
-        <wssucw:Welcome runat="server" EnableViewState="false" />
+            <wssucw:Welcome runat="server" EnableViewState="false">
+            </wssucw:Welcome>
         </SharePoint:SPSecurityTrimmedControl>
-
-        <header>
-            <div class="row">
-                <div class="_21YLtxP8I1MgipohPCKOi8" role="menuitem"><button id="O365_MainLink_Settings" class="_2aWhjeWVp-uLIvDBHKkW3y o365sx-button o365sx-highContrastButton" role="menuitem" aria-haspopup="true" type="button" aria-label="Settings" title="Settings"><span class="ms-Icon--Settings ms-icon-font-size-16" role="presentation" style="display: inline-block; font-size: 16px;"></span></button></div>
-                <div class="_21YLtxP8I1MgipohPCKOi8" role="menuitem"><button id="O365_MainLink_Help" class="_2aWhjeWVp-uLIvDBHKkW3y o365sx-button o365sx-highContrastButton" role="menuitem" aria-haspopup="true" type="button" aria-label="Help" title="Help" style="display: block;"><span class="ms-Icon--Help ms-icon-font-size-16 HelpMirrored" role="presentation" style="display: inline-block; font-size: 16px;"></span></button></div>
-                <div id="O365_MeControlContainer" class="_2UXX4dVC2B99bO96GDK3pe" role="menuitem"><button id="O365_MainLink_Me" class="_2aWhjeWVp-uLIvDBHKkW3y _2yYgunP49PgTdf_-kFeTe0 o365sx-button o365sx-highContrastButton" role="menuitem" aria-haspopup="true" type="button" title="Jason Clark" aria-label="Signed in user: Jason Clark. View your account information or sign out"><div class="_3OzA5cKVyFmPzM4aw-bRn3"><div class="Ipn3cyrlp_OLrL0HMRTED _20Ou8RFvEkcaYPBdvdnz7r"><span style="display: none;"></span></div><div class="_2aWhjeWVp-uLIvDBHKkW3y _3RX_cR0DwM3refq1ece9Sa"><div id="O365_MainLink_MePhoto" class="_3wgWaLwumYrLSSv4B4V6tK"><div><div><div class="_1QW64XfiFsTzzXMqmiVNZ1" style="width: 32px; height: 32px;"><div id="meInitialsButton" class="_1DwcSXzR3L0AzogevpRVcM" style="background-color: rgb(126, 56, 120); font-size: 16px;"><span>JC</span></div><div class="_1sgrH7E8WUuoV13Ti1KYE_"><img src="https://outlook.office365.com/owa/service.svc/s/GetPersonaPhoto?email=jason.clark@maxukdevjc.onmicrosoft.com&amp;UA=0&amp;size=HR96x96&amp;sc=1550836934831" alt="JC" style="" /></div></div></div></div></div></div></div></button></div>
-            </div>
-        </header>
-
+        
         <div id="s4-workspace">
             <div id="s4-bodyContainer">
-                <div>
-                    
-                    
-                    <SharePoint:AjaxDelta id="DeltaPlaceHolderMain" IsMainContent="true" runat="server">
-                    <asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server">
-                    </asp:ContentPlaceHolder>
-                    </SharePoint:AjaxDelta>
-                    
+
+                <header>
+                    <div class="row">
+                        <div class="col-9 headerLeftContainer">
+                            <!-- ***** CHDA Logo ***** -->
+                            <div class="col-2 pageLogo">
+                                <div data-name="SiteLogo">
+                                    
+                                    
+                                    <SharePoint:AjaxDelta BlockElement="true" runat="server">
+                                        
+                                        <SharePoint:SPSimpleSiteLink CssClass="ms-siteicon-a" runat="server" ID="xaed88f3a5f2d4bbcaaa62dc48ca9ba7d">
+                                            
+                                            <SharePoint:SiteLogoImage CssClass="ms-siteicon-img" name="onetidHeadbnnr0" ID="x6d23369ff50d43dfa56f336d32224626" LogoImageUrl="/publishingimages/chda_logo.jpg" runat="server">
+                                                
+                                            </SharePoint:SiteLogoImage>
+                                            
+                                        </SharePoint:SPSimpleSiteLink>
+                                        
+                                    </SharePoint:AjaxDelta>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ***** Header Right Container ***** -->
+                        <div class="col-3 headerRightContainer">
+                            
+                            <!-- ***** Search Box ***** -->
+                            <div class="navbar-search" id="search">
+                            </div>
+                            
+                            <!-- ***** Site Welcome Message and Link to User Profile Page ***** -->
+                            <div class="welcomeText" id="welcomeMsg">
+                            </div>
+
+                            <div class="adminTools">
+                            
+                                <!-- ***** Site Email Link ***** -->
+                                <a title="Contact us about the Intranet" href="mailto:CIntranet@maximusuk.co.uk?subject=New%20Enquiry%20from%20CHDA%20Intranet" class="siteEmail">
+                                    <i class="fa fa-envelope">
+                                    </i>
+                                </a>
+                            
+                                <!-- ***** Site Help Link ***** -->
+                                <a title="Intranet Help" id="O365_MainLink_Help" class="siteHelp o365cs-nav-item o365cs-nav-button ms-bgc-tdr-h o365button o365cs-topnavText">
+                                    <i class="fa fa-question">
+                                    </i>
+                                </a>
+                            
+                                <a title="Test page responsiveness" id="btnResponsive" href="#" onclick="testResponsive();return false;" class="siteTest">
+                                    <i class="fas fa-expand-arrows-alt">
+                                    </i>
+                                </a>
+                            
+                                <!-- ***** Suite Bar - Site Acions ***** -->
+                                <div id="suiteBarButtons">
+                                    <!-- Site Actions Cog Options /PublishingImages/cog_32x32.png-->
+                                    <div class="customCog"><i class="fa fa-cog"></i></div>
+                                    <div class="siteActions" id="siteactiontd">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- ***** Main Content Container ***** -->
+                <div class="container-fluid mainContainer">	
+                                        
+                    <!-- main row --> 
+                    <div class="hidden msgBannerAdjust row" id="pageContent">  
+
+                        <!-- *********************** -->
+                        <!-- **** Left Section ***** -->
+                        <!-- *********************** -->	    
+                        <div class="col-9 pageLeftContainer"> 
+
+                            <!-- ***** Slideshow ***** -->
+                            <div id="slideshow"></div>
+
+                            <!-- ***** Site welcome text for team front door pages ***** -->
+                            <div id="siteWelcomeText"></div>
+
+                            <div data-name="ContentPlaceHolderMain">
+                                
+                                
+                                <SharePoint:AjaxDelta ID="DeltaPlaceHolderMain" IsMainContent="true" runat="server">
+                                    <asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server">
+                                        <div id="newContent"></div>
+                                    </asp:ContentPlaceHolder>
+                                </SharePoint:AjaxDelta>
+                                
+                            </div>
+                        </div>  <!-- End Left Section -->
+
+                        <!-- ************************* -->
+                        <!-- **** Middle Section ***** -->
+                        <!-- ************************* -->
+                        <div class="col-2 pageMiddleContainer" id="metrotilesApp">
+                            <div class="metrotiles">	        							
+                                <div class="hidden restricted" id="restrictApp"> </div>
+                                <div id="metrotiles"></div>							  
+                            </div>
+                        </div>
+
+                        <!-- ************************* -->
+                        <!-- ***** Right Section ***** -->
+                        <!-- ************************* -->
+                        <div class="col-1 text-justify pageRightContainer" id="pageRightContainer">
+                            <div class="usefulLinksSection">
+                                <div class="row linkContainer" id="usefulLinks">
+                                    <div id="accordion">                        
+
+                                        <!-- ***** Group 1 is the Team links ***** -->
+                                        <div class="card" id="usefulLinksGroup1">                        
+                                            <a class="accordion-toggle card-link" data-toggle="collapse" href="#group1" style="text-decoration:none">
+                                                <div class="card-header">
+                                                    <strong id="groupTitle1"></strong>
+                                                </div>
+                                            </a>
+                                            <div id="group1" class="collapse" data-parent="#accordion">
+                                                <div class="list-group" id="links1"></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- ***** Group 2 is the CHDA links ***** -->
+                                        <div class="card" id="usefulLinksGroup2">
+                                            <a class="accordion-toggle" data-toggle="collapse" href="#group2" style="text-decoration:none">
+                                                <div class="card-header">
+                                                    <strong id="groupTitle2"></strong>                                                        
+                                                </div>
+                                            </a>
+                                            <div id="group2" class="collapse" data-parent="#accordion">
+                                                <div class="list-group" id="links2"></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- ***** Group 3 is the MAXIMUS UK links ***** -->
+                                        <div class="card" id="usefulLinksGroup3">
+                                            <a class="accordion-toggle" data-toggle="collapse" href="#group3" style="text-decoration:none">
+                                                <div class="card-header">
+                                                    <strong id="groupTitle3"></strong>
+                                                </div>
+                                            </a>
+                                            <div id="group3" class="collapse" data-parent="#accordion">
+                                                <div class="list-group" id="links3"></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- ***** This is for the Site Contacts ***** -->
+                                        <div class="card" id="usefulLinksSiteContacts">
+                                            <a class="accordion-toggle" data-toggle="collapse" href="#siteContacts" style="text-decoration:none">
+                                                <div class="card-header">
+                                                    <strong>Site Contacts</strong>
+                                                </div>
+                                            </a>
+                                            <div id="siteContacts" class="collapse" data-parent="#accordion">
+                                                <div class="list-group">
+                                                    <strong>
+                                                        <h5 style="margin:-2px 0 0 15px;padding-top:5px;">Owners<hr style="margin-top:2px;color:#545487;" /></h5>
+                                                    </strong>
+                                                    <div id="siteOwner" style="margin-top:-20px!important"></div>                                                    
+                                                    <strong>
+                                                        <h5 style="margin:-2px 0 0 15px;padding-top:5px;">Power Users<hr style="margin-top:2px;color:#545487;" /></h5>
+                                                    </strong>
+                                                    <div id="powerUser" style="margin-top:-20px!important"></div>
+                                                    <strong>
+                                                        <h5 style="margin:-2px 0 0 15px;padding-top:5px;">Moderators<hr style="margin-top:2px;color:#545487;" /></h5>
+                                                    </strong>
+                                                    <div id="moderatorUser" style="margin-top:-20px!important"></div>
+                                                </div>
+                                            </div>
+                                        </div> <!-- end contacts panel-->
+                                    </div> <!-- end panel group -->
+                                </div> <!-- end link container -->
+                            </div> <!-- end Right Container -->			                                                                                    
+                        </div> <!-- end Column - useful links section -->    
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div id="navBarContainer">
-            <asp:ContentPlaceHolder id="PlaceHolderLeftNavBar" runat="server" />
-        </div>
-    <SharePoint:AjaxDelta id="DeltaFormDigest" BlockElement="true" runat="server"><asp:ContentPlaceHolder id="PlaceHolderFormDigest" runat="server"><SharePoint:formdigest runat="server" /></asp:ContentPlaceHolder></SharePoint:AjaxDelta></SharePoint:SharePointForm><SharePoint:AjaxDelta id="DeltaPlaceHolderUtilityContent" runat="server"><asp:ContentPlaceHolder id="PlaceHolderUtilityContent" runat="server" /></SharePoint:AjaxDelta><asp:ContentPlaceHolder id="PlaceHolderTitleAreaClass" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleBreadcrumb" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderGlobalNavigationSiteMap" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderGlobalNavigation" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderSearchArea" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderHorizontalNav" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTopNavBar" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftNavBarDataSource" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderCalendarNavigator" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftActions" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftNavBarTop" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderSiteName" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderPageDescription" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderPageImage" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleLeftBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderMiniConsole" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleRightMargin" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleAreaSeparator" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderNavSpacer" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftNavBarBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderBodyLeftBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderBodyRightMargin" Visible="False" runat="server" /><asp:ContentPlaceHolder id="WSSDesignConsole" Visible="False" runat="server" /><asp:ContentPlaceHolder id="SPNavigation" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderQuickLaunchTop" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderQuickLaunchBottom" Visible="False" runat="server" /></body>
+        <!-- **** Custom App Scripts **** -->
+        <script type="text/javascript" src="/Style%20Library/maxuk/js/siteLinks.js">//<![CDATA[//]]></script> 
+        <script type="text/javascript" src="/Style%20Library/maxuk/js/siteContacts.js">//<![CDATA[//]]></script>
+        <script type="text/javascript" src="/Style%20Library/maxuk/js/siteMessages.js">//<![CDATA[//]]></script>  
+        <script type="text/javascript" src="/Style%20Library/maxuk/js/importantMessage.js">//<![CDATA[//]]></script>
+        <script type="text/javascript" src="/Style%20Library/maxuk/js/siteMetroTiles.js">//<![CDATA[//]]></script>
+
+        <script type="text/javascript">//<![CDATA[
+            
+            var context;
+            var web;
+            var submitHook = function () { return false; };				
+            var siteURL = _spPageContextInfo.webAbsoluteUrl;
+            var domainURL = siteURL.split("/")[2];	     
+            var isAdmin = false;	  
+            var userName = "";
+            var contentCode;
+            
+            theForm._spOldSubmit = theForm.submit; theForm.submit = function () {
+                if (!submitHook()) { this._spOldSubmit(); }
+            };
+
+            $(function () {
+
+                $('#newContent').append(contentCode);
+
+                SP.SOD.executeFunc('sp.js', 'SP.ClientContext', sharePointReady);
+
+                var sWidth = screen.width;
+                var sHeight = screen.height;
+                var dHeight = $(document).height();
+                var dWidth = $(document).width();
+                console.log('Screen Height :' + sHeight + ' Screen Width :'+ sWidth);
+                console.log('Document Height :' + dHeight + ' Document Width :' + dWidth);
+
+                $('#pageLoader').addClass('hidden');
+                $('#pageContent').removeClass('hidden');
+                
+                getTiles(siteURL);
+
+                /***** Check for temp user *****/
+                $().SPServices({
+                    operation: "GetGroupCollectionFromUser",
+                    userLoginName: $().SPServices.SPGetCurrentUser(),
+                    async: false,
+                    completefunc: function (xData, Status) {
+
+                        //If the current User does belong to a specific group
+                        if ($(xData.responseXML).find("Group[Name='CHDA Intranet Visitors']").length === 1) {
+                            var agreement = getCookie();
+
+                            //***** remove search function *****/
+                            //$('#search').addClass('hidden');
+                            var disclaimURL = 'https://'+ domainURL + '/SitePages/disclaimer.html';
+                            //alert(disclaimURL);
+
+                            //checks for cookie and displays disclaimer alert if new user
+                            if (agreement === "") {
+                                window.open(disclaimURL, '_self', 'toolbar=no,status=no,titlebar=no,scrollbars=no');
+                            }
+
+                            $('#custom-bootstrap-menu ul li:nth-child(4) ul li:nth-child(3)').addClass('hidden');
+                            //$('#mainWindow').removeClass('hidden');                                                      
+                            $('#restrictApp').removeClass('hidden');	
+                                
+                            console.log('Danger Will Robinson! temp user logged in');
+                        }
+                    }
+                }); 
+
+                $.ajax({
+                    url: siteURL + "/_api/web/title",
+                    method: "GET",
+                    headers: { "Accept": "application/json; odata=verbose" },
+                    success: function (data) {
+                        siteTitle = data.d.Title;
+
+                        if (siteTitle == "CHDA Intranet") {
+                            getLinkData(siteURL,'Home');
+                        } else {
+                            getLinkData(siteURL, siteTitle);
+                            getContacts(siteURL, 'Contacts');
+                        }
+                    },
+                    error: function (data) {
+                        console.log("Error: " + data);
+                    }
+                });
+
+                console.log('DOM ready from Master page');
+
+                //ExecuteOrDelayUntilScriptLoaded(function () {
+                //	var mru = SPClientPeoplePickerMRU.GetSPClientPeoplePickerMRU();
+                //	mru.ResetCache();
+                //}, “clientpeoplepicker.js”);
+                    
+                //localStorage.clear();  ***Nb: this clears the local machine cache but stops the team calendars from working
+                            
+                //$('#zz7_SiteActionsMenu').append('<span class="glyphicon glyphicon-cog"></span>');             
+            });
+
+            // ***** Load SharePoint ClientContext
+            function sharePointReady() {
+                try {
+
+                    getMessages();
+                    console.log("getting important messages");
+
+                    var timer = !1;
+                    _Ticker = $("#messages").newsTicker();
+                    _Ticker.on("mouseenter", function () {
+                        var __self = this;
+                        timer = setTimeout(function () {
+                            __self.pauseTicker();
+                        }, 200);
+                    });
+                    _Ticker.on("mouseleave", function () {
+                        clearTimeout(timer);
+                        if (!timer) return !1;
+                        this.startTicker();
+                    });
+
+                    context = new SP.ClientContext.get_current();
+                    web = context.get_web();  
+
+                    //***** Get name of user from SharePoint user profile service and display on screen
+                    getCurrentUser();                                             
+                    console.log('SharePoint ready from Master page');
+                }
+                catch (err) { console.log(err); }
+            }
+
+            //$(window).on('beforeunload', function (e) {
+            // document.cookie = 'PartnerAgreement' + '=; expires=Tue, 01-Jan-80 00:00:00 GMT' + '; path=/';
+            //});
+
+            // gets the Cookie if it exists
+            function getCookie() {
+                if (document.cookie.length > 0) {
+                    c_name = "PartnerAgreement";
+                    c_start = document.cookie.indexOf(c_name + "=")
+
+                    if (c_start !== -1) {
+                        c_start = c_start + c_name.length + 1
+                        c_end = document.cookie.indexOf(";", c_start)
+                        if (c_end === -1) { c_end = document.cookie.length }
+                        return agreement = unescape(document.cookie.substring(c_start, c_end))
+                    }
+                }           
+                return "";
+            }
+
+            function testResponsive() {
+
+                var resolutions = [1200, 1250, 1300, 1350, 1400, 1450, 1500, 1550, 1600, 1650, 1700, 1750, 1800, 1850, 1900, 1920, 1950, 2000, 2050, 2100, 2150, 2200, 2300, 2400, 2500, 2600, 2700, 2800];
+
+                var dHeight = screen.height;
+                for (var i = 0; i < resolutions.length; i++) {
+                    var dWidth = resolutions[i];
+                    
+                    window.setTimeout(resizeWindow(dWidth,dHeight), 3000);
+                }
+            }
+
+            function resizeWindow(dWidth,dHeight) {
+                window.resizeTo(dWidth, dHeight);
+            alert('Testing Screen Resolution - Height :' + dHeight + ' x Width :' + dWidth);
+            }
+
+            function getCurrentUser() {
+                //***** Get first name of user from SharePoint user profile service and display on screen
+                var userName = $().SPServices.SPGetCurrentUser({
+                    fieldName: 'FirstName',
+                    debug: false
+                });
+
+                var userID = _spPageContextInfo.userId;
+                $("#welcomeMsg").append("Welcome " + "<a href='" + siteURL + "/my/'>" + userName + "</a>"); 
+            }
+
+                //if (userName.split("|")[2] != undefined) {
+                //    userName = userName.split("|")[1];
+                //};
+
+                //var userID = _spPageContextInfo.userId;
+                //$("#welcomeMsg").append("Welcome " + "<a href='" + siteURL + "/my/'>" + userName + "</a>"); 
+
+                //$("#welcomeMsg").append("Welcome " + "<a href='https://intranet.chda.maxuk.co.uk/my/'>" + (userName) + "</a>");
+    /*         
+                var userid = _spPageContextInfo.userId;
+                var requestUri = _spPageContextInfo.webAbsoluteUrl + "/_api/SP.UserProfiles.PeopleManager/GetMyProperties"; //"/_api/web/getuserbyid(" + userid + ")";
+                var requestHeaders = { "accept" : "application/json;odata=verbose" };
+
+                $.ajax({
+                    url: requestUri,
+                    type: "GET",
+                    contentType : "application/json;odata=verbose",
+                    headers : requestHeaders,
+                    success : onSuccess,
+                    error : onError
+                });
+        
+            function onSuccess(data) {
+
+                var firstName = "";
+                var dataResults = data.d.UserProfileProperties.results;
+                var displayName = data.d.DisplayName;
+                for (var i = 0; i < dataResults.length; i++) {
+                    var property = dataResults[i];
+                    if (property.Key === "FirstName") {
+                        firstName = property.Value;
+                        console.log(firstName);
+                    }
+                }
+                //userName = dataResults.Title;
+                //alert(userName);
+                
+                if (displayName.indexOf('@') !== -1) { userName = displayName.split('@')[0] }
+
+                $("#welcomeMsg").append("Welcome " + "<a href='" + siteURL + "/my/'>" + userName + "</a>"); 
+                //return dataResults.Title; //.split(' ')[0];
+            }
+
+            function onError(error) {
+            console.log(error);
+            }
+    */
+        //]]></script>
+
+    <SharePoint:AjaxDelta id="DeltaFormDigest" BlockElement="true" runat="server"><asp:ContentPlaceHolder id="PlaceHolderFormDigest" runat="server"><SharePoint:formdigest runat="server" /></asp:ContentPlaceHolder></SharePoint:AjaxDelta></SharePoint:SharePointForm><SharePoint:AjaxDelta id="DeltaPlaceHolderUtilityContent" runat="server"><asp:ContentPlaceHolder id="PlaceHolderUtilityContent" runat="server" /></SharePoint:AjaxDelta><asp:ContentPlaceHolder id="PlaceHolderTitleAreaClass" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleBreadcrumb" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderGlobalNavigationSiteMap" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderGlobalNavigation" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderSearchArea" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftNavBar" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderHorizontalNav" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTopNavBar" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftNavBarDataSource" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderCalendarNavigator" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftActions" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftNavBarTop" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderSiteName" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderPageDescription" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderPageImage" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleLeftBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderMiniConsole" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleRightMargin" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleAreaSeparator" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderNavSpacer" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftNavBarBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderBodyLeftBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderBodyRightMargin" Visible="False" runat="server" /><asp:ContentPlaceHolder id="WSSDesignConsole" Visible="False" runat="server" /><asp:ContentPlaceHolder id="SPNavigation" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderQuickLaunchTop" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderQuickLaunchBottom" Visible="False" runat="server" /></body>
 </SharePoint:SPHtmlTag>
