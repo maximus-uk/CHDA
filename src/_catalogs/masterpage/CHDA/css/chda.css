@@ -64,12 +64,15 @@
     
         .nav-tabs > li > a:hover {
             color: var(--PrimaryMid) !important;
+            border-bottom: 3px solid var(--PrimaryDark);
+            border-bottom: 3px solid var(--PrimaryMid);
         }
     
         .nav-tabs > li.active > a,
         .nav-tabs > li.active > a:hover,
         .nav-tabs > li.active > a:focus {
             color: var(--PrimaryMid);
+            border-bottom: 3px solid var(--PrimaryMid);
         }
             .nav-pills > li > a:hover, .nav-pills > li.active > a:hover {
                 color: var(--ForeColour) !important;
@@ -110,10 +113,19 @@
     #custom-bootstrap-menu ul a {
         color: var(--PrimaryDark);
     }
+        #custom-bootstrap-menu ul li a {
+            text-shadow: 0 0 0.5px 0 white;
+        } 
+
         #custom-bootstrap-menu ul.dynamic {
             border: .5px solid var(--PrimaryDark);
             background-color: var(--PrimaryLight);
         }
+            #custom-bootstrap-menu ul li a:hover,
+            #custom-bootstrap-menu ul li a:focus {
+                color: var(--ForeColour) !important;
+            }        
+
             #custom-bootstrap-menu ul.dynamic .ms-core-listMenu-item {
                 color: var(--PrimaryDark);
             }
@@ -121,13 +133,8 @@
                 background-color: var(--PrimaryMid);
                 color: var(--ForeColour) !important;
             }
-            #custom-bootstrap-menu ul li a:hover,
-            #custom-bootstrap-menu ul li a:focus {
-                color: var(--ForeColour) !important;
-            }
     
                 #custom-bootstrap-menu ul li.selected:hover {
-                    border-radius: 10px 10px 0 0;
                     background-color: var(--PrimaryMid);
                     border-color: transparent !important;
                 }
@@ -151,14 +158,13 @@
         }
     
         #custom-bootstrap-menu .navbar-toggle .icon-bar {
-            background-color: var(--ForeColour)
+            background-color: var(--ForeColour);
         }
     
         #custom-bootstrap-menu .navbar-toggle:hover .icon-bar,
         #custom-bootstrap-menu .navbar-toggle:focus .icon-bar {
-            background-color: var(--TextColour)
+            background-color: var(--PrimaryMid);
         }
-        
     
     /*******************************/
     /****** Right Header Items *****/
@@ -237,7 +243,11 @@
         background-color: var(--PrimaryMid) !important;
         color: var(--ForeColour) !important;
     }
-    
+
+    .ms-siteactions-imgspan > .ms-core-menu-buttonIcon {
+        color: transparent;
+    }
+
     #suiteBarButtons li a:hover {
         background-color: var(--PrimaryMid) !important;
         color: var(--ForeColour) !important;
@@ -319,12 +329,10 @@
         background-color: var(--PrimaryMid);
     }
     
-    .carousel {border:1px solid var(--PrimaryLight); border-radius:20px;}
-    .carousel-inner{border-radius:20px}
-    .carousel-control-prev, .carousel-control-next{background-color:var(--PrimaryLight);width:5%;opacity: 0.7;}
+    .carousel {border:1px solid var(--PrimaryLight);}
+    .carousel-control-prev, .carousel-control-next{background-color:var(--PrimaryLight);}
     .carousel-control-prev:hover, .carousel-control-next:hover{background-color:var(--PrimaryMid)}
-    .carousel-control-prev-icon, .carousel-control-next-icon{width:60%;height:60%}
-
+ 
     /**************************/
     /****** Useful Links ******/
     /**************************/
@@ -366,9 +374,12 @@
             .linkContainer a.list-group-item:focus,
             button.list-group-item:focus {
                 color: var(--ForeColour);
+                background-color: var(--PrimaryMid) !important;
             }
         
     .card {
+        background-color: transparent;
+        border: .5px solid silver;
         color: var(--PrimaryDark) !important;
     }
         .card > .list-group,
@@ -437,11 +448,26 @@
     .tooltip-inner {
         background-color: var(--PrimaryMid);
     }
-        
+    
+    .sidebar ul {
+        border: 1px solid var(--PrimaryLight);
+    }
+
+    /*******************************/
+    /***** Service Page Styles *****/
+    /*******************************/  
+    .btn-primary {
+        color: var(--ForeColour) !important;
+    }
+
     /**************************/
     /****** Mobile Screen *****/
     /**************************/
-    @media (max-width: 1200px) {   
+    @media (max-width: 1200px) {  
+        .navbar-collapse {
+            border-top: 1px solid transparent;
+            box-shadow: inset 0 1px 0 var(--TextColour);
+        }         
         .usefulLinksSection {
             background-color: var(--ForeColour);
         }
