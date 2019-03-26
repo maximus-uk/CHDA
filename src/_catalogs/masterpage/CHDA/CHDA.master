@@ -21,7 +21,8 @@
 	<SharePoint:RobotsMetaTag runat="server" />
 
 	<%-- Pinned tile Favourite Image for Windows 8, 8.1, 10 / Tablets / Mobile --%>
-
+    <link rel="shortcut icon" href="/publishingimages/favicon.ico" />
+    
 	<%--Page Title section to display on screen --%>
 	<SharePoint:PageTitle runat="server"><asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server"><SharePoint:ProjectProperty Property="Title" runat="server" /> | <SharePoint:ListItemProperty Property="BaseName" maxlength="40" runat="server" id="pageName"/></asp:ContentPlaceHolder></SharePoint:PageTitle>
 	<SharePoint:StartScript runat="server" />
@@ -349,6 +350,7 @@
                         					
                         <div class="row notifications hidden" id="notifications">                                              		                    	
                             <div class="TickerNews" id="messages">
+                                <div class="TickerNews" id="messages">
                                 <div class="ti_wrapper">
                                     <div class="ti_slide">
                                         <div class="ti_content" id="importantMsg"></div>

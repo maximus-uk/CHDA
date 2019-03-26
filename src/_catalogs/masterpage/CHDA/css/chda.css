@@ -11,30 +11,30 @@
 
      ************************************************** */
 
-     /***** Brand Colours *****/
-     :root {
+    /***** Brand Colours *****/
+    :root {
         --PrimaryDark: #545487;
         --PrimaryMid: #7676b8;
-        --PrimaryLight: #ddddeb;
-        --SecondaryDark1: #4e7b2f;
+        --PrimaryLight: #dbdcf4;
+        --SecondaryDark1: #4f7b39;
         --SecondaryMid1: #9cc487;
         --SecondaryLight1: #d9eccd;
-        --SecondaryDark2: #ca5c28;
+        --SecondaryDark2: #c95828;
         --SecondaryMid2: #f9ad86;
-        --SecondaryLight2: #fdf0e4;
-        --TertiaryDark1: #205794;
-        --TertiaryMid1: #7098cf;
-        --TertiaryLight1: #e5eaf6;
-        --TertiaryDark2:#8a7424;
-        --TertiaryMid2:#ddcc68;
-        --TertiaryLight2:#f2e5b6;
-        --TertiaryDark3:#6a2f53;
-        --TertiaryMid3:#e5cadb;
-        --TertiaryLight3:#ffe5ef;
+        --SecondaryLight2: #fae8d6;
+        --AccentDark1: #205794;
+        --AccentMid1: #6e96cf;
+        --AccentLight1: #e5eaf6;
+        --AccentDark2:#8a742e;
+        --AccentMid2:#ddcc68;
+        --AccentLight2:#f2e5b6;
+        --AccentDark3:#5f295f;
+        --AccentMid3:#cfaccc;
+        --AccentLight3:#f2ddec;
         --TextColour: black;
         --ForeColour: white;
         --UsefulLinkBG: lightgrey;
-    }  
+    } 
         
     header {
         background-color: var(--PrimaryLight);
@@ -296,7 +296,6 @@
     /*********************/
     /***** Page Body *****/
     /*********************/
-    
     .mainContainer {
         scrollbar-face-color: var(--PrimaryMid);
         scrollbar-arrow-color: var(--ForeColour);
