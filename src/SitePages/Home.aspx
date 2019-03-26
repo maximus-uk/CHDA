@@ -39,11 +39,17 @@
 
 </asp:Content>
 
-<%-- ***** For code to be added within the page body but not content for the left container ***** --%>
-<asp:Content ContentPlaceHolderID="PlaceHolderMain" runat="server">  
+<%-- ***** For content to be added to the left container ***** --%>
+<asp:Content ContentPlaceHolderID="PlaceHolderPageContent" runat="server"> 
+    <div id="thisContent">
+    </div>
+</asp:Content>
 
-    <!-- SCRIPTS -->
-    <script type="text/javascript" src="/Style%20Library/maxuk/js/siteSlider.js"></script>
+<%-- ***** For code to be added at the end of the page body ***** --%>
+<asp:Content ContentPlaceHolderID="PlaceHolderPageCode" runat="server">  
+
+    <!-- SCRIPTS -->    
+    <script type="text/javascript" src="/Style%20Library/maxuk/js/siteSlider.js"></script>    
     <script type="text/javascript"> 	            
 
         $(function(){
@@ -76,9 +82,3 @@
 
     </script>
 </asp:Content>                      
-
-<%-- ***** For content to be added to the left container ***** --%>
-<asp:Content ContentPlaceHolderID="PlaceHolderPageContent" runat="server"> 
-    <div id="thisContent">
-    </div>
-</asp:Content>

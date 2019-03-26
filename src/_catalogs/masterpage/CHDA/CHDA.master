@@ -22,7 +22,7 @@
 
 	<%-- Pinned tile Favourite Image for Windows 8, 8.1, 10 / Tablets / Mobile --%>
     <link rel="shortcut icon" href="/publishingimages/favicon.ico" />
-    
+
 	<%--Page Title section to display on screen --%>
 	<SharePoint:PageTitle runat="server"><asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server"><SharePoint:ProjectProperty Property="Title" runat="server" /> | <SharePoint:ListItemProperty Property="BaseName" maxlength="40" runat="server" id="pageName"/></asp:ContentPlaceHolder></SharePoint:PageTitle>
 	<SharePoint:StartScript runat="server" />
@@ -292,14 +292,14 @@
                                                                                     UseShortId="true"
                                                                                     PermissionsString="ViewPages"
                                                                                     PermissionMode="Any" />
-                                                    <SharePoint:MenuItemTemplate runat="server" id="MenuItem_EditPage"
+                                                   <!-- <SharePoint:MenuItemTemplate runat="server" id="MenuItem_EditPage"
                                                                                     Text="<%$Resources:wss,siteactions_editpage15%>"
                                                                                     Description="<%$Resources:wss,siteactions_editpagedescriptionv4%>"
                                                                                     ImageUrl="/_layouts/15/images/ActionsEditPage.png?rev=23"
                                                                                     MenuGroupId="200"
                                                                                     Sequence="210"
                                                                                     PermissionsString="EditListItems"
-                                                                                    ClientOnClickNavigateUrl="javascript:ChangeLayoutMode(false);" />
+                                                                                    ClientOnClickNavigateUrl="javascript:ChangeLayoutMode(false);" />-->
                                                     <SharePoint:MenuItemTemplate runat="server" id="MenuItem_ViewAllSiteContents"
                                                                                     Text="<%$Resources:wss,quiklnch_allcontent_15%>"
                                                                                     Description="<%$Resources:wss,siteactions_allcontentdescription%>"
@@ -320,14 +320,14 @@
                                                                                     ClientOnClickScriptContainingPrefixedUrl="GoToPage('~siteLayouts/settings.aspx')"
                                                                                     PermissionsString="EnumeratePermissions,ManageWeb,ManageSubwebs,AddAndCustomizePages,ApplyThemeAndBorder,ManageAlerts,ManageLists,ViewUsageData"
                                                                                     PermissionMode="Any" />
-                                                    <SharePoint:MenuItemTemplate runat="server" id="MenuItem_SwitchToMobileView"
+                                                   <!-- <SharePoint:MenuItemTemplate runat="server" id="MenuItem_SwitchToMobileView"
                                                                                     Visible="false"
                                                                                     Text="<%$Resources:wss,siteactions_switchtomobileview%>"
                                                                                     Description="<%$Resources:wss,siteactions_switchtomobileviewdesc%>"
                                                                                     MenuGroupId="300"
                                                                                     Sequence="330"
                                                                                     UseShortId="true"
-                                                                                    ClientOnClickScript="var mswlh = window.location.href; if (mswlh.indexOf('?')==-1) { window.location = mswlh + '?mobile=1'; } else { window.location = mswlh + '&mobile=1'; }" />
+                                                                                    ClientOnClickScript="var mswlh = window.location.href; if (mswlh.indexOf('?')==-1) { window.location = mswlh + '?mobile=1'; } else { window.location = mswlh + '&mobile=1'; }" />-->
                                                 </SharePoint:FeatureMenuTemplate>
 									        </CustomTemplate>
                                         </SharePoint:SiteActions>
@@ -350,7 +350,6 @@
                         					
                         <div class="row notifications hidden" id="notifications">                                              		                    	
                             <div class="TickerNews" id="messages">
-                                <div class="TickerNews" id="messages">
                                 <div class="ti_wrapper">
                                     <div class="ti_slide">
                                         <div class="ti_content" id="importantMsg"></div>
@@ -372,7 +371,7 @@
                             <!-- *********************** -->
                             <!-- **** Left Section ***** -->
                             <!-- *********************** -->	    
-                            <div class="col-9 pageLeftContainer scrollbar" id="#pageLeftContainer"> 
+                            <div class="col-9 pageLeftContainer" id="#pageLeftContainer"> 
 
                                 <!-- ***** Slideshow ***** -->
                                 <div id="slideshow"></div>
@@ -390,11 +389,11 @@
                             <!-- **** Middle Section ***** -->
                             <!-- ************************* -->
                             <div class="col-2 pageMiddleContainer">
-                                <div class="row metrotiles" id="metrotilesApp">	        							
+                                <div class="metrotiles" id="metrotilesApp">	        							
                                     <div class="hidden restricted" id="restrictApp">&nbsp;</div>
                                     <div id="metrotiles"></div>							  
                                 </div>
-                                <div class="row appContainer">
+                                <div class="appContainer">
                                     <asp:ContentPlaceHolder id="PlaceHolderAppContent" runat="server"></asp:ContentPlaceHolder>
                                 </div>
                             </div>
@@ -731,6 +730,6 @@
         }
 */
     </script>
-
+    <asp:ContentPlaceHolder id="PlaceHolderPageCode" runat="server"></asp:ContentPlaceHolder>    
 </body>
 </SharePoint:SPHtmlTag>
