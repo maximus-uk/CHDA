@@ -131,7 +131,7 @@
                                                                      
                         <!-- ***** CHDA Logo ***** -->
                         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 pageLogo">                           
-                            <SharePoint:SiteLogoImage CssClass="ms-siteicon-img" name="onetidHeadbnnr0" id="onetidHeadbnnr2" LogoImageUrl="/PublishingImages/CHDA_logo.jpg" runat="server" __designer:Preview="&lt;img id=&quot;ctl00_onetidHeadbnnr2&quot; class=&quot;ms-siteicon-img&quot; name=&quot;onetidHeadbnnr0&quot; Src=&quot;/PublishingImages/chda logo.png&quot; alt=&quot;CHDA Intranet&quot; /&gt;" __designer:Values="&lt;P N=&#39;CssClass&#39; T=&#39;ms-siteicon-img&#39; /&gt;&lt;P N=&#39;LogoImageUrl&#39; T=&#39;/PublishingImages/chda logo.png&#39; /&gt;&lt;P N=&#39;HasAttributes&#39; T=&#39;True&#39; /&gt;&lt;P N=&#39;ID&#39; T=&#39;onetidHeadbnnr2&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;"></SharePoint:SiteLogoImage>
+                            <SharePoint:SiteLogoImage CssClass="ms-siteicon-img" name="onetidHeadbnnr0" id="onetidHeadbnnr2" LogoImageUrl="/PublishingImages/Logos/CHDA_logo.png" runat="server" __designer:Preview="&lt;img id=&quot;ctl00_onetidHeadbnnr2&quot; class=&quot;ms-siteicon-img&quot; name=&quot;onetidHeadbnnr0&quot; Src=&quot;/PublishingImages/chda logo.png&quot; alt=&quot;CHDA Intranet&quot; /&gt;" __designer:Values="&lt;P N=&#39;CssClass&#39; T=&#39;ms-siteicon-img&#39; /&gt;&lt;P N=&#39;LogoImageUrl&#39; T=&#39;/PublishingImages/chda logo.png&#39; /&gt;&lt;P N=&#39;HasAttributes&#39; T=&#39;True&#39; /&gt;&lt;P N=&#39;ID&#39; T=&#39;onetidHeadbnnr2&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;"></SharePoint:SiteLogoImage>
                         </div>
                         
                         <!-- ***** Top Navigation ***** -->
@@ -366,8 +366,6 @@
                         <!-- main row --> 
                         <div class="hidden msgBannerAdjust row" id="pageContent" >  
 
-                            <!--<asp:ContentPlaceHolder id="PlaceHolderMain" runat="server"></asp:ContentPlaceHolder>-->
-
                             <!-- *********************** -->
                             <!-- **** Left Section ***** -->
                             <!-- *********************** -->	    
@@ -405,67 +403,8 @@
                                 <div class="usefulLinksSection">
                                     <div class="row linkContainer" id="usefulLinks">
                                         <div id="accordion">                        
+                                            <div id="teamLinks"></div>
 
-                                            <!-- ***** Group 1 is the Team links ***** -->
-                                            <div class="card" id="usefulLinksGroup1">                        
-                                                <a class="accordion-toggle card-link" data-toggle="collapse" href="#group1" style="text-decoration:none">
-                                                    <div class="card-header">
-                                                        <strong id="groupTitle1"></strong>
-                                                    </div>
-                                                </a>
-                                                <div id="group1" class="collapse" data-parent="#accordion">
-                                                    <div class='list-group' id="links1"></div>
-                                                </div>
-                                            </div>
-
-                                            <!-- ***** Group 2 is the CHDA links ***** -->
-                                            <div class="card" id="usefulLinksGroup2">
-                                                <a class="accordion-toggle" data-toggle="collapse" href="#group2" style="text-decoration:none">
-                                                    <div class="card-header">
-                                                        <strong id="groupTitle2"></strong>                                                        
-                                                    </div>
-                                                </a>
-                                                <div id="group2" class="collapse" data-parent="#accordion">
-                                                    <div class='list-group' id="links2"></div>
-                                                </div>
-                                            </div>
-
-                                            <!-- ***** Group 3 is the MAXIMUS UK links ***** -->
-                                            <div class="card" id="usefulLinksGroup3">
-                                                <a class="accordion-toggle" data-toggle="collapse" href="#group3" style="text-decoration:none">
-                                                    <div class="card-header">
-                                                        <strong id="groupTitle3"></strong>
-                                                    </div>
-                                                </a>
-                                                <div id="group3" class="collapse" data-parent="#accordion">
-                                                    <div class='list-group' id="links3"></div>
-                                                </div>
-                                            </div>
-
-                                            <!-- ***** This is for the Site Contacts ***** -->
-                                            <div class="card" id="usefulLinksSiteContacts">
-                                                <a class="accordion-toggle" data-toggle="collapse" href="#siteContacts" style="text-decoration:none">
-                                                    <div class="card-header">
-                                                        <strong>Site Contacts</strong>
-                                                    </div>
-                                                </a>
-                                                <div id="siteContacts" class="collapse" data-parent="#accordion">
-                                                    <div class='list-group'>
-                                                        <strong>
-                                                            <h5 style="margin:-2px 0 0 15px;padding-top:5px;">Owners<hr style="margin-top:2px;color:#545487;"/></h5>
-                                                        </strong>
-                                                        <div id="siteOwner" style="margin-top:-20px!important"></div>                                                    
-                                                        <strong>
-                                                            <h5 style="margin:-2px 0 0 15px;padding-top:5px;">Power Users<hr style="margin-top:2px;color:#545487;"/></h5>
-                                                        </strong>
-                                                        <div id="powerUser" style="margin-top:-20px!important"></div>
-                                                        <strong>
-                                                            <h5 style="margin:-2px 0 0 15px;padding-top:5px;">Moderators<hr style="margin-top:2px;color:#545487;"/></h5>
-                                                        </strong>
-                                                        <div id="moderatorUser" style="margin-top:-20px!important"></div>
-                                                    </div>
-                                                </div>
-                                            </div> <!-- end contacts panel-->
                                         </div> <!-- end panel group -->
                                     </div> <!-- end link container -->
                                 </div> <!-- end Right Container -->			                                                                                    
@@ -539,8 +478,13 @@
 
             $('#pageLoader').addClass('hidden');
             $('#pageContent').removeClass('hidden');
-            
-            getTiles(siteURL);
+
+            console.log(siteURL.split('/')[5]);
+            if(siteURL.split('/')[5]===undefined){
+                getTiles(siteURL);
+            }else {
+                getTeamTiles(siteURL);
+            }
 
             /***** Check for temp user *****/
             $().SPServices({
@@ -578,13 +522,7 @@
                 headers: { "Accept": "application/json; odata=verbose" },
                 success: function (data) {
                     siteTitle = data.d.Title;
-
-                    if (siteTitle == "CHDA Intranet") {
-                        getLinkData(siteURL,'Home');
-                    } else {
-                        getLinkData(siteURL, siteTitle);
-                        getContacts(siteURL, 'Contacts');
-                    }
+                    getLinkData(siteURL, siteTitle);
                 },
                 error: function (data) {
                     console.log("Error: " + data);

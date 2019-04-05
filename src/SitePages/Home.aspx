@@ -34,7 +34,7 @@
 
     <!-- STYLES -->
     <style type="text/css">
-        #usefulLinksGroup1, #usefulLinksSiteContacts{display:none}
+
     </style> 
 
 </asp:Content>
@@ -53,8 +53,6 @@
     <script type="text/javascript"> 	            
 
         $(function(){
-            //getLinkData('Home'); 
-                
             $('#slideshow').append('<div class="carousel slide" id="slideshowApp" data-ride="carousel">' +                                    
                                 '<div class="carousel-inner">' +
                                     '<div id="slideItems"></div>'+
@@ -72,9 +70,6 @@
                             '</div>');            
 
             getSlideData();
-            
-            //contentCode=$("#thisContent").html();
-
         });
         
         $(window).on('load',function () {           					 	                 	
