@@ -50,7 +50,8 @@
     <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery-ui.min.js"></script>	
     <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery.SPServices.min.js"></script>		   
     <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery.tickerNews.min.js"></script>
-    <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/AngularJS/angularjs.min.js"></script>
+    <script type="text/javascript" src="/_catalogs/masterpage/MAXUK/vendor/AngularJS/angular.min.js"></script>
+    <script type="text/javascript" src="/_catalogs/masterpage/MAXUK/vendor/AngularJS/angular-route.min.js"></script>
 
     <%-- ***** STYLES ***** --%>   
     <!-- ***** VENDOR ***** -->  
@@ -377,9 +378,13 @@
                                 <!-- ***** Site welcome text for team front door pages ***** -->
                                 <div id="siteWelcomeText"></div>
 
-                                <!-- ***** Page Content ***** -->
-                                <div id="newContent"></div>
-                                <asp:ContentPlaceHolder id="PlaceHolderPageContent" runat="server"></asp:ContentPlaceHolder>
+                                <!-- ***** Page Content ***** -->                                                                
+                                <div ng-controller="fdController">
+                                    <div ng-view></div>
+                                </div>
+
+                                <asp:ContentPlaceHolder id="PlaceHolderPageContent" runat="server">
+                                </asp:ContentPlaceHolder>
 
                             </div>  <!-- End Left Section -->
 
@@ -442,6 +447,7 @@
 <asp:ContentPlaceHolder id="PlaceHolderUtilityContent" runat="server" />    
 
     <!-- **** Custom App Scripts **** -->
+    <script type="text/javascript" src="/sites/chda/_catalogs/masterpage/chda/js/chda.js"></script> 
     <script type="text/javascript" src="/Style%20Library/maxuk/js/siteLinks.js"></script> 
     <script type="text/javascript" src="/Style%20Library/maxuk/js/siteContacts.js"></script>
     <script type="text/javascript" src="/Style%20Library/maxuk/js/siteMessages.js"></script>  
