@@ -8,36 +8,41 @@ $('.tooltip-social').tooltip({
   selector: "a[data-toggle=tooltip]"
 })
 
-// create the module and name it scotchApp
-var app = angular.module('chdaApp',['ngRoute']);
+//var siteURL = _spPageContextInfo.webAbsoluteUrl;
+//console.log("url="+siteURL);
+
+var app = angular.module('chdaApp',[]);
 
 app.controller('fdController', function($scope){
-  $scope.message='Knowledge Page';
+//    $scope.message='Welcome to the '+ +' Page';
 });
 
 // configure our routes
-app.config(function($routeProvider) {
+/*
+app.config(function($locationProvider, $routeProvider) {
+  $locationProvider.html5Mode(true);
   $routeProvider
 
     // route for the home page
-    .when('/', {
-      templateUrl : 'sitepages/home.html',
+    .when('home.aspx', {
+      templateUrl : '/sites/chda/it/sitepages/home.aspx',
       controller  : 'homeController'
     })
 
     // route for the knowledge page
-    .when('/knowledge', {
-      templateUrl : 'sitepages/knowledge.html',
+    .when('home.aspx#knowledge', {
+      templateUrl : '/sites/chda/it/sitepages/knowledge.html',
       controller  : 'knowledgeController'
     });
 });
 
 // create the controller and inject Angular's $scope
-scotchApp.controller('homeController', function($scope) {
+app.controller('homeController', function($scope) {
   // create a message to display in our view
-  $scope.message = 'Everyone come and see how good I look!';
+  $scope.message = 'This is the front door team home page';
 });
 
-scotchApp.controller('knowledgeController', function($scope) {
-  $scope.message = 'Look! I am an  page.';
+app.controller('knowledgeController', function($scope) {
+  $scope.message = 'Welcome to the team knowledge library';
 });
+*/

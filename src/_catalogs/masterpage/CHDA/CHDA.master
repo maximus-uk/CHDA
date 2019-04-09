@@ -376,13 +376,13 @@
                                 <div id="slideshow"></div>
 
                                 <!-- ***** Site welcome text for team front door pages ***** -->
-                                <div id="siteWelcomeText"></div>
+                                <div id="siteWelcomeText"></div>    
 
-                                <!-- ***** Page Content ***** -->                                                                
+                                <!-- ***** Page View Controller ***** -->                                                                                               
                                 <div ng-controller="fdController">
-                                    <div ng-view></div>
+                                    <h3>{{message}}</h3>
                                 </div>
-
+                                
                                 <asp:ContentPlaceHolder id="PlaceHolderPageContent" runat="server">
                                 </asp:ContentPlaceHolder>
 
