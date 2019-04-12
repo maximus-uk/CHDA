@@ -381,8 +381,11 @@
                                 <!-- ***** Page View Controller ***** -->                                                                                               
                                 <div ng-controller="fdController">
                                     <h3>{{message}}</h3>
+                                    <div>{{content}}</div>
                                 </div>
                                 
+                                <!--<iframe class="appContentFrame" id="appContentFrame" name="appContentFrame" src=""></iframe>-->
+
                                 <asp:ContentPlaceHolder id="PlaceHolderPageContent" runat="server">
                                 </asp:ContentPlaceHolder>
 
