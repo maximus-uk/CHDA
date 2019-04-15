@@ -488,7 +488,7 @@
             $('#pageLoader').addClass('hidden');
             $('#pageContent').removeClass('hidden');
 
-            console.log(siteURL.split('/')[5]);
+            console.log("site is="+siteURL.split('/')[5]);
             if(siteURL.split('/')[5]===undefined){
                 getTiles(siteURL);
             }else {
