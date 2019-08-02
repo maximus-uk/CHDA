@@ -1,5 +1,5 @@
 # CHDA (Dev)
-code files and pages for the SPO CHDA Intranet
+code files and pages for the development SPO CHDA Intranet
 
 # SPGo JSON
 
