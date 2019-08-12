@@ -50,8 +50,8 @@
     <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery-ui.min.js"></script>	
     <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery.SPServices.min.js"></script>		   
     <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery.tickerNews.min.js"></script>
-    <script type="text/javascript" src="/_catalogs/masterpage/MAXUK/vendor/AngularJS/angular.min.js"></script>
-    <script type="text/javascript" src="/_catalogs/masterpage/MAXUK/vendor/AngularJS/angular-route.min.js"></script>
+    <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/AngularJS/angularjs.min.js"></script>
+    <script type="text/javascript" src="/_catalogs/masterpage/MAXUK/vendor/jquery/jquery.slidereveal.min.js"></script>
 
     <%-- ***** STYLES ***** --%>   
     <!-- ***** VENDOR ***** -->  
@@ -61,10 +61,10 @@
     <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk/vendor/jquery/jquery-ui.min.css" />
     
     <!-- ***** MAX UK Core ***** -->
-    <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk_sites/css/maxuk_corev15.css" />
-    <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk_sites/css/maxuksites.css" /> 
-    <link rel="stylesheet" type="text/css" href="/sites/chda/_catalogs/masterpage/chda/css/chda.css" /> 
-    <link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk_sites/css/maxuk_corev15.css" />  <!--*** core SharePoint classic site CSS ***-->
+    <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk_sites/css/maxuksites.css" />  <!-- *** CSS for all maximus uk classis sites *** -->
+    <link rel="stylesheet" type="text/css" href="/sites/chda/_catalogs/masterpage/chda/css/chda.css" /> <!-- *** CHDA core CSS *** -->
+    <link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/custom.css" /> <!-- *** app or page specific CSS *** -->
     
     <!-- Add-In Apps -->
     <link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/metrotiles.css" />
@@ -110,7 +110,13 @@
           0% { transform: rotate(0deg); }
           100% { transform: rotate(360deg); }
         }
+
+        *{box-sizing: content-box}
+        .red{border:1px solid red; height:100px; width:100px;margin:5px;border-radius:10px}
+        .blue{border:1px solid blue; height:100px; width:100px;margin:5px;border-radius:10px}
+        .green{border:1px solid green; height:100px; width:100px;margin:5px;border-radius:10px}
     </style>
+
 </head>
 
 <body ng-app="chdaApp">
@@ -370,53 +376,88 @@
                             <!-- *********************** -->
                             <!-- **** Left Section ***** -->
                             <!-- *********************** -->	    
-                            <div class="col-9 pageLeftContainer" id="#pageLeftContainer"> 
+                            <div class="col-12 pageLeftContainer" id="#pageLeftContainer"> 
 
                                 <!-- ***** Slideshow ***** -->
                                 <div id="slideshow"></div>
 
                                 <!-- ***** Site welcome text for team front door pages ***** -->
-                                <div id="siteWelcomeText"></div>    
+                                <div id="siteWelcomeText"></div>
 
-                                <!-- ***** Page View Controller ***** -->                                                                                               
-                                <div ng-controller="fdController">
-                                    <h3>{{message}}</h3>
-                                    <div>{{content}}</div>
-                                </div>
-                                
-                                <!--<iframe class="appContentFrame" id="appContentFrame" name="appContentFrame" src=""></iframe>-->
-
-                                <asp:ContentPlaceHolder id="PlaceHolderPageContent" runat="server">
-                                </asp:ContentPlaceHolder>
-
+                                <!-- ***** Page Content ***** -->
+                                <div id="newContent"></div>
+                                <asp:ContentPlaceHolder id="PlaceHolderPageContent" runat="server"></asp:ContentPlaceHolder>
                             </div>  <!-- End Left Section -->
 
-                            <!-- ************************* -->
-                            <!-- **** Middle Section ***** -->
-                            <!-- ************************* -->
-                            <div class="col-2 pageMiddleContainer">
-                                <div class="metrotiles" id="metrotilesApp">	        							
-                                    <div class="hidden restricted" id="restrictApp">&nbsp;</div>
-                                    <div id="metrotiles"></div>							  
-                                </div>
-                                <div class="appContainer">
-                                    <asp:ContentPlaceHolder id="PlaceHolderAppContent" runat="server"></asp:ContentPlaceHolder>
-                                </div>
-                            </div>
+                            <div class="container left-shadow-overlay" id="slider">
+                                <h3 role="button" class="btn btn-alert" id='trigger'>Apps</h3>
+                                <div class="row sidebar">   
+                                    <div class="appContent scrollbar">
+                                        <div class="tab-content" id="v-pills-tabContent">
 
-                            <!-- ************************* -->
-                            <!-- ***** Right Section ***** -->
-                            <!-- ************************* -->
-                            <div class="col-1 text-justify pageRightContainer" id="pageRightContainer">
-                                <div class="usefulLinksSection">
-                                    <div class="row linkContainer" id="usefulLinks">
-                                        <div id="accordion">                        
-                                            <div id="teamLinks"></div>
+                                            <div class="tab-pane fade active" id="links" role="tabpanel" aria-labelledby="v-pills-links-tab">
+                                                <div class="usefulLinksSection">
+                                                    <div class="row linkContainer" id="usefulLinks">
+                                                        <div id="accordion" style="width:100%">                        
+                                                            <div id="teamLinks"></div>
+                                                        </div> <!-- end accordion -->
+                                                    </div> <!-- end link container -->
+                                                </div> <!-- end useful links section -->			                                                                                    
+                                            </div>
 
-                                        </div> <!-- end panel group -->
-                                    </div> <!-- end link container -->
-                                </div> <!-- end Right Container -->			                                                                                    
-                            </div> <!-- end Column - useful links section -->    
+                                            <div class="tab-pane fade metrotiles" id="metrotilesApp" role="tabpanel" aria-labelledby="v-pills-metrotiles-tab">
+                                                <div class="hidden restricted" id="restrictApp">&nbsp;</div>
+                                                <div id="metrotiles"></div>							  
+                                            </div>
+
+                                            <div class="tab-pane fade" id="help" role="tabpanel" aria-labelledby="v-pills-help-tab">this will show the help desk bot</div>
+
+                                            <div class="tab-pane fade" id="question" role="tabpanel" aria-labelledby="v-pills-question-tab">
+                                                <div class="faqNewQuestion" id="faqNewQuestion">
+                                                    <h2><u>Ask a Question</u></h2>
+                                                    <div class="row" id="faqSite">
+                                                        <h4 class="col-6 qText">Who is your question for?</h4>                                                        
+                                                        <select id="faqTeamSelect">
+                                                            <option>Suggestions</option>
+                                                            <option>Quality</option>
+                                                        </select>                                                                                                               
+                                                    </div>
+                                                    <div class="row" id="faqCheck">
+                                                        <h4 class="col-6 qText">Have you checked the FAQ section on that site?</h4>
+                                                        <div>
+                                                            <a href='#' onclick="faqCheckFunction()" class="btn button">Yes</a>
+                                                            <a href='#' onclick="faqCheckFunction()" class="btn button">No</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" id="faqCategory">
+                                                        <h4 class="col-5 qText">Which category does your question fall under?</h4>
+                                                        <select id="faqCategorySelect"></select>
+                                                    </div>
+                                                    <div class="row text-left" id="faqQuestion">
+                                                        <h4 class="col-5 qText">What is your question?</h4>
+                                                        <textarea id="faqQuestionText" maxlength="255" draggable="false" cols="28" rows="3"></textarea>                
+                                                    </div>
+                                                    <a onclick="writeFAQ()" role="button" class="btn button">Post</a>
+                                                </div>                                                
+                                            </div>
+                                            <div class="tab-pane fade" id="location" role="tabpanel" aria-labelledby="v-pills-location-tab">Office locations app.</div>
+                                            <div class="tab-pane fade" id="room" role="tabpanel" aria-labelledby="v-pills-room-tab">Room booking app.</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-3 appTabs">
+                                        <div class="nav flex-column nav-pills pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                        <a class="nav-link" id="links-tab" data-toggle="pill" href="#links" role="tab" aria-controls="v-pills-links" aria-selected="true">Useful Links</a>
+                                        <a class="nav-link" id="metrotile-tab" data-toggle="pill" href="#metrotilesApp" role="tab" aria-controls="v-pills-metrotiles" aria-selected="false">Metrotiles</a>
+                                        <a class="nav-link" id="help-tab" data-toggle="pill" href="#help" role="tab" aria-controls="v-pills-help" aria-selected="false">Help Desk</a>
+                                        <a class="nav-link" id="question-tab" data-toggle="pill" href="#question" role="tab" aria-controls="v-pills-question" aria-selected="false">Ask a Question</a>
+                                        <a class="nav-link" id="location-tab" data-toggle="pill" href="#location" role="tab" aria-controls="v-pills-location" aria-selected="false">Locations</a>
+                                        <a class="nav-link" id="room-tab" data-toggle="pill" href="#room" role="tab" aria-controls="v-pills-room" aria-selected="false">Room Booking</a>
+                                    </div>
+                                    </div>
+                                </div>                                    
+                            </div>                                                        
+                        
                         </div> <!-- end main row -->
                     </div> <!-- end Main Container -->
                 </div> <!-- end Body Container -->
@@ -450,7 +491,6 @@
 <asp:ContentPlaceHolder id="PlaceHolderUtilityContent" runat="server" />    
 
     <!-- **** Custom App Scripts **** -->
-    <script type="text/javascript" src="/sites/chda/_catalogs/masterpage/chda/js/chda.js"></script> 
     <script type="text/javascript" src="/Style%20Library/maxuk/js/siteLinks.js"></script> 
     <script type="text/javascript" src="/Style%20Library/maxuk/js/siteContacts.js"></script>
     <script type="text/javascript" src="/Style%20Library/maxuk/js/siteMessages.js"></script>  
@@ -472,6 +512,14 @@
             if (!submitHook()) { this._spOldSubmit(); }
         };
 
+        $('#slider').slideReveal({
+            trigger: $("#trigger"),
+            push: false,
+            position: "right",
+            speed: 600,
+            autoEscape: false
+        });        
+
         $(function () {
 
             SP.SOD.executeFunc('sp.js', 'SP.ClientContext', sharePointReady);
@@ -489,11 +537,25 @@
             $('#pageContent').removeClass('hidden');
 
             console.log("site is="+siteURL.split('/')[5]);
-            if(siteURL.split('/')[5]===undefined){
+
+            switch(siteURL.split('/')[5]){
+                case 'about':
+                case 'knowledge':
+                case undefined:
+                    console.log('getting Tiles');
+                    getTiles(siteURL);
+                    break;
+                default:
+                    console.log('getting team tiles');
+                    getTeamTiles(siteURL);
+                    break;
+            }
+
+            /*if(siteURL.split('/')[5]===undefined){
                 getTiles(siteURL);
             }else {
                 getTeamTiles(siteURL);
-            }
+            }*/
 
             /***** Check for temp user *****/
             $().SPServices({
@@ -584,6 +646,25 @@
         //$(window).on('beforeunload', function (e) {
            // document.cookie = 'PartnerAgreement' + '=; expires=Tue, 01-Jan-80 00:00:00 GMT' + '; path=/';
         //});
+
+        function writeFAQ(site) {
+            var faqText = $('textarea#faqQuestionText').val();
+            var faqCat = $('#faqSelect').children("option:selected").val();
+
+            var method = "UpdateListItems";
+            var list = 'Quality_FAQs';
+
+            $().SPServices({
+                operation: method,
+                async: false,
+                listName: list,
+                batchCmd: "New",
+                valuepairs: [["Title", faqText],["Category", faqCat]],
+                completefunc: function (xData, Status) {
+                    
+                }
+            });
+        }
 
         // gets the Cookie if it exists
         function getCookie() {

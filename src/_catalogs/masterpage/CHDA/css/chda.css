@@ -378,6 +378,7 @@
         
     .card {
         background-color: transparent;
+        border: .5px solid silver;
         color: var(--PrimaryDark) !important;
     }
         .card > .list-group,
