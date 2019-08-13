@@ -50,7 +50,7 @@
     <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery-ui.min.js"></script>	
     <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery.SPServices.min.js"></script>		   
     <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery.tickerNews.min.js"></script>
-    <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/AngularJS/angularjs.min.js"></script>
+    <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/AngularJS/angular.min.js"></script>
     <script type="text/javascript" src="/_catalogs/masterpage/MAXUK/vendor/jquery/jquery.slidereveal.min.js"></script>
 
     <%-- ***** STYLES ***** --%>   
@@ -370,6 +370,8 @@
                             <div class="loader"> </div>
                         </div>
 
+                        <div class="watermark">Development</div>
+
                         <!-- main row --> 
                         <div class="hidden msgBannerAdjust row" id="pageContent" >  
 
@@ -383,6 +385,7 @@
 
                                 <!-- ***** Site welcome text for team front door pages ***** -->
                                 <div id="siteWelcomeText"></div>
+                                
 
                                 <!-- ***** Page Content ***** -->
                                 <div id="newContent"></div>
