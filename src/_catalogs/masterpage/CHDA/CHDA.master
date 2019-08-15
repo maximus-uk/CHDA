@@ -50,7 +50,7 @@
     <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery-ui.min.js"></script>	
     <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery.SPServices.min.js"></script>		   
     <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery.tickerNews.min.js"></script>
-    <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/AngularJS/angular.min.js"></script>
+    <!--<script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/AngularJS/angular.min.js"></script>-->
     <script type="text/javascript" src="/_catalogs/masterpage/MAXUK/vendor/jquery/jquery.slidereveal.min.js"></script>
 
     <%-- ***** STYLES ***** --%>   
@@ -68,8 +68,8 @@
     
     <!-- Add-In Apps -->
     <link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/metrotiles.css" />
-    <link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/EventCalendar.css" />
-    <link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/EventListing.css" />
+    <!--<link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/EventCalendar.css" />
+    <link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/EventListing.css" />-->
 
 	<%-- ***** Chrome Resolution CSS files ***** --%>
 	<link rel="stylesheet" media="screen and (-webkit-min-device-pixel-ratio:0), screen and (-webkit-min-device-pixel-ratio:1), screen and (-webkit-min-device-pixel-ratio:2)" href="/Style%20Library/maxuk/css/custom_Chrome.css" />	

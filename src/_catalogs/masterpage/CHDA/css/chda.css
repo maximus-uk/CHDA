@@ -3,7 +3,7 @@
      Page   	: CHDA CSS
      Author 	: Jason Clark
      Date   	: Feb 2019
-     Purpose	: Master CSS file for Custom Master page CHDA.master 
+     Purpose	: Master CSS file to provide branding colours for CHDA site. 
     
      Modified By: 
      Date		: 
@@ -107,14 +107,14 @@
         .ms-core-listMenu-horizontalBox li.selected a.selected:hover {
             color: var(--ForeColour) !important;
             background-color: var(--PrimaryDark) !important;
-        }
-        
+        }    
+
     /***** Custom Bootstrap Nav menu *****/
     #custom-bootstrap-menu ul a {
         color: var(--PrimaryDark);
     }
         #custom-bootstrap-menu ul li a {
-            text-shadow: 0 0 0.5px 0 white;
+            text-shadow: 0 0 0.5px white;
         } 
 
         #custom-bootstrap-menu ul.dynamic {
@@ -211,8 +211,7 @@
         .siteEmail:hover {
             color: var(--PrimaryMid)
         }
-    
-    
+       
     .siteTest {
         color: var(--PrimaryDark);
     }
@@ -261,38 +260,7 @@
     .ms-core-menu-item:after {
         color: var(--ForeColour) !important;
     }
-        
-    h1 {
-        color: var(--PrimaryDark) !important;
-    }
-    
-    h2 {
-        color: var(--PrimaryDark) !important;
-    }
-    
-    h3 {
-        color: var(--PrimaryDark) !important;
-    }
-    
-    h4 {
-        color: var(--PrimaryDark) !important;
-    }
-        h4 > a {
-            color: var(--PrimaryDark);
-        }
-    
-    h5 {
-        color: var(--PrimaryDark) !important;
-    }
-    
-    h6 {
-        color: var(--PrimaryDark) !important;
-    }
-    
-    .navbar-search ul > li > a {
-        color: var(--TextColour) !important;
-    }
-        
+
     /*********************/
     /***** Page Body *****/
     /*********************/
