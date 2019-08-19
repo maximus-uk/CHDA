@@ -386,7 +386,6 @@
                                 <!-- ***** Site welcome text for team front door pages ***** -->
                                 <div id="siteWelcomeText"></div>
                                 
-
                                 <!-- ***** Page Content ***** -->
                                 <div id="newContent"></div>
                                 <asp:ContentPlaceHolder id="PlaceHolderPageContent" runat="server"></asp:ContentPlaceHolder>
