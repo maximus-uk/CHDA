@@ -708,8 +708,13 @@
                 debug: false
             });
 
+            var tenantDomain = siteURL.split('/')[2];
+            var tenant = tenantDomain.split('.')[0];
+            var myURL = "https://"+[tenantDomain.slice(0, tenant.length), "-my.", tenantDomain.slice(tenant.length+1)].join('');
+            console.log(myURL);
+            
             var userID = _spPageContextInfo.userId;
-            $("#welcomeMsg").append("Welcome " + "<a href='" + siteURL + "/my/'>" + userName + "</a>"); 
+            $("#welcomeMsg").append("Welcome " + "<a href='"+myURL+"' target='_blank'>" + userName + "</a>"); 
         }
 
             //if (userName.split("|")[2] != undefined) {
