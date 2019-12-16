@@ -61,21 +61,13 @@
     <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk/vendor/jquery/jquery-ui.min.css" />
     
     <!-- ***** MAX UK Core ***** -->
-    <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk_sites/css/maxuk_corev15.css" />  <!--*** core SharePoint classic site CSS ***-->
+    <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk_sites/css/maxuk_corev15.css" /> <!--*** core SharePoint classic site CSS ***-->
     <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk_sites/css/maxuksites.css" />  <!-- *** CSS for all maximus uk classis sites *** -->
     <link rel="stylesheet" type="text/css" href="/sites/chda/_catalogs/masterpage/chda/css/chda.css" /> <!-- *** CHDA core CSS *** -->
     <link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/custom.css" /> <!-- *** app or page specific CSS *** -->
     
     <!-- Add-In Apps -->
     <link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/metrotiles.css" />
-    <!--<link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/EventCalendar.css" />
-    <link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/EventListing.css" />-->
-
-	<%-- ***** Chrome Resolution CSS files ***** --%>
-	<link rel="stylesheet" media="screen and (-webkit-min-device-pixel-ratio:0), screen and (-webkit-min-device-pixel-ratio:1), screen and (-webkit-min-device-pixel-ratio:2)" href="/Style%20Library/maxuk/css/custom_Chrome.css" />	
-
-	<%-- ***** Small Resolution CSS files ***** --%>
-	<link rel="stylesheet" media="screen and (max-width:1200px)" href="/Style%20Library/maxuk/css/custom_smlScreen.css" />	
 
 	<%-- ***** Medium Resolution CSS files ***** --%>
 	<link rel="stylesheet" media="screen and (min-width: 1201px) and (max-width:1280px)" href="/Style%20Library/maxuk/css/custom_(1201-1280).css" />
@@ -115,11 +107,57 @@
         .red{border:1px solid red; height:100px; width:100px;margin:5px;border-radius:10px}
         .blue{border:1px solid blue; height:100px; width:100px;margin:5px;border-radius:10px}
         .green{border:1px solid green; height:100px; width:100px;margin:5px;border-radius:10px}
+
+        .navbar-collapse, .collapse.navbar-collapse{top:-10px;left:-5px}
+        .dropdown-item {color:#545487;font-weight:bold}
+        .dropdown-item:focus, .dropdown-item:hover{
+            background-color:#7676b8!important;
+            color:white!important;
+            width:auto;
+            border-radius:10px;
+            padding:.25rem 1.5rem;
+        }
+
+        .megamenu-li {
+            position: static;
+        }       
+        .nav-item a {padding-bottom:0}
+        .nav-item:hover {
+            border-bottom:5px solid #7676b8
+        }
+
+        .dropdown.show, .nav-item.dropdown.megamenu-li.show {
+            /*background-color:#7676b8!important;
+            border-radius:10px 10px 0 0;
+            box-shadow:3px 3px 4px #545487;*/
+            border-bottom:5px solid #ca5c28;
+        }
+        .nav-item.dropdown.show a, .nav-item.dropdown.megamenu-li.show a{padding-bottom:0;/*color:white*/}
+        .dropdown-menu.show, .megamenu.show{
+            background-color:#ddddeb;
+            border:2px solid #545487;
+            border-radius:0 10px 10px 10px;
+            margin-top:10px;
+        }
+        .dropdown-menu.show a, .megamenu.show a{color:#545487}
+        .megamenu.show {
+            position: absolute;
+            width: 60vw;
+            /*left: 5px;*/
+            /*right: 0;*/
+            /*top:75px;*/
+            padding: 15px;
+        }
+
+        .leftSection{border-right:1px solid #7676b8;}
+        .navSectionHeader{margin:0 0 0 15px;border-bottom:1px solid #7676b8}
+        .teamSection{margin-top:10px}
+        .teamTitle{border-bottom:1px solid #7676b8}
     </style>
 
 </head>
-
-<body ng-app="chdaApp">
+<!--ng-app="chdaApp"-->
+<body>
 
     <SharePoint:SPClientIDGenerator runat="server" ServerControlID="DeltaPlaceHolderMain;DeltaPlaceHolderPageTitleInTitleArea;DeltaPlaceHolderUtilityContent" />
     <SharePoint:ImageLink runat="server" />
@@ -134,29 +172,177 @@
 
             <header>
                 <div class="row">
-                    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 headerLeftContainer">
+                    <div class="col-9 headerLeftContainer">
                                                                      
                         <!-- ***** CHDA Logo ***** -->
-                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 pageLogo">                           
+                        <div class="col-2 pageLogo">                           
                             <SharePoint:SiteLogoImage CssClass="ms-siteicon-img" name="onetidHeadbnnr0" id="onetidHeadbnnr2" LogoImageUrl="/PublishingImages/Logos/CHDA_logo.png" runat="server" __designer:Preview="&lt;img id=&quot;ctl00_onetidHeadbnnr2&quot; class=&quot;ms-siteicon-img&quot; name=&quot;onetidHeadbnnr0&quot; Src=&quot;/PublishingImages/chda logo.png&quot; alt=&quot;CHDA Intranet&quot; /&gt;" __designer:Values="&lt;P N=&#39;CssClass&#39; T=&#39;ms-siteicon-img&#39; /&gt;&lt;P N=&#39;LogoImageUrl&#39; T=&#39;/PublishingImages/chda logo.png&#39; /&gt;&lt;P N=&#39;HasAttributes&#39; T=&#39;True&#39; /&gt;&lt;P N=&#39;ID&#39; T=&#39;onetidHeadbnnr2&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;"></SharePoint:SiteLogoImage>
                         </div>
                         
                         <!-- ***** Top Navigation ***** -->
-                        <div class="col-sm-10 col-md-10 col-lg-10 col-xs-10 nav-section">
-                            <nav class="navbar" id="custom-bootstrap-menu">
-                                
+                        <div class="col-10 nav-section"> <!--nav-section-->
+                            <nav class="navbar navbar-expand-lg"> <!--id="custom-bootstrap-menu"-->
+                                <div class="container-fluid">
                                     <!-- **** mobile hamburger menu **** -->
-                                    <div class="nav navbar-header">
-                                       <!-- <button type="button" class="nav navbar-toggle" data-toggle="collapse" data-target="#chdaNavbarCollapse" aria-expanded="false" title="Navigation Menu">                                            
-                                            <span class="sr-only">Toggle navigation</span>
-                                            <span class="icon-bar"></span>
-                                            <span class="icon-bar"></span>
-                                            <span class="icon-bar"></span>
-                                        </button>-->
-                                    </div>
-                                    <div class="navbar-collapse collapsed" id="chdaNavbarCollapse">
-                                        <div class="nav navbar-nav">
-                                            <PublishingNavigation:PortalSiteMapDataSource ID="topSiteMap" 
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#customNavbar" aria-controls="customNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+
+                                    <div class="navbar-collapse collapse" id="customNavbar">
+                                        <ul class="navbar-nav mr-auto">
+                                                        
+                                            <!-- Megamenu-->
+                                            <li class="nav-item active"><a href="" class="nav-link">Home</a></li>
+                                            <li class="nav-item dropdown">
+                                                <a href="" class="nav-link dropdown-toggle" id="aboutmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >About</a>
+                                                <div class="dropdown-menu" aria-labelledby="aboutmenu">
+                                                    <a href="" class="dropdown-item">Culture</a>
+                                                    <a href="" class="dropdown-item">ERG</a>
+                                                    <a href="" class="dropdown-item">News</a>
+                                                    <a href="" class="dropdown-item">SMT</a>
+                                                    <a href="" class="dropdown-item">Suggestions</a>
+                                                    <a href="" class="dropdown-item">Unions</a>
+                                                    <a href="" class="dropdown-item">Quality</a>
+                                                    <a href="" class="dropdown-item">Locations</a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item dropdown megamenu-li">
+                                                <a class="nav-link dropdown-toggle" href="" id="megamenu01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Teams</a>
+                                                <div class="dropdown-menu megamenu" aria-labelledby="megamenu01">
+                                                    <div class="row teamSection">
+                                                        <div class="col">
+                                                            <h2 class="teamTitle">Business Services</h2>
+                                                            <a class="dropdown-item" href="#">Business Intelligence</a>
+                                                            <a class="dropdown-item" href="#">Business Services</a>
+                                                            <a class="dropdown-item" href="#">Estates</a>
+                                                            <a class="dropdown-item" href="#">Process Design</a>
+                                                        </div>
+                                                        <div class="col">
+                                                            <h2 class="teamTitle">Clinical</h2>
+                                                            <a class="dropdown-item" href="#">Clinical Operations Support</a>
+                                                            <a class="dropdown-item" href="#">Clinical Policy and Projects</a>
+                                                            <a class="dropdown-item" href="#">Clinical Standards</a>                                                            
+                                                            <a class="dropdown-item" href="#">Professional Standards</a>                                                            
+                                                            <a class="dropdown-item" href="#">Customer Experience</a>
+                                                            <a class="dropdown-item" href="#">Customer Relations</a>
+                                                            <a class="dropdown-item" href="#">VCC</a>                                                            
+                                                        </div>
+                                                        <div class="col">
+                                                            <h2 class="teamTitle">Commercial</h2>
+                                                            <a class="dropdown-item" href="#">Commercial</a>
+                                                            <a class="dropdown-item" href="#">Change</a>
+                                                            <a class="dropdown-item" href="#">Project Management Office</a>
+                                                            <a class="dropdown-item" href="#">Supply Chain</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row teamSection">
+                                                        <div class="col">
+                                                            <h2 class="teamTitle">Finance</h2>
+                                                            <a class="dropdown-item" href="#">Payroll</a>
+                                                            <a class="dropdown-item" href="#">Travel & Expenses</a>
+                                                        </div>
+                                                        <div class="col">
+                                                            <h2><a class="dropdown-item" href="#">Health & Safety</a></h2>
+                                                            <h2><a class="dropdown-item" href="#">Legal</a></h2>
+                                                        </div>
+                                                        <div class="col">
+                                                            <h2 class="teamTitle">Operations</h2>
+                                                            <a class="dropdown-item" href="#">Central Operations Support</a>
+                                                            <a class="dropdown-item" href="#">National Performance</a>
+                                                            <a class="dropdown-item" href="#">Operations</a>
+                                                            <a class="dropdown-item" href="#">London & South</a>
+                                                            <a class="dropdown-item" href="#">North England</a>
+                                                            <a class="dropdown-item" href="#">Scotland & Newcastle</a>
+                                                            <a class="dropdown-item" href="#">West & Wales</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item dropdown megamenu-li">
+                                                <a id="megamneu02" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Knowledge Library</a>
+                                                <div class="dropdown-menu megamenu" aria-labelledby="megamenu02">
+                                                    <div class="row teamSection">
+                                                        <div class="col leftSection">
+                                                            <a class="dropdown-item" href="#">Knowledge Home</a>
+                                                            <a class="dropdown-item" href="#">Branding</a>
+                                                            <a class="dropdown-item" href="#">Templates</a>
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <h2 class="teamTitle">Business Services</h2>
+                                                                    <a class="dropdown-item" href="#">Business Intelligence</a>
+                                                                    <a class="dropdown-item" href="#">Business Services</a>
+                                                                    <a class="dropdown-item" href="#">Estates</a>
+                                                                    <a class="dropdown-item" href="#">Process Design</a>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <h2 class="teamTitle">Clinical</h2>
+                                                                    <a class="dropdown-item" href="#">Clinical Operations Support</a>
+                                                                    <a class="dropdown-item" href="#">Clinical Policy and Projects</a>
+                                                                    <a class="dropdown-item" href="#">Clinical Standards</a>                                                            
+                                                                    <a class="dropdown-item" href="#">Professional Standards</a>                                                            
+                                                                    <a class="dropdown-item" href="#">Customer Experience</a>
+                                                                    <a class="dropdown-item" href="#">Customer Relations</a>
+                                                                    <a class="dropdown-item" href="#">VCC</a>                                                            
+                                                                </div>
+                                                                <div class="col">
+                                                                    <h2 class="teamTitle">Commercial</h2>
+                                                                    <a class="dropdown-item" href="#">Commercial</a>
+                                                                    <a class="dropdown-item" href="#">Change</a>
+                                                                    <a class="dropdown-item" href="#">Project Management Office</a>
+                                                                    <a class="dropdown-item" href="#">Supply Chain</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row teamSection">
+                                                                <div class="col">
+                                                                    <h2 class="teamTitle">Finance</h2>
+                                                                    <a class="dropdown-item" href="#">Payroll</a>
+                                                                    <a class="dropdown-item" href="#">Travel & Expenses</a>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <h2><a class="dropdown-item" href="#">Health & Safety</a></h2>
+                                                                    <h2><a class="dropdown-item" href="#">Legal</a></h2>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <h2 class="teamTitle">Operations</h2>
+                                                                    <a class="dropdown-item" href="#">Central Operations Support</a>
+                                                                    <a class="dropdown-item" href="#">National Performance</a>
+                                                                    <a class="dropdown-item" href="#">Operations</a>
+                                                                    <a class="dropdown-item" href="#">London & South</a>
+                                                                    <a class="dropdown-item" href="#">North England</a>
+                                                                    <a class="dropdown-item" href="#">Scotland & Newcastle</a>
+                                                                    <a class="dropdown-item" href="#">West & Wales</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a href="" class="nav-link dropdown-toggle" id="ssmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shared Services</a>
+                                                <div class="dropdown-menu" aria-labelledby="ssmenu">
+                                                    <a href="" class="dropdown-item">Communications</a>
+                                                    <a href="" class="dropdown-item">Human Resources</a>
+                                                    <a href="" class="dropdown-item">Information Technology</a>
+                                                    <a href="" class="dropdown-item">Recruitment</a>
+                                                    <a href="" class="dropdown-item">Talent & Development</a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a href="" class="nav-link dropdown-toggle" id="ssmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Business Units</a>
+                                                <div class="dropdown-menu" aria-labelledby="ssmenu">
+                                                    <a href="" class="dropdown-item">CHDA</a>
+                                                    <a href="" class="dropdown-item">ESD</a>
+                                                    <a href="" class="dropdown-item">HML</a>
+                                                    <a href="" class="dropdown-item">Revitalised</a>
+                                                </div>
+                                            </li>                                            
+    
+                                            <li class="nav-item"><a href="" class="nav-link">Admin</a></li>
+                                        </ul>                                           
+                                    
+                                            <!--<PublishingNavigation:PortalSiteMapDataSource ID="topSiteMap" 
                                             runat="server" EnableViewState="false" 
                                             SiteMapProvider="GlobalNavigationSwitchableProvider" 
                                             StartFromCurrentNode="true" 
@@ -173,10 +359,10 @@
                                             StaticDisplayLevels="1" 
                                             AdjustForShowStartingNode="true" 
                                             MaximumDynamicDisplayLevels="4" 
-                                            SkipLinkText="" __designer:Templates="&lt;Group Name=&quot;Item Templates&quot;&gt;&lt;Template Name=&quot;StaticItemTemplate&quot; Flags=&quot;D&quot; Content=&quot;&quot; /&gt;&lt;Template Name=&quot;DynamicItemTemplate&quot; Flags=&quot;D&quot; Content=&quot;&quot; /&gt;&lt;/Group&gt;"/>
-                                        </div>
+                                            SkipLinkText="" __designer:Templates="&lt;Group Name=&quot;Item Templates&quot;&gt;&lt;Template Name=&quot;StaticItemTemplate&quot; Flags=&quot;D&quot; Content=&quot;&quot; /&gt;&lt;Template Name=&quot;DynamicItemTemplate&quot; Flags=&quot;D&quot; Content=&quot;&quot; /&gt;&lt;/Group&gt;"/>-->
+
                                     </div>
-                               
+                                </div>
                             </nav>
 
                             <!-- ***** Site Page Title & Breadcrumbs ***** -->
@@ -354,7 +540,7 @@
 
                     <!-- ***** Main Content Container ***** -->
                     <div class="container-fluid mainContainer">	
-                        					
+                        <!--					
                         <div class="row notifications hidden" id="notifications">                                              		                    	
                             <div class="TickerNews" id="messages">
                                 <div class="ti_wrapper">
@@ -364,7 +550,7 @@
                                 </div>
                             </div>                            
 						</div>
-
+                        -->
                         <div class="pageLoader" id="pageLoader">
                             <h3>Page Loading, please wait...</h3>
                             <div class="loader"> </div>
@@ -373,7 +559,7 @@
                         <div class="watermark">Development</div>
 
                         <!-- main row --> 
-                        <div class="hidden msgBannerAdjust row" id="pageContent" >  
+                        <div class="hidden" id="pageContent" >  
 
                             <!-- *********************** -->
                             <!-- **** Left Section ***** -->
@@ -402,6 +588,8 @@
                                                     <div class="row linkContainer" id="usefulLinks">
                                                         <div id="accordion" style="width:100%">                        
                                                             <div id="teamLinks"></div>
+                                                            <div id="buLinks"></div>
+                                                            <div id="maxLinks"></div>                                                            
                                                         </div> <!-- end accordion -->
                                                     </div> <!-- end link container -->
                                                 </div> <!-- end useful links section -->			                                                                                    
@@ -494,6 +682,7 @@
 
     <!-- **** Custom App Scripts **** -->
     <script type="text/javascript" src="/Style%20Library/maxuk/js/siteLinks.js"></script> 
+    <script type="text/javascript" src="/Style%20Library/maxuk/js/siteTeamLinks.js"></script>
     <script type="text/javascript" src="/Style%20Library/maxuk/js/siteContacts.js"></script>
     <script type="text/javascript" src="/Style%20Library/maxuk/js/siteMessages.js"></script>  
     <script type="text/javascript" src="/Style%20Library/maxuk/js/importantMessage.js"></script>
@@ -538,17 +727,20 @@
             $('#pageLoader').addClass('hidden');
             $('#pageContent').removeClass('hidden');
 
-            console.log("site is="+siteURL.split('/')[5]);
-
+            //console.log("business site is="+siteURL.split('/')[4]);
+            
             switch(siteURL.split('/')[5]){
-                case 'about':
-                case 'knowledge':
                 case undefined:
-                    console.log('getting Tiles');
+                    //console.log('getting Tiles');
                     getTiles(siteURL);
                     break;
+                case 'about':
+                case 'knowledge':
+                    var rootURL="https://"+domainURL+"/sites/"+siteURL.split('/')[4]+"/";
+                    console.log("rooturl="+rootURL);
+                    getTiles(rootURL);
                 default:
-                    console.log('getting team tiles');
+                    //console.log('getting team tiles');
                     getTeamTiles(siteURL);
                     break;
             }
@@ -567,7 +759,7 @@
                 completefunc: function (xData, Status) {
 
                     //If the current User does belong to a specific group
-                    if ($(xData.responseXML).find("Group[Name='CHDA Intranet Visitors']").length === 1) {
+                    if ($(xData.responseXML).find("Group[Name='"+siteURL.split('/')[4]+" Intranet Visitors']").length === 1) {
                         var agreement = getCookie();
 
                         //***** remove search function *****/
@@ -596,6 +788,7 @@
                 success: function (data) {
                     siteTitle = data.d.Title;
                     getLinkData(siteURL, siteTitle);
+                    getTeamLinkData(siteURL,siteTitle);
                 },
                 error: function (data) {
                     console.log("Error: " + data);

@@ -1,446 +1,1004 @@
-/*   **************************************************
-     Site   	: CHDA Intranet
-     Page   	: CHDA CSS
-     Author 	: Jason Clark
-     Date   	: Feb 2019
-     Purpose	: Master CSS file to provide branding colours for CHDA site. 
-    
-     Modified By: 
-     Date		: 
-     Notes		: 
+/***************************************************
+Site   	    : CHDA Intranet
+Page   	    : CHDA CSS
+Author 	    : Jason Clark
+Date   	    : Feb 2019
+Purpose	    : Master CSS file to provide branding colours for CHDA site. 
+Note        : This CSS file should ONLY contain colour references, all positioning and other CSS code should go into the maxuksites.css
 
-     ************************************************** */
+Modified By :  
+Date        : 
+Notes       : 
 
-    /***** Brand Colours *****/
-    :root {
-        --PrimaryDark: #545487;
-        --PrimaryMid: #7676b8;
-        --PrimaryLight: #dbdcf4;
-        --SecondaryDark1: #4f7b39;
-        --SecondaryMid1: #9cc487;
-        --SecondaryLight1: #d9eccd;
-        --SecondaryDark2: #c95828;
-        --SecondaryMid2: #f9ad86;
-        --SecondaryLight2: #fae8d6;
-        --AccentDark1: #205794;
-        --AccentMid1: #6e96cf;
-        --AccentLight1: #e5eaf6;
-        --AccentDark2:#8a742e;
-        --AccentMid2:#ddcc68;
-        --AccentLight2:#f2e5b6;
-        --AccentDark3:#5f295f;
-        --AccentMid3:#cfaccc;
-        --AccentLight3:#f2ddec;
-        --TextColour: black;
-        --ForeColour: white;
-        --UsefulLinkBG: lightgrey;
-    } 
+***************************************************/
+
+/***** Brand Colours *****/
+:root {
+    --PrimaryDark: #545487;
+    --PrimaryMid: #7676b8;
+    --PrimaryLight: #dbdcf4;
+    --SecondaryDark1: #4f7b39;
+    --SecondaryMid1: #9cc487;
+    --SecondaryLight1: #d9eccd;
+    --SecondaryDark2: #c95828;
+    --SecondaryMid2: #f9ad86;
+    --SecondaryLight2: #fae8d6;
+    --AccentDark1: #205794;
+    --AccentMid1: #6e96cf;
+    --AccentLight1: #e5eaf6;
+    --AccentDark2:#8a742e;
+    --AccentMid2:#ddcc68;
+    --AccentLight2:#f2e5b6;
+    --AccentDark3:#5f295f;
+    --AccentMid3:#cfaccc;
+    --AccentLight3:#f2ddec;
+    --TextColour: black;
+    --BaseColour: white;
+    --UsefulLinkBG: lightgrey;
+    --MaxDarkGrey : #666;
+    --MaxMidGrey : #a1a1a1; 
+    --MaxSilver : #c2c2c4;         
+} 
+
+/****** for test position purposes - different colour borders for objects ******/
+.blueBox {
+    border: 1px solid blue;
+}
+
+.redBox {
+    border: 1px solid red;
+}
+
+.yellowBox {
+    border: 1px solid yellow;
+}
+
+.greenBox {
+    border: 1px solid green;
+}
+
+.greyBox {
+    border: 1px solid var(--MaxMidGrey);
+}
+
+/***********************/
+/***** Page Header *****/
+/***********************/    
+header {background-color: var(--PrimaryLight);}
+
+#s4-ribbonrow {
+    color:var(--TextColour);
+    background-color: var(--PrimaryLight);
+}
+    
+.pageTitle h1 {
+    color:var(--PrimaryDark);
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    background-color: var(--PrimaryMid);
+}
+    
+.nav > .nav-link:hover,
+.nav > .nav-link:focus {
+    color: var(--BaseColour);
+}
         
-    header {
-        background-color: var(--PrimaryLight);
-    }
-    
-    #s4-ribbonrow {
-        color:var(--TextColour);
-        background-color: var(--PrimaryLight);
-    }
-        
-    .pageTitle h1 {
-        color:var(--PrimaryDark);
-    }
-    
-    .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-        background-color: var(--PrimaryMid);
-    }
-      
-    .nav > li > a:hover,
-    .nav > li > a:focus {
-        color: var(--ForeColour);
-    }
-    
-    .nav-tabs > li > a {
+.ms-core-listMenu-horizontalBox {
+    color: var(--PrimaryDark);
+}
+    .ms-core-listMenu-horizontalBox li.static > .ms-core-listMenu-item {
         color: var(--PrimaryDark);
     }
-    
-        .nav-tabs > li > a:hover {
-            color: var(--PrimaryMid) !important;
-            border-bottom: 3px solid var(--PrimaryDark);
-            border-bottom: 3px solid var(--PrimaryMid);
-        }
-    
-        .nav-tabs > li.active > a,
-        .nav-tabs > li.active > a:hover,
-        .nav-tabs > li.active > a:focus {
-            color: var(--PrimaryMid);
-            border-bottom: 3px solid var(--PrimaryMid);
-        }
-            .nav-pills > li > a:hover, .nav-pills > li.active > a:hover {
-                color: var(--ForeColour) !important;
-                background-color: var(--PrimaryMid) !important;
-            }
-    
-    .nav-pills > li.active > a,
-    .nav-pills > li.active > a:focus {
-        color: var(--ForeColour) !important;
+
+    .ms-core-listMenu-horizontalBox li.static > .ms-core-listMenu-item:hover {
+        color: var(--BaseColour) !important;
         background-color: var(--PrimaryMid) !important;
+        border: .5px solid var(--PrimaryDark);
     }
-     
-    .ms-core-listMenu-horizontalBox {
-        color: var(--PrimaryDark);
+
+    .ms-core-listMenu-horizontalBox li.selected a.selected {
+        color: var(--BaseColour) !important;
+        background-color: var(--PrimaryDark) !important;
+        border: .5px solid var(--PrimaryDark);
     }
-        .ms-core-listMenu-horizontalBox li.static > .ms-core-listMenu-item {
+
+    .ms-core-listMenu-horizontalBox li.selected a.selected:hover {
+        color: var(--BaseColour) !important;
+        background-color: var(--PrimaryDark) !important;
+    }
+    
+/***** Custom Bootstrap Nav menu *****/
+#custom-bootstrap-menu ul a {
+    color: var(--PrimaryDark);
+}
+    #custom-bootstrap-menu ul li a {
+        text-shadow: 0 0 0.5px var(--BaseColour);
+    } 
+
+    #custom-bootstrap-menu ul.dynamic {
+        border: .5px solid var(--PrimaryDark);
+        background-color: var(--PrimaryLight);
+    }
+        #custom-bootstrap-menu ul li a:hover,
+        #custom-bootstrap-menu ul li a:focus {
+            color: var(--BaseColour) !important;
+        }     
+
+        #custom-bootstrap-menu ul.dynamic .ms-core-listMenu-item {
             color: var(--PrimaryDark);
         }
-    
-        .ms-core-listMenu-horizontalBox li.static > .ms-core-listMenu-item:hover {
-            color: var(--ForeColour) !important;
+        #custom-bootstrap-menu ul.dynamic .ms-core-listMenu-item:hover {
+            background-color: var(--PrimaryMid);
+            color: var(--BaseColour) !important;
+        }
+
+            #custom-bootstrap-menu ul li.selected:hover {
+                /*background-color: var(--PrimaryMid);*/
+                border-color: transparent !important;
+            }
+
+    /***** Bootstrap Custom Mobile Menu *****/
+    #custom-bootstrap-menu .navbar-toggle {
+        border: 1px solid var(--PrimaryMid);
+        background-color: var(--PrimaryDark);
+        color: var(--PrimaryLight) !important;
+    }
+
+    #custom-bootstrap-menu .in.navbar-collapse {
+        background-color: var(--PrimaryLight);
+        border: 1px solid var(--PrimaryDark);
+        box-shadow: 4px 4px var(--PrimaryMid);
+    }
+
+    #custom-bootstrap-menu .navbar-toggle:hover,
+    #custom-bootstrap-menu .navbar-toggle:focus {
+        background-color: var(--PrimaryMid);
+    }
+
+    #custom-bootstrap-menu .navbar-toggle .icon-bar {
+        background-color: var(--BaseColour);
+    }
+
+    #custom-bootstrap-menu .navbar-toggle:hover .icon-bar,
+    #custom-bootstrap-menu .navbar-toggle:focus .icon-bar {
+        background-color: var(--PrimaryMid);
+    }
+
+/*******************************/
+/****** Right Header Items *****/
+/*******************************/    
+.ms-srch-sb-border, .ms-srch-sb-borderFocused {
+    border: 1px solid var(--PrimaryLight) !important;
+}
+
+.ms-srch-sb > .ms-srch-sb-searchLink {
+    background-color: var(--PrimaryLight);   
+}
+    .ms-srch-sb > .ms-srch-sb-searchLink:hover {
+        background-color: var(--PrimaryMid);
+        color: var(--BaseColour) !important
+    }
+
+.welcomeText {
+    color: var(--PrimaryDark) !important;
+}
+    .welcomeText a, .welcomeText h3 {
+        color: var(--PrimaryDark) !important;
+    }
+        .welcomeText a:hover {
             background-color: var(--PrimaryMid) !important;
-            border: .5px solid var(--PrimaryDark);
+            color: var(--BaseColour) !important;
         }
-    
-        .ms-core-listMenu-horizontalBox li.selected a.selected {
-            color: var(--ForeColour) !important;
-            background-color: var(--PrimaryDark) !important;
-            border: .5px solid var(--PrimaryDark);
-        }
-    
-        .ms-core-listMenu-horizontalBox li.selected a.selected:hover {
-            color: var(--ForeColour) !important;
-            background-color: var(--PrimaryDark) !important;
-        }    
 
-    /***** Custom Bootstrap Nav menu *****/
-    #custom-bootstrap-menu ul a {
-        color: var(--PrimaryDark);
-    }
-        #custom-bootstrap-menu ul li a {
-            text-shadow: 0 0 0.5px white;
-        } 
-
-        #custom-bootstrap-menu ul.dynamic {
-            border: .5px solid var(--PrimaryDark);
-            background-color: var(--PrimaryLight);
-        }
-            #custom-bootstrap-menu ul li a:hover,
-            #custom-bootstrap-menu ul li a:focus {
-                color: var(--ForeColour) !important;
-            }        
-
-            #custom-bootstrap-menu ul.dynamic .ms-core-listMenu-item {
-                color: var(--PrimaryDark);
-            }
-            #custom-bootstrap-menu ul.dynamic .ms-core-listMenu-item:hover {
-                background-color: var(--PrimaryMid);
-                color: var(--ForeColour) !important;
-            }
-    
-                #custom-bootstrap-menu ul li.selected:hover {
-                    background-color: var(--PrimaryMid);
-                    border-color: transparent !important;
-                }
-    
-        /***** Bootstrap Custom Mobile Menu *****/
-        #custom-bootstrap-menu .navbar-toggle {
-            border: 1px solid var(--PrimaryMid);
-            background-color: var(--PrimaryDark);
-            color: var(--PrimaryLight) !important;
-        }
-    
-        #custom-bootstrap-menu .in.navbar-collapse {
-            background-color: var(--PrimaryLight);
-            border: 1px solid var(--PrimaryDark);
-            box-shadow: 4px 4px var(--PrimaryMid);
-        }
-    
-        #custom-bootstrap-menu .navbar-toggle:hover,
-        #custom-bootstrap-menu .navbar-toggle:focus {
-            background-color: var(--PrimaryMid);
-        }
-    
-        #custom-bootstrap-menu .navbar-toggle .icon-bar {
-            background-color: var(--ForeColour);
-        }
-    
-        #custom-bootstrap-menu .navbar-toggle:hover .icon-bar,
-        #custom-bootstrap-menu .navbar-toggle:focus .icon-bar {
-            background-color: var(--PrimaryMid);
-        }
-    
-    /*******************************/
-    /****** Right Header Items *****/
-    /*******************************/    
-    .ms-srch-sb-border, .ms-srch-sb-borderFocused {
-        border: 1px solid var(--PrimaryLight) !important;
-    }
-    
-    .ms-srch-sb > .ms-srch-sb-searchLink {
-        background-color: var(--PrimaryLight);   
-    }
-        .ms-srch-sb > .ms-srch-sb-searchLink:hover {
-            background-color: var(--PrimaryMid);
-            color: var(--ForeColour) !important
-        }
-    
-    .welcomeText {
+.siteHelp {
+    color: var(--PrimaryDark) !important;
+}
+    .siteHelp > a {
         color: var(--PrimaryDark) !important;
     }
-        .welcomeText a, .welcomeText h3 {
-            color: var(--PrimaryDark) !important;
-        }
-            .welcomeText a:hover {
-                background-color: var(--PrimaryMid) !important;
-                color: var(--ForeColour) !important;
-            }
-    
-    .siteHelp {
-        color: var(--PrimaryDark) !important;
+    .siteHelp a:before {
+        color: var(--PrimaryDark); 
     }
-        .siteHelp > a {
-            color: var(--PrimaryDark) !important;
-        }
-        .siteHelp a:before {
-            color: var(--PrimaryDark); 
-        }
-        .siteHelp:hover {
-            color: var(--PrimaryMid) !important;
-        }
+    .siteHelp:hover {
+        color: var(--PrimaryMid) !important;
+    }
+
+.siteEmail {
+    color: var(--PrimaryDark);
+}
+    .siteEmail:hover {
+        color: var(--PrimaryMid)
+    }
+
+
+.siteTest {
+    color: var(--PrimaryDark);
+}
+
+.siteActions {
+    color: var(--PrimaryDark) !important;
+}
+
+.ms-siteactions-normal a:hover {
+    color: var(--BaseColour) !important;
+    background-color: var(--PrimaryLight) !important;
+}
+
+.ms-siteactions-normal a:before {
+    background-color: var(--PrimaryLight) !important;
+    color: var(--TextColour) !important;
+}
+
+.ms-siteactions-normal a:after {
+    color: var(--PrimaryDark) !important;
+}
+
+.ms-siteactions-root .ms-core-menu-list li:after {
+    color: var(--BaseColour) !important
+}
+
+.ms-siteactions-hover {
+    background-color: var(--PrimaryMid) !important;
+    color: var(--BaseColour) !important;
+}
+
+.ms-siteactions-imgspan > .ms-core-menu-buttonIcon {
+    color: transparent;
+}
+
+#suiteBarButtons li a:hover {
+    background-color: var(--PrimaryMid) !important;
+    color: var(--BaseColour) !important;
+}
+        
+.ms-core-menu-item.Selected, .ms-core-menu-item:hover {
+    color: var(--BaseColour) !important;
+    background-color: var(--PrimaryMid) !important;
+}
+
+.ms-core-menu-item:after {
+    color: var(--BaseColour) !important;
+}
     
-    .siteEmail {
+h1 {
+    color: var(--PrimaryDark) !important;
+}
+
+h2 {
+    color: var(--PrimaryDark) !important;
+}
+
+h3 {
+    color: var(--PrimaryDark) !important;
+}
+
+h4 {
+    color: var(--PrimaryDark) !important;
+}
+
+h5 {
+    color: var(--PrimaryDark) !important;
+}
+
+h6 {
+    color: var(--PrimaryDark) !important;
+}
+
+h1 > a:hover, h2 > a:hover, h3 > a:hover, h4 > a:hover, h5 > a:hover, h6 > a:hover {background-color:var(--PrimaryMid); color:var(--BaseColour)!important;}
+h1 > a .active, h2 > a .active, h3 > a .active, h4 > a .active, h5 > a .active, h6 > a .active {background-color:var(--PrimaryDark); color:var(--BaseColour)!important;}
+
+.navbar-search ul > li > a {
+    color: var(--TextColour) !important;
+}
+
+a {color:var(--PrimaryDark);}
+a:focus, a:hover {color: var(--PrimaryMid);}
+
+/*********************/
+/***** Page Body *****/
+/*********************/
+body {background-color:var(--BaseColour);}    
+
+.mainContainer {
+    scrollbar-face-color: var(--PrimaryMid);
+    scrollbar-arrow-color: var(--BaseColour);
+    scrollbar-darkshadow-color: var(--TextColour) !important;
+}
+
+    /* Webkit Browser Scrollbar */
+    .mainContainer::-webkit-scrollbar {
+        background-color: var(--BaseColour);
+    }
+
+    /* Track */
+    .mainContainer::-webkit-scrollbar-track {
+        -webkit-box-shadow: var(--BaseColour); /*inset 0 0 6px rgba(0,0,0,0.8);*/
+        box-shadow: var(--BaseColour);
+    }
+
+    /* Handle */
+    .mainContainer::-webkit-scrollbar-thumb {
+        background: var(--PrimaryMid);
+        -webkit-box-shadow: inset 0 0 6px var(--PrimaryDark);
+        box-shadow: inset 0 0 6px var(--PrimaryDark);
+    }
+    
+    .watermark p {
+        color: var(--PrimaryLight) !important
+    }
+
+.pageLeftContainer::-webkit-scrollbar-thumb {
+    background:var(--PrimaryMid);
+}  
+
+.ti_wrapper {
+    background-color: var(--PrimaryMid);
+}
+
+.pageLoader .loader {
+    border-top: 16px solid var(--PrimaryMid);
+}
+
+.carousel {border:1px solid var(--PrimaryLight);}
+.carousel-control-prev, .carousel-control-next{background-color:var(--PrimaryLight);}
+.carousel-control-prev:hover, .carousel-control-next:hover{background-color:var(--PrimaryMid)}
+
+.nav-tabs .nav-link {
+    color: var(--PrimaryDark);
+}   
+    .nav-tabs .nav-link:focus,
+    .nav-tabs .nav-link:hover {
+        color: var(--PrimaryDark);
+        background-color: transparent;
+        border-bottom: 3px solid var(--PrimaryMid);
+    }
+
+    .nav-tabs .nav-link.active {
+        color: var(--PrimaryDark);
+        background-color: transparent;
+        border-bottom: 3px solid var(--PrimaryDark);
+    }     
+
+.nav-pills .nav-link{
+    color: var(--TextColour) !important;
+    background-color: var(--PrimaryLight) !important;
+}    
+
+.nav-pills .nav-link:hover,
+.nav-pills .nav-link:focus {
+    color: var(--BaseColour) !important;
+    background-color: var(--PrimaryMid) !important;
+}
+
+.nav-pills .nav-link.active {
+    color: var(--BaseColour) !important;
+    background-color: var(--PrimaryDark) !important;
+    box-shadow: 2px 2px 4px 2px var(--PrimaryMid);    
+}
+
+/***********************************/
+/****** Sidebar App Container ******/
+/***********************************/    
+.restricted {
+    background-color: var(--PrimaryLight);
+}    
+    .restricted:before {
+        color: red !important;
+    }
+
+#trigger {
+    background-color:var(--PrimaryLight);                
+    border:1px solid var(--PrimaryMid);
+    box-shadow: -4px 2px 5px 2px var(--MaxDarkGrey);
+    color:var(--PrimaryDark);
+}
+    #trigger:hover{background-color: var(--PrimaryMid);color:var(--BaseColour)!important}
+    
+.sidebar .appContent {border:3px solid var(--PrimaryMid);background-color:var(--BaseColour);}
+.sidebar .appTabs {border:2px solid var(--PrimaryMid);box-shadow: -5px 5px 10px 3px var(--MaxDarkGrey);background-color:var(--BaseColour);}
+.sidebar .appTabs .nav-link {color:var(--PrimaryDark)}
+.sidebar .appTabs .nav-link:hover{background-color:var(--PrimaryMid);color:var(--BaseColour)!important}
+.sidebar .nav-pills .nav-link.active{background-color:var(--PrimaryDark);color:var(--BaseColour)}
+.scrollbar::-webkit-scrollbar{background-color:var(--PrimaryLight)}
+.scrollbar::-webkit-scrollbar-track{background-color:var(--PrimaryLight)}
+.scrollbar::-webkit-scrollbar-thumb{background-color:var(--PrimaryMid)}
+.usefulLinks .card-header{background-color:var(--PrimaryLight);border:2px solid var(--PrimaryMid); box-shadow: 1px 2px 5px var(--MaxDarkGrey);}
+.usefulLinks .card-header:hover{background-color:var(--PrimaryMid);}
+.usefulLinks .card-header:hover .card-link{color:var(--BaseColour)!important}
+.usefulLinks .card-header .card-link{color:var(--PrimaryDark)!important}
+.usefulLinks .card-body{border:1px solid var(--PrimaryMid);background:none; color:var(--PrimaryDark)}
+
+/******************************/
+/****** Useful Links App ******/
+/******************************/
+.linkContainer {
+    scrollbar-base-color: var(--BaseColour);
+    scrollbar-face-color: var(--BaseColour);
+    scrollbar-3dlight-color: var(--BaseColour);
+    scrollbar-highlight-color: var(--BaseColour);
+    scrollbar-track-color: var(--BaseColour);
+    scrollbar-arrow-color: var(--BaseColour);
+    scrollbar-shadow-color: var(--BaseColour) !important;
+}
+    .linkContainer .list-group {
+        background-color: var(--UsefulLinkBG) !important;
+        border-bottom: 1px solid var(--PrimaryDark);
+    }
+    .linkContainer .list-group-item {
+        background-color: var(--PrimaryLight);
         color: var(--PrimaryDark);
     }
-        .siteEmail:hover {
-            color: var(--PrimaryMid)
+        .linkContainer .list-group-item:hover {
+            background-color: var(--PrimaryMid) !important;
+            color: var(--BaseColour) !important;
         }
-       
-    .siteTest {
-        color: var(--PrimaryDark);
+
+        .linkContainer .list-group-item.active > .badge,
+        .nav-pills > .active > a > .badge {
+            color: var(--TextColour);
+            background-color: var(--PrimaryMid);
+        }
+
+    .linkContainer a.list-group-item,
+    button.list-group-item {
+        color: var(--TextColour);
     }
+
+        .linkContainer a.list-group-item:hover,
+        button.list-group-item:hover,
+        .linkContainer a.list-group-item:focus,
+        button.list-group-item:focus {
+            color: var(--BaseColour);
+            background-color: var(--PrimaryMid) !important;
+        }
     
-    .siteActions {
-        color: var(--PrimaryDark) !important;
-    }
-    
-    .ms-siteactions-normal a:hover {
-        color: var(--ForeColour) !important;
+.card {
+    background-color: transparent;
+    border: .5px solid var(--MaxSilver);
+    color: var(--PrimaryDark) !important;
+}
+    .card > .list-group,
+    .card > .collapse > .list-group {
         background-color: var(--PrimaryLight) !important;
+    }    
+    .card > .list-group, .card > .collapse > .list-group {
+        background-color: var(--PrimaryLight) !important;
+        color: var(--PrimaryDark) !important;
+    }
+
+.card-header {
+    border-bottom: 1px solid var(--PrimaryDark) !important;
+    background-color: var(--PrimaryLight) !important;
+    color:var(--PrimaryDark);
+}
+    .card-header > .dropdown .dropdown-toggle {
+        color:var(--PrimaryDark);
+    }
+    .card-header:hover, .accordion-toggle:hover {
+        background-color: var(--PrimaryMid) !important;
+        color: var(--BaseColour) !important;
+    }
+
+.accordion-toggle:after {
+    color: var(--PrimaryDark) !important;
+}
+
+.accordion-toggle.collapsed:after {
+    color: var(--PrimaryDark) !important;
+}
+    
+.sidebar ul {
+    border: 1px solid var(--PrimaryLight);
+}
+
+.btn-primary {
+    color: var(--BaseColour) !important;
+}
+
+/************************
+***** Locations App *****
+*************************/
+.locationFrame {
+    border-bottom: thin solid var(--MaxMidGrey);
+}
+
+.CHDACentres {
+    color: var(--TextColour) !important;
+}
+
+.rowLocation {
+    color: red;
+    border: 2px solid var(--TextColour);
+}
+
+.colLocation {
+    border: 1px solid red;
+}
+/**************************************************/
+
+/***********************************/
+/***** Web Part Properties Box *****/
+/***********************************/    
+.ms-ToolPaneOuter {
+    border: 5px solid var(--PrimaryDark) !important;
+}
+
+.ms-ToolPaneBody {
+    color: var(--TextColour);
+    scrollbar-face-color: var(--PrimaryLight);
+    scrollbar-3dlight-color: var(--BaseColour);
+    scrollbar-highlight-color: var(--PrimaryMid);
+    scrollbar-track-color: var(--PrimaryLight);
+    scrollbar-arrow-color: var(--PrimaryDark);
+    scrollbar-shadow-color: var(--PrimaryMid) !important;
+    scrollbar-darkshadow-color: var(--TextColour) !important;
+}
+
+/*********************/
+/***** Left Menu *****/
+/*********************/    
+.modal-backdrop {
+    background-color: var(--PrimaryLight);
+}
+
+.tooltip-inner {
+    background-color: var(--PrimaryMid);
+}
+
+.sidebar ul {
+    border: 1px solid var(--PrimaryLight);
+}
+
+/*******************************/
+/***** Service Page Styles *****/
+/*******************************/  
+.btn-primary {
+    color: var(--BaseColour) !important;
+}
+
+/*************************
+***** Page Elements *****
+*************************/
+.ms-alternatingstrong {
+    background-color: var(--PrimaryLight);
+}
+
+.pLow, .pNorm, .pHigh {
+    color: var(--BaseColour);
+}
+
+.pLow {
+    background-color: green;
+}
+
+.pNorm {
+    background-color: orange;
+}
+
+.pHigh {
+    background-color: red;
+}    
+
+.rowDivider {
+    border-bottom: 1px var(--PrimaryMid) solid;
+}
+
+.highlight :hover {
+    background-color: var(--PrimaryMid) !important;
+}
+
+    .highlight :hover .newsHeadline, .highlight :hover h4, .highlight :hover h6 {
+        color: var(--BaseColour) !important;
+    }
+
+.noHover:hover {
+    color: var(--TextColour) !important;
+}
+
+.scrollbar {
+    scrollbar-base-color: var(--BaseColour);
+    scrollbar-face-color: var(--PrimaryMid);
+    scrollbar-3dlight-color: var(--PrimaryMid);
+    scrollbar-highlight-color: var(--PrimaryLight);
+    scrollbar-track-color: var(--BaseColour);
+    scrollbar-arrow-color: var(--PrimaryDark);
+    scrollbar-shadow-color: var(--PrimaryMid) !important;
+    scrollbar-darkshadow-color: var(--PrimaryDark) !important;
+}
+    
+/****** Mozilla Scrollbar */
+.scrollbar::-webkit-scrollbar {
+    background-color: var(--BaseColour);
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    box-shadow: var(--BaseColour); /*inset 0 0 6px rgba(221,221,235,0.3);*/
+    background-color: var(--BaseColour);
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px 2px rgba(221,221,235,.3);
+    background-color: var(--PrimaryMid);
+}
+
+.hiddenScrollbar {
+    scrollbar-base-color: var(--BaseColour);
+    scrollbar-face-color: var(--BaseColour);
+    scrollbar-3dlight-color: var(--BaseColour);
+    scrollbar-highlight-color: var(--BaseColour);
+    scrollbar-track-color: var(--BaseColour);
+    scrollbar-arrow-color: var(--BaseColour);
+    scrollbar-shadow-color: var(--BaseColour);
+}
+
+    /****** Mozilla Scrollbar */
+    .hiddenScrollbar::-webkit-scrollbar {
+        background-color: var(--BaseColour);
+    }
+
+    .hiddenScrollbar::-webkit-scrollbar-track {
+        box-shadow: var(--BaseColour);
+        /*inset 0 0 6px rgba(221,221,235,0.3);*/
+        background-color: var(--BaseColour);
+    }
+
+    .hiddenScrollbar::-webkit-scrollbar-thumb {
+        box-shadow: var(--BaseColour);
+        background-color: var(--BaseColour);
+    }
+
+.homeLink {
+    color: var(--BaseColour);
+}
+    .homeLink:hover {
+        color: var(--PrimaryMid) !important;
+    }
+
+#msgBox h3 {
+    background-color: var(--PrimaryLight);
+    color: var(--TextColour) !important;
+}
+
+.button, #savebutton1, #savebutton2, #gobackbutton1, #gobackbutton2, .ms-ButtonHeightWidth {
+    background: var(--PrimaryDark) !important;
+    color: var(--BaseColour) !important;
+    text-shadow: 0 1px var(--MaxDarkGrey) !important;
+}
+
+    .tabButton:hover, .ms-ButtonHeightWidth:hover, .button:hover, #savebutton1:hover, #savebutton2:hover, #gobackbutton1:hover, #gobackbutton2:hover {
+        background-color: var(--PrimaryMid) !important;
+        text-shadow: 0 1px hsla(0, 0%, 100%, 0.4);
+        color:var(--BaseColour);
+    }
+
+    .button:active {
+        background-color: var(--PrimaryMid) !important;
+        color: var(--BaseColour) !important;
+        box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
+        border-radius: 7px !important;
+        color: var(--BaseColour) !important;
+    }
+
+    .button.is-checked {
+        color:var(--BaseColour);
+        background-color: var(--PrimaryMid);
+        text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
+    }
+
+    .headingText {
+        background-color: var(--PrimaryDark);
     }
     
-    .ms-siteactions-normal a:before {
-        background-color: var(--PrimaryLight) !important;
+        .headingText h2 {
+            color: var(--BaseColour) !important;
+        }
+    
+    .navTabBar ul li {
+        color:var(--TextColour) !important;
+    }
+
+.homeTabBar, .navTabBar {
+    background-color: var(--BaseColour);
+}
+
+.homeTab ul li {
+    color: var(--TextColour) !important;
+}
+
+    .homeTab ul li:hover,
+    .homeTab > ul > li > a:hover {
+        background-color: var(--PrimaryMid) !important;
+        color: var(--BaseColour) !important;
+    }
+
+/*************************************	
+*********** News Section ************
+*************************************/
+
+.newsTabs {
+background-color: var(--BaseColour);
+}
+
+.newsMastContainer {
+border: .5px var(--PrimaryLight) solid;
+}
+.newsMastContainer .newsMast {
+    border-bottom: .5px solid var(--PrimaryMid);
+}
+    .newsMastContainer .newsMast .newsHeadline {
+        color: var(--PrimaryDark) !important;
+    }
+
+.newsDetailContainer {
+border: .5px var(--PrimaryLight) solid;
+}
+
+/* The notification switch */
+.slider {
+background-color: var(--PrimaryDark);
+}
+.slider:before {
+    background-color: var(--BaseColour);
+}
+
+input:checked + .slider {
+background-color: var(--PrimaryMid);
+}
+
+input:focus + .slider {
+box-shadow: 0 0 1px var(--PrimaryLight);
+}
+
+.tabContainer {
+background-color: var(--BaseColour);
+}
+
+.tabBar {
+background-color: var(--BaseColour);
+}
+
+.greyBorderRight {
+border-right: .5px solid var(--MaxSilver);
+}
+
+.greyBorderLeft {
+border-left: .5px solid var(--MaxSilver);
+}
+
+.documentSection {
+scrollbar-base-color: var(--BaseColour);
+scrollbar-face-color: var(--PrimaryMid);
+scrollbar-3dlight-color: var(--BaseColour);
+scrollbar-highlight-color: var(--BaseColour);
+scrollbar-track-color: var(--BaseColour);
+scrollbar-arrow-color: var(--PrimaryMid);
+scrollbar-shadow-color: var(--BaseColour);
+}
+/* Handle */
+.documentSection::-webkit-scrollbar-thumb {
+    background:var(--PrimaryMid);
+}
+
+.documentFolder .card-header:hover h5{
+    color: var(--BaseColour) !important;
+}
+
+.documentViewer {
+    border: 1px solid var(--PrimaryLight);
+}
+
+.docItem a:hover {
+    background-color: var(--PrimaryMid);
+    color: var(--BaseColour) !important;
+}
+
+.teamDocumentSubfolders .docDelete, .docList .docDelete {
+    color: red;
+}
+
+.teamDocumentTabs {
+background-color: var(--BaseColour);
+}
+.teamDocumentTabs > ul {
+    scrollbar-base-color: var(--BaseColour);
+    scrollbar-face-color: var(--PrimaryMid);
+    scrollbar-3dlight-color: var(--PrimaryLight);
+    scrollbar-highlight-color: var(--PrimaryLight);
+    scrollbar-track-color: var(--BaseColour);
+    scrollbar-arrow-color: var(--BaseColour);
+    scrollbar-shadow-color: var(--PrimaryMid);
+    scrollbar-darkshadow-color: var(--BaseColour);
+}
+.teamDocumentTabs > ul::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(221,221,235,0.3);
+    background-color: var(--BaseColour);
+}
+
+.teamDocumentTabs > ul::-webkit-scrollbar {
+    background-color: var(--BaseColour);
+}
+
+.teamDocumentTabs > ul::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(221,221,235,.3);
+    background-color: var(--PrimaryDark);
+}
+.teamDocumentTabs .active > a {
+    box-shadow: 2px 2px 7px var(--MaxMidGrey) !important;
+}
+.knowledgeMainTabs h2{color:white!important}
+
+.knowledgeTabContainer {
+    background-color:var(--BaseColour);
+}
+.scroller {
+    background-color:var(--BaseColour);
+}
+.redIcon {
+    color: red
+}
+
+.blueIcon {
+    color: blue;
+}
+
+.orangeIcon {
+    color: orange;
+}
+
+.greenIcon {
+    color: green;
+}
+
+.purpleIcon {
+    color: var(--PrimaryDark);
+}
+
+.docPreview {
+    border: 1px solid var(--MaxDarkGrey);
+}
+
+/* ---- Document Item ---- */
+.highlight:hover {
+    background-color: var(--PrimaryMid) !important;
+    color: var(--BaseColour) !important;
+}
+
+    .highlight:hover p, .highlight:hover a {
+        color: var(--BaseColour) !important;
+    }
+
+.docUline {
+    color: var(--TextColour);
+    border-bottom: .7px solid var(--MaxSilver);
+}
+    .docUline:hover {
+        background-color: var(--PrimaryMid);
+    }
+
+.ms-cellstyle, .ms-cellStyleNonEditable, .ms-cellStyleMenuHover, .ms-MenuCellStyle-TdHover, .ms-MenuCellStyle-MenuDivHover {
+    border: solid 1px var(--BaseColour);
+}
+
+tr.ms-itmHoverEnabled {
+    background-color: var(--PrimaryLight);
+}
+
+tr.ms-alternating {
+    background-color: var(--BaseColour);
+}
+
+blockquote {
+    border-left: 5px solid var(--PrimaryDark);
+}
+
+.bullets {
+    color:var(--TextColour) !important;
+}
+
+.profileEditBtn {
+    color: var(--BaseColour);
+    background-color: var(--PrimaryDark);
+}
+    .profileEditBtn:hover {
+        color: var(--BaseColour) !important;
+        background-color: var(--PrimaryMid);
+    }
+
+.contactsContent {
+    background-color: var(--BaseColour) !important;
+}
+    .contactsContent .contactTitle {
+        background: var(--PrimaryLight);
+    }
+    .contactsContent h3 {
         color: var(--TextColour) !important;
     }
-    
-    .ms-siteactions-normal a:after {
-        color: var(--PrimaryDark) !important;
-    }
-    
-    .ms-siteactions-root .ms-core-menu-list li:after {
-        color: var(--ForeColour) !important
-    }
-    
-    .ms-siteactions-hover {
-        background-color: var(--PrimaryMid) !important;
-        color: var(--ForeColour) !important;
-    }
 
-    .ms-siteactions-imgspan > .ms-core-menu-buttonIcon {
-        color: transparent;
-    }
+.officeAddr {
+    color: var(--TextColour);
+}
 
-    #suiteBarButtons li a:hover {
-        background-color: var(--PrimaryMid) !important;
-        color: var(--ForeColour) !important;
-    }
-            
-    .ms-core-menu-item.Selected, .ms-core-menu-item:hover {
-        color: var(--ForeColour) !important;
+.suggestionContent, .faqContent {
+    background-color: transparent !important;
+}
+.suggestionTabs .nav-tabs li > a, .faqTabs .nav-tabs li > a  {
+    color: var(--TextColour);
+}
+    .suggestionTabs .nav-tabs li > a:active, .faqTabs .nav-tabs li > a:active {
+        color: var(--BaseColour) !important;
         background-color: var(--PrimaryMid) !important;
     }
-    
-    .ms-core-menu-item:after {
-        color: var(--ForeColour) !important;
+
+.suggestionTabs a:hover, .faqTabs a:hover {
+    color: var(--BaseColour) !important;
+    background-color: var(--PrimaryMid) !important;
+}
+
+.smtValues {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background-color: var(--PrimaryLight);
+    box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.25);
+}
+
+.smtValues-container {
+    color: var(--PrimaryDark);
+    border-bottom: 1px solid var(--MaxSilver);
+}
+    .smtValues-container h3 {
+        color: var(--PrimaryDark);
+        text-shadow: -1px 0px 0px rgba(0, 0, 0, 0.50);
+    }
+    .smtValues-container h4 {
+        color: var(--PrimaryDark);
     }
 
-    /*********************/
-    /***** Page Body *****/
-    /*********************/
-    .mainContainer {
-        scrollbar-face-color: var(--PrimaryMid);
-        scrollbar-arrow-color: var(--ForeColour);
-        scrollbar-darkshadow-color: var(--TextColour) !important;
-    }
-    
-        /* Webkit Browser Scrollbar */
-        .mainContainer::-webkit-scrollbar {
-            background-color: var(--ForeColour);
-        }
-    
-        /* Track */
-        .mainContainer::-webkit-scrollbar-track {
-            -webkit-box-shadow: var(--ForeColour); /*inset 0 0 6px rgba(0,0,0,0.8);*/
-            box-shadow: var(--ForeColour);
-        }
-    
-        /* Handle */
-        .mainContainer::-webkit-scrollbar-thumb {
-            background: var(--PrimaryMid);
-            -webkit-box-shadow: inset 0 0 6px var(--PrimaryDark);
-            box-shadow: inset 0 0 6px var(--PrimaryDark);
-        }
-        
-        .watermark p {
-            color: var(--PrimaryLight) !important
-        }
-    
-    .ti_wrapper {
-        background-color: var(--PrimaryMid);
-    }
-    
-    .carousel {border:1px solid var(--PrimaryLight);}
-    .carousel-control-prev, .carousel-control-next{background-color:var(--PrimaryLight);}
-    .carousel-control-prev:hover, .carousel-control-next:hover{background-color:var(--PrimaryMid)}
- 
-    /**************************/
-    /****** Useful Links ******/
-    /**************************/
-    .linkContainer {
-        scrollbar-base-color: var(--ForeColour);
-        scrollbar-face-color: var(--ForeColour);
-        scrollbar-3dlight-color: var(--ForeColour);
-        scrollbar-highlight-color: var(--ForeColour);
-        scrollbar-track-color: var(--ForeColour);
-        scrollbar-arrow-color: var(--ForeColour);
-        scrollbar-shadow-color: var(--ForeColour) !important;
-    }
-        .linkContainer .list-group {
-            background-color: var(--UsefulLinkBG) !important;
-            border-bottom: 1px solid var(--PrimaryDark);
-        }
-        .linkContainer .list-group-item {
-            background-color: var(--PrimaryLight);
-            color: var(--PrimaryDark);
-        }
-            .linkContainer .list-group-item:hover {
-                background-color: var(--PrimaryMid) !important;
-                color: var(--ForeColour) !important;
-            }
-    
-            .linkContainer .list-group-item.active > .badge,
-            .nav-pills > .active > a > .badge {
-                color: var(--TextColour);
-                background-color: var(--PrimaryMid);
-            }
-    
-        .linkContainer a.list-group-item,
-        button.list-group-item {
-            color: var(--TextColour);
-        }
-    
-            .linkContainer a.list-group-item:hover,
-            button.list-group-item:hover,
-            .linkContainer a.list-group-item:focus,
-            button.list-group-item:focus {
-                color: var(--ForeColour);
-                background-color: var(--PrimaryMid) !important;
-            }
-        
-    .card {
-        background-color: transparent;
-        border: .5px solid silver;
-        color: var(--PrimaryDark) !important;
-    }
-        .card > .list-group,
-        .card > .collapse > .list-group {
-            background-color: var(--PrimaryLight) !important;
-        }    
-        .card > .list-group, .card > .collapse > .list-group {
-            background-color: var(--PrimaryLight) !important;
-            color: var(--PrimaryDark) !important;
-        }
-    
-    .card-header {
-        border-bottom: 1px solid var(--PrimaryDark) !important;
-        background-color: var(--PrimaryLight) !important;
-        color:var(--PrimaryDark);
-    }
-        .card-header > .dropdown .dropdown-toggle {
-            color:var(--PrimaryDark);
-        }
-        .card-header:hover, .accordion-toggle:hover {
-            background-color: var(--PrimaryMid) !important;
-            color: var(--ForeColour) !important;
-        }
-    
-    .accordion-toggle:after {
-        color: var(--PrimaryDark) !important;
-    }
-    
-    .accordion-toggle.collapsed:after {
-        color: var(--PrimaryDark) !important;
-    }
-        
-    .sidebar ul {
-        border: 1px solid var(--PrimaryLight);
-    }
-    
-    .btn-primary {
-        color: var(--ForeColour) !important;
-    }
-        
-    /***********************************/
-    /***** Web Part Properties Box *****/
-    /***********************************/    
-    .ms-ToolPaneOuter {
-        border: 5px solid var(--PrimaryDark) !important;
-    }
-    
-    .ms-ToolPaneBody {
-        color: var(--TextColour);
-        scrollbar-face-color: var(--PrimaryLight);
-        scrollbar-3dlight-color: var(--ForeColour);
-        scrollbar-highlight-color: var(--PrimaryMid);
-        scrollbar-track-color: var(--PrimaryLight);
-        scrollbar-arrow-color: var(--PrimaryDark);
-        scrollbar-shadow-color: var(--PrimaryMid) !important;
-        scrollbar-darkshadow-color: var(--TextColour) !important;
-    }
-    
-    /*********************/
-    /***** Left Menu *****/
-    /*********************/    
-    .modal-backdrop {
-        background-color: var(--PrimaryLight);
-    }
-    
-    .tooltip-inner {
-        background-color: var(--PrimaryMid);
-    }
-    
-    .sidebar ul {
-        border: 1px solid var(--PrimaryLight);
+.smtTabBar {
+    background-color: var(--BaseColour);
+}
+
+.nav-tabs {
+    background-color: transparent !important;
+    color: var(--PrimaryDark);
+}
+                
+.smtBanner {
+    background-color: var(--PrimaryMid);
+}
+    .smtBanner > h3 {
+        color: var(--BaseColour) !important;
     }
 
-    /*******************************/
-    /***** Service Page Styles *****/
-    /*******************************/  
-    .btn-primary {
-        color: var(--ForeColour) !important;
+.contactCard {
+    border: 1px solid var(--PrimaryLight);
+    background-color: transparent;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+    .contactCard:hover {
+        box-shadow: 0 8px 16px 0 var(--PrimaryMid);
     }
 
-    /**************************/
-    /****** Mobile Screen *****/
-    /**************************/
-    @media (max-width: 1200px) {  
-        .navbar-collapse {
-            border-top: 1px solid transparent;
-            box-shadow: inset 0 1px 0 var(--TextColour);
-        }         
-        .usefulLinksSection {
-            background-color: var(--ForeColour);
-        }
-    
-        .pageRightContainer {
-            background-color: var(--ForeColour);
-            border: 1px solid var(--PrimaryDark);
-        }
-    }   
+    .contactCard .jobTitle {
+        color: var(--PrimaryDark);
+    }
+        .contactCard .jobTitle:hover {
+            color: var(--PrimaryMid);
+        }   
+
+/*.buttonOn {
+background-color: var(--PrimaryMid) !important;
+color: var(--BaseColour) !important;
+box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
+background-color: var(--PrimaryDark);
+}
+.buttonOn a p {color:var(--BaseColour)!important;}
+*/
+/**************************/
+/****** Mobile Screen *****/
+/**************************/
+@media (max-width: 1200px) {  
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 var(--TextColour);
+    }  
+}   
