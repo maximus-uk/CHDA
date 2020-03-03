@@ -62,6 +62,7 @@
     <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk_sites/css/maxuk_corev15.css" /> <!--*** core SharePoint classic site CSS ***-->
     <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk_sites/css/maxuksites.css" />  <!-- *** CSS for all maximus uk classic sites *** -->
     <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk_sites/css/maxukbranding.css" /> <!-- *** core branding colours *** -->
+    <link rel="stylesheet" type="text/css" href="/sites/chda/_catalogs/masterpage/CHDA/css/chda.css" /> <!-- *** CSS branding colours ESD *** -->
     <link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/custom.css" /> <!-- *** app or page specific CSS *** -->
     
     <!-- Add-In Apps -->
@@ -134,8 +135,7 @@
     </style>
 </head>
 
-<!--ng-app="chdaApp"-->
-<body>
+<body ng-app="buApp">
 
     <SharePoint:SPClientIDGenerator runat="server" ServerControlID="DeltaPlaceHolderMain;DeltaPlaceHolderPageTitleInTitleArea;DeltaPlaceHolderUtilityContent" />
     <SharePoint:ImageLink runat="server" />
@@ -158,8 +158,8 @@
                         </div>
                         
                         <!-- ***** Top Navigation ***** -->
-                        <div class="col-10 nav-section" id="customNav"> <!--nav-section-->
-                            <nav class="navbar navbar-expand-lg"> <!--id="custom-bootstrap-menu">-->
+                        <div class="col-10 nav-section" id="customNav"> 
+                            <nav class="navbar navbar-expand-lg">
                                 <div class="container-fluid">
                                     <!-- **** mobile hamburger menu **** -->
                                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#customNavbar" aria-controls="customNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -257,45 +257,6 @@
                                                                     <a class="dropdown-item" href="/sites/chda/tande/sitepages/knowledge.aspx">Travel & Expenses</a>
                                                                     <a class="dropdown-item" href="/sites/chda/vcc/sitepages/knowledge.aspx">VCC</a>                                                            
                                                                 </div>
-<!--
-                                                                    <h2><a class="dropdown-item" href="/sites/chda/pd/sitepages/knowledge.aspx">Process Design</a></h2>
-                                                                </div>
-                                                                <div class="col">
-                                                                    <h2 class="teamTitle">Clinical</h2>
-                                                                    <a class="dropdown-item" href="/sites/chda/clinical/sitepages/knowledge.aspx">Clinical</a>
-                                                                    <a class="dropdown-item" href="/sites/chda/cpp/sitepages/knowledge.aspx">Clinical Policy and Projects</a>
-                                                                    <a class="dropdown-item" href="/sites/chda/cs/sitepages/knowledge.aspx">Clinical Standards</a>                                                            
-                                                                    <a class="dropdown-item" href="/sites/chda/ps/sitepages/knowledge.aspx">Professional Standards</a>                                                            
-                                                                    <a class="dropdown-item" href="/sites/chda/ce/sitepages/knowledge.aspx">Customer Experience</a>
-                                                                    <a class="dropdown-item" href="/sites/chda/cr/sitepages/knowledge.aspx">Customer Relations</a>
-                                                                    <a class="dropdown-item" href="/sites/chda/vcc/sitepages/knowledge.aspx">VCC</a>                                                            
-                                                                </div>
-                                                                <div class="col">
-                                                                    <h2 class="teamTitle">Commercial</h2>
-                                                                    <a class="dropdown-item" href="/sites/chda/commercial/sitepages/knowledge.aspx">Commercial</a>
-                                                                    <a class="dropdown-item" href="/sites/chda/change/sitepages/knowledge.aspx">Change</a>
-                                                                    <a class="dropdown-item" href="/sites/chda/pmo/sitepages/knowledge.aspx">Project Management Office</a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row teamSection">
-                                                                <div class="col">
-                                                                    <h2 class="teamTitle">Finance</h2>
-                                                                    <a class="dropdown-item" href="/sites/chda/finance/sitepages/knowledge.aspx">Finance</a>
-                                                                    <a class="dropdown-item" href="/sites/chda/payroll/sitepages/knowledge.aspx">Payroll</a>
-                                                                    <a class="dropdown-item" href="/sites/chda/tande/sitepages/knowledge.aspx">Travel & Expenses</a>
-                                                                </div>
-                                                                <div class="col">
-                                                                    <h2><a class="dropdown-item" href="/sites/chda/hands/sitepages/knowledge.aspx">Health & Safety</a></h2>
-                                                                    <h2><a class="dropdown-item" href="/sites/chda/legal/sitepages/knowledge.aspx">Legal</a></h2>
-                                                                </div>
-                                                                <div class="col">
-                                                                    <h2 class="teamTitle">Operations</h2>
-                                                                    <a class="dropdown-item" href="/sites/chda/cos/sitepages/knowledge.aspx">Central Operations Support</a>
-                                                                    <a class="dropdown-item" href="/sites/chda/np/sitepages/knowledge.aspx">National Performance</a>
-                                                                    <a class="dropdown-item" href="/sites/chda/ops/sitepages/knowledge.aspx">Operations</a>
-                                                                </div>
-                                                            </div>
-                                                            -->
 
                                                             <div class="col">
                                                                 <h2 class="teamTitle">Central Services</h2>                                                                
@@ -316,6 +277,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                               </div>          
                                             </li>
                                             <li class="nav-item dropdown">
                                                 <a href="" class="nav-link dropdown-toggle" id="ssmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Central Services</a>
@@ -420,9 +382,9 @@
                             </SharePoint:AjaxDelta>
                         </div>
 
-                        <!-- ***** Site Welcome Message and Link to User Profile Page ***** -->
+                        <!-- ***** Site Welcome Message and Link to User O365 Apps ***** -->
                         <div class="welcomeText">
-                            <nav class="navbar navbar-expand-lg"> <!--id="custom-bootstrap-menu">-->
+                            <nav class="navbar navbar-expand-lg">
                                 <div class="container-fluid">
                                     <div class="navbar-collapse collapse" id="customNavbar">
                                         <ul class="navbar-nav mr-auto">                            
@@ -451,7 +413,6 @@
                             <!--
 																<a title="Intranet Help" id="O365_MainLink_Help" class="siteHelp o365cs-nav-item o365cs-nav-button ms-bgc-tdr-h o365button o365cs-topnavText"><i class='fa fa-question'></i></a>
                             -->
-                            <a title="Test page responsiveness" id="btnResponsive" href="#" onclick="testResponsive();return false;" class="siteTest"><i class="fas fa-expand-arrows-alt"></i></a>
 
                             <!-- ***** Suite Bar - Site Acions ***** -->
                             <SharePoint:AjaxDelta runat="server" 
@@ -551,7 +512,6 @@
                                     
                                 </div>
                             </SharePoint:AjaxDelta>
-
                     </div>
                 </div>
             </header>
@@ -569,16 +529,16 @@
 
                         <div id="pageAlert" aria-live="polite" aria-atomic="true">
                             <div class="toast" data-autohide="false">
-                                <div class="toast-header">
-                                    <svg class="rounded mr-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+                                <div class="toast-header" id="toastHead">
+                                    <!--<svg class="rounded mr-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
                                         preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
-                                        <rect fill="#ff0000" width="100%" height="100%" /></svg>
+                                        <rect fill="#ff0000" width="100%" height="100%" /></svg>-->
                                     <h3></h3>
                                     <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <div class="toast-body"></div>
+                                <div class="toast-body" id="toastBody">
                             </div>
                         </div>
 
@@ -609,6 +569,31 @@
                             <div class="container left-shadow-overlay" id="slider">
                                 <h3 role="button" class="btn btn-alert" id='trigger'>Apps</h3>
                                 <div class="row sidebar">   
+                                    <div class="col-3 appTabs">
+                                        <ul class="nav flex-column nav-pills pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="links-tab" data-toggle="pill" href="#links" role="tab" aria-controls="v-pills-links" aria-selected="true">Useful Links</a>
+                                                <div id="editLinks"></div>                                               
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="metrotile-tab" data-toggle="pill" href="#metrotilesApp" role="tab" aria-controls="v-pills-metrotiles" aria-selected="false">Metrotiles</a>
+                                                <div id="editTiles"></div>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="help-tab" data-toggle="pill" href="#help" role="tab" aria-controls="v-pills-help" aria-selected="false">Help Desk</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="question-tab" data-toggle="pill" href="#question" role="tab" aria-controls="v-pills-question" aria-selected="false">Ask a Question</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="location-tab" data-toggle="pill" href="#location" role="tab" aria-controls="v-pills-location" aria-selected="false">Locations</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="room-tab" data-toggle="pill" href="#room" role="tab" aria-controls="v-pills-room" aria-selected="false">Room Booking</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
                                     <div class="appContent scrollbar">
                                         <div class="tab-content" id="v-pills-tabContent">
 
@@ -663,34 +648,8 @@
                                             <div class="tab-pane fade" id="room" role="tabpanel" aria-labelledby="v-pills-room-tab">Room booking app.</div>
                                         </div>
                                     </div>
-
-                                    <div class="col-3 appTabs">
-                                        <ul class="nav flex-column nav-pills pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                            <li class="nav-item">
-                                                <a class="nav-link" id="links-tab" data-toggle="pill" href="#links" role="tab" aria-controls="v-pills-links" aria-selected="true">Useful Links</a>
-                                                <div id="editLinks"></div>                                               
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" id="metrotile-tab" data-toggle="pill" href="#metrotilesApp" role="tab" aria-controls="v-pills-metrotiles" aria-selected="false">Metrotiles</a>
-                                                <div id="editTiles"></div>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" id="help-tab" data-toggle="pill" href="#help" role="tab" aria-controls="v-pills-help" aria-selected="false">Help Desk</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" id="question-tab" data-toggle="pill" href="#question" role="tab" aria-controls="v-pills-question" aria-selected="false">Ask a Question</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" id="location-tab" data-toggle="pill" href="#location" role="tab" aria-controls="v-pills-location" aria-selected="false">Locations</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" id="room-tab" data-toggle="pill" href="#room" role="tab" aria-controls="v-pills-room" aria-selected="false">Room Booking</a>
-                                            </li>
-                                        </ul>
-                                    </div>
                                 </div>                                    
-                            </div>                                                        
-                        
+                            </div>                                                                               
                         </div> <!-- end main row -->
                     </div> <!-- end Main Container -->
                 </div> <!-- end Body Container -->
@@ -784,6 +743,52 @@
             if (!submitHook()) { this._spOldSubmit(); }
         };
 
+        //var w1 = window.matchMedia("(max-width:2400px)");
+        //adjustSlider(w1);
+        //w1.addListener(adjustSlider);
+
+        //var mqls = [ // list of window.matchMedia() queries
+            /*window.matchMedia("(max-width: 2600px)"),
+            window.matchMedia("(max-width: 2500px)"),
+            window.matchMedia("(max-height: 2400px)"),
+            window.matchMedia("(max-height: 2300px)"),
+            window.matchMedia("(max-height: 2200px)"),
+            window.matchMedia("(max-height: 2100px)"),
+            window.matchMedia("(max-height: 2000px)"),
+            window.matchMedia("(max-height: 1900px)"),
+            window.matchMedia("(max-height: 1800px)"),
+            window.matchMedia("(max-height: 1700px)"),
+            window.matchMedia("(max-height: 1600px)"),
+            window.matchMedia("(max-height: 1500px)"),
+            window.matchMedia("(max-height: 1400px)"),
+            window.matchMedia("(max-height: 1300px)"),
+            window.matchMedia("(max-height: 1200px)")
+        ]*/
+ 
+        //function mediaqueryresponse(mql){
+            
+            //if (mqls[0].matches){$('#slider').css('right','-45.7vw');}
+            /*if (mqls[1].matches){$('#slider').css('right','-45.7vw');}
+            if (mqls[2].matches){$('#slider').css('right','-1170px');}
+            if (mqls[3].matches){$('#slider').css('right','-45.7vw');}
+            if (mqls[4].matches){$('#slider').css('right','-45.7vw');}
+            if (mqls[5].matches){$('#slider').css('right','-45.7vw');}
+            if (mqls[6].matches){$('#slider').css('right','-45.7vw');}
+            if (mqls[7].matches){$('#slider').css('right','-51.5vw');}
+            if (mqls[8].matches){$('#slider').css('right','-51.5vw');}
+            if (mqls[9].matches){$('#slider').css('right','-51.5vw');}
+            if (mqls[10].matches){$('#slider').css('right','-51.5vw');}
+            if (mqls[11].matches){$('#slider').css('right','-51.5vw');}
+            if (mqls[12].matches){$('#slider').css('right','-51.5vw');}
+            if (mqls[13].matches){$('#slider').css('right','-51.5vw');}
+            if (mqls[14].matches){$('#slider').css('right','-51.5vw');}*/
+        //}
+ 
+        //for (var i=0; i<mqls.length; i++){ // loop through queries
+        //    mediaqueryresponse(mqls[i]) // call handler function explicitly at run time
+        //    mqls[i].addListener(mediaqueryresponse) // call handler function whenever the media query is triggered
+        //} 
+
         var selector = 'nav .nav-item';
 
         $(selector).on('click', function(e){
@@ -801,6 +806,36 @@
             autoEscape: false
         });        
 
+        //function adjustSlider(w1){
+        //    if(w1.matches){
+        //        $('#slider').css('right','-50.3vw');
+        //    }else {
+        //        $('#slider').css('right','-1170px');
+        //    }
+
+            /*if(dWidth >=2400 && dWidth <2600){
+                $('#slider').css('right','-45.7vw');
+            }
+            if(dWidth >=2200 && dWidth <2400){
+                $('#slider').css('right','-1170px');
+            }
+            if(dWidth >=1900 && dWidth <2200){
+                $('#slider').css('right','-51.5vw');
+            }
+            if(dWidth >1700 && dWidth <1900){
+                $('#slider').css('right','-55vw');
+            }
+            if(dWidth >1500 && dWidth <1700){
+                $('#slider').css('right','-52vw');
+            }
+            if(dWidth >1400 && dWidth <1500){
+                $('#slider').css('right','-52vw');
+            }
+            if(dWidth >1300 && dWidth <1400){
+                $('#slider').css('right','-52.5vw');
+            }*/
+        //}
+
         var reAdjust = function () {
             if (($('.knowledgeTabContainer').outerWidth()) < widthOfList()) {
                 $('.scroller-right').show().css('display', 'flex');
@@ -816,9 +851,19 @@
                 $('.item').animate({ left: "-=" + getLeftPosi() + "px" }, 'slow');
                 $('.scroller-left').hide();
             }
+
+            if(dWidth >=1900 && dWidth <2600){
+                $('#slider').css('right','-1170px');
+            }
+            if(dWidth >1500 && dWidth <1900){
+                $('#slider').css('right','-55vw');
+            } 
+            if(dWidth >=1900 && dWidth <2100){
+                $('#slider').css('right','-51.5vw');
+            }                       
         }
-                
-        // *** Document Object Model (DOM) Load
+																				                
+        // *** Document Object Model (DOM) Loaded
         $(function () {
             var isPowerUser = false;
             localStorage.clear();
@@ -829,17 +874,6 @@
             
             console.log('Screen Height :' + sHeight + ' Screen Width :'+ sWidth);
             console.log('Document Height :' + dHeight + ' Document Width :' + dWidth);    
-
-            /*$('nav .nav-item a').on('click', function(e){
-                alert(this.text());
-                $('nav li').removeClass('active');
-                $(this).addClass('active');
-            });*/
-
-            //$('#pageLoader').addClass('hidden');
-            //$('#pageContent').removeClass('hidden');
-
-            //console.log("business site is="+siteURL.split('/')[4]);
             
             /***** Check for temp user *****/
             $().SPServices({
@@ -1003,25 +1037,6 @@
             return "";
         }
 
-        function testResponsive() {
-
-            var resolutions = [1200, 1250, 1300, 1350, 1400, 1450, 1500, 1550, 1600, 1650, 1700, 1750, 1800, 1850, 1900, 1920, 1950, 2000, 2050, 2100, 2150, 2200, 2300, 2400, 2500, 2600, 2700, 2800];
-
-            var dHeight = screen.height;
-            for (var i = 0; i < resolutions.length; i++) {
-                var dWidth = resolutions[i];
-                
-                window.setTimeout(resizeWindow(dWidth,dHeight), 3000);
-            }
-        }
-
-        function resizeWindow(dWidth,dHeight) {
-            window.resizeTo(dWidth, dHeight);
-            // add dialog and pause to continue 
-
-            //alert('Testing Screen Resolution - Height :' + dHeight + ' x Width :' + dWidth);
-        }
-
         function getCurrentUser() {
             //***** Get name of user from SharePoint user profile service and display on screen
 
@@ -1075,18 +1090,8 @@
             function onError(error) {
                 console.log(error);
             }
-
-            //$("#welcomeMsg").append("Welcome " + "<a href='"+myURL+"' target='_blank'>" + userName + "</a>"); 
         }
 
-            //if (userName.split("|")[2] != undefined) {
-            //    userName = userName.split("|")[1];
-            //};
-
-            //var userID = _spPageContextInfo.userId;
-            //$("#welcomeMsg").append("Welcome " + "<a href='" + siteURL + "/my/'>" + userName + "</a>"); 
-
-            //$("#welcomeMsg").append("Welcome " + "<a href='https://intranet.chda.maxuk.co.uk/my/'>" + (userName) + "</a>");
     </script>
 		<!--***** Custom page JS code *****-->
     <asp:ContentPlaceHolder id="PlaceHolderPageCode" runat="server"></asp:ContentPlaceHolder>    

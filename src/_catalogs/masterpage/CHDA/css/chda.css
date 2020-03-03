@@ -1,0 +1,41 @@
+/***************************************************
+Site   	    : CHDA Intranet
+Page   	    : CHDA CSS (Brand Colours)
+Author 	    : Jason Clark
+Date   	    : Feb 2019
+Purpose	    : Master CSS file to provide branding colours for CHDA site. 
+Note        : This CSS file should ONLY contain colour references, all positioning and other CSS code should go into the maxuksites.css
+
+Modified By :  
+Date        : 
+Notes       : 
+
+***************************************************/
+
+/***** Brand Colours *****/
+:root {
+    --PrimaryDark: #545487;
+    --PrimaryMid: #7676b8;
+    --PrimaryLight: #dbdcf4;
+    --SecondaryDark1: #4f7b39;
+    --SecondaryMid1: #9cc487;
+    --SecondaryLight1: #d9eccd;
+    --SecondaryDark2: #c95828;
+    --SecondaryMid2: #f9ad86;
+    --SecondaryLight2: #fae8d6;
+    --AccentDark1: #205794;
+    --AccentMid1: #6e96cf;
+    --AccentLight1: #e5eaf6;
+    --AccentDark2:#8a742e;
+    --AccentMid2:#ddcc68;
+    --AccentLight2:#f2e5b6;
+    --AccentDark3:#5f295f;
+    --AccentMid3:#cfaccc;
+    --AccentLight3:#f2ddec;
+    --TextColour: black;
+    --BaseColour: white;
+    --UsefulLinkBG: lightgrey;
+    --MaxDarkGrey : #666;
+    --MaxMidGrey : #a1a1a1; 
+    --MaxSilver : #c2c2c4;         
+} 
